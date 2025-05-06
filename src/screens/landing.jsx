@@ -13,7 +13,6 @@ import "../responsive.css";
 import { useModal } from "../components/pages/ModalContext";
 import SearchBar from "./searchBar";
 import { FaPlayCircle } from "react-icons/fa";
-import { animateSlideUpOnScroll } from "../components/animateSlideUpOnScroll";
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -65,8 +64,32 @@ const LandingPage = () => {
 
   const slider = useRef();
 
+  const animateSlideUpOnScroll = (triggerElement) => {
+    const elements = triggerElement.querySelectorAll(".slide-up-text");
+
+    elements.forEach((el, i) => {
+      gsap.fromTo(
+        el,
+        { y: "100%", opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          delay: i * 0.2,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            toggleActions: "play none none reverse", // optional reverse
+          },
+        }
+      );
+    });
+  };
+
   useGSAP(() => {
     const sections = document.querySelectorAll(".section-with-animations");
+
     sections.forEach((section) => {
       animateSlideUpOnScroll(section);
     });
