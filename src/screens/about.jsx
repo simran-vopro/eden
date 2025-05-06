@@ -12,8 +12,8 @@ import "swiper/css/pagination";
 import Footer from "../components/other/footer";
 import { useModal } from "../components/pages/ModalContext";
 import gsap from "gsap";
-import { animateSlideUpOnScroll } from "../components/animateSlideUpOnScroll";
 import { useGSAP } from "@gsap/react";
+import { animateSlideUpOnScroll } from "../components/animateSlideUpOnScroll";
 
 const posts = [
   {
