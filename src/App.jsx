@@ -1,12 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import "./App.css";
 import Lenis from "lenis";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 
 import LandingPage from "./screens/landing";
@@ -14,6 +17,7 @@ import Insights from "./screens/insights";
 import { ModalProvider, useModal } from "./components/pages/ModalContext";
 import ContactModal from "./screens/ContactModal";
 import About from "./screens/about";
+import HowItWorks from "./screens/howItWorks";
 
 const ScrollManager = ({ children }) => {
   const lenisRef = useRef(null);
@@ -51,26 +55,116 @@ const ScrollManager = ({ children }) => {
 // Separate wrapper to access context inside modal
 const ContactModalWrapper = () => {
   const { closeContactModal, isContactModalOpen } = useModal();
-  return <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />;
+  return (
+    <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
+  );
 };
 
+const RouteTransition = () => {
+  const location = useLocation();
+
+
+  useLayoutEffect(() => {
+
+    const revealToSpan = () => {
+      console.log("location.pathname  revealToSpan==> ", location.pathname)
+      document.querySelectorAll(".reveal").forEach((ele) => {
+        // ❗ Skip if already wrapped
+        if (ele.querySelector(".parent")) return;
+
+        // Create 2 spans
+        const parent = document.createElement("span");
+        const child = document.createElement("span");
+        parent.classList.add("parent");
+        child.classList.add("child");
+
+        // Move the content inside the child
+        child.innerHTML = ele.innerHTML;
+        parent.appendChild(child);
+
+        // Replace the content of ele
+        ele.innerHTML = "";
+        ele.appendChild(parent);
+      });
+    };
+    revealToSpan();
+  }, [location.key]);
+
+
+  useGSAP(() => {
+    console.log("location.pathname ==> ", location.pathname)
+
+    const tl = gsap.timeline();
+    tl.from(".child span", {
+      x: 100,
+      duration: 1,
+      stagger: 0.2,
+      ease: "Power3.easeInOut",
+      opacity: 0,
+    })
+      .to(".parent .child", {
+        y: "-100%",
+        duration: 1,
+        ease: "Circ.easeInOut",
+      })
+      .to("#fs-loader", {
+        height: 0,
+        duration: 1,
+        ease: "Circ.easeInOut",
+      })
+      .to("#bg-layer", {
+        height: "100%",
+        duration: 1,
+        delay: -1,
+        ease: "Circ.easeInOut",
+      })
+      .to("#main-loader", {
+        height: "0",
+        duration: 1,
+        ease: "Circ.easeInOut",
+      });
+  }, [location.key]); //👈 Triggers on every route change
+
+
+  return null;
+};
 
 const App = () => {
-  return (
-    <ModalProvider>
-      <Router>
-        <ScrollManager>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/insights" element={<Insights />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </ScrollManager>
-      </Router>
 
-      {/* Render once globally */}
-      <ContactModalWrapper />
-    </ModalProvider>
+  return (
+    <>
+      <div id="main-loader">
+        <div id="fs-loader">
+          <div id="loader-top-heading">
+            <h5 className="reveal">You Don’t Choose Eden for the Logo — </h5>
+            <h5 className="reveal">&copy; You Choose It for the People</h5>
+          </div>
+          <h1 className="reveal">
+            <span>We</span> <span>Are</span> <span>Eden</span>
+          </h1>
+        </div>
+
+        <div id="bg-layer"></div>
+      </div>
+      <ModalProvider>
+        <Router forceRefresh={true}>
+          {/* 👇 Route animation trigger */}
+          <RouteTransition />
+
+          <ScrollManager>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/how-it-works" element={<HowItWorks />} />
+            </Routes>
+          </ScrollManager>
+        </Router>
+
+        {/* Render once globally */}
+        <ContactModalWrapper />
+      </ModalProvider>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Btn from "./btn";
 import { FaTimes } from "react-icons/fa";
@@ -24,10 +24,10 @@ const Header = ({ headerStyle, navItemStyle }) => {
   const menuItems = [
     "Home",
     "About",
-    "Services",
+    "How it Works",
     "Insights",
-    "Packages",
-    "Contact Us",
+    "CSR",
+    // "Contact Us",
   ];
 
   useEffect(() => {
@@ -87,6 +87,8 @@ const Header = ({ headerStyle, navItemStyle }) => {
     }
   };
 
+
+  const navigate = useNavigate();
   return (
     <div id="header" style={headerStyle}>
       <div className="mobile-logo">
@@ -96,50 +98,56 @@ const Header = ({ headerStyle, navItemStyle }) => {
       {/* Desktop Navigation */}
       <div className="navItems desktop-only">
         {menuItems.map((item, i) => (
+          // <>
+          //   {/* {
+          //     item === "Contact Us" ? <Link
+          //       className={`navItem ${activeItem === item ? "active" : ""}`}
+          //       key={i}
+          //       style={navItemStyle}
+          //       onClick={(e) => {
+          //         openContactModal();
+          //         closeMenu();
+          //       }}
+          //     >
+          //       {item}
+          //     </Link> : */}
 
-          <>
-            {
-              item === "Contact Us" ? <Link
-                className={`navItem ${activeItem === item ? "active" : ""}`}
-                key={i}
-                style={navItemStyle}
-                onClick={(e) => {
-                  openContactModal();
-                  closeMenu();
-                }}
-              >
-                {item}
-              </Link> : <Link
-                className={`navItem ${activeItem === item ? "active" : ""}`}
-                key={i}
-                to={
-                  item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`
-                }
-                style={navItemStyle}
-                onClick={(e) => {
-                  if (item === "Contact Us") {
-                    openContactModal();
-                    closeMenu();
-                  } else {
-                    handleMenuClick(item);
-                  }
-                }}
-              >
-                {item}
-              </Link>
+
+
+          //   {/* } */}
+          // </>
+
+          <Link
+            className={`navItem ${activeItem === item ? "active" : ""}`}
+            key={i}
+            to={
+              item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`
             }
-          </>
+            style={navItemStyle}
+            onClick={(e) => {
+              if (item === "Home") {
+                navigate("/")
+                // openContactModal();
+                // closeMenu();
+                window.location.reload()
+              } else {
+                handleMenuClick(item);
+              }
+            }}
+          >
+            {item}
+          </Link>
 
         ))}
       </div>
 
       <div className="navBtn desktop-only">
-        <Btn padding="0 3rem">Login</Btn>
+        <Btn padding="0 3rem" onClick={openContactModal}>Contact Us</Btn>
       </div>
 
       {/* Mobile Menu Icon */}
       <div ref={menuIconRef} className="mobile-menu-icon" onClick={openMenu}>
-        <FaBarsStaggered style={{fontSize: "1.2rem" }} />
+        <FaBarsStaggered style={{ fontSize: "1.2rem" }} />
       </div>
 
       {/* Mobile Menu */}
@@ -163,7 +171,7 @@ const Header = ({ headerStyle, navItemStyle }) => {
             {item}
           </Link>
         ))}
-        <Btn padding="0 2rem">Login</Btn>
+        <Btn onClick={openContactModal} padding="0 2rem">Contact Us</Btn>
       </div>
     </div>
   );
