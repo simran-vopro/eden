@@ -17,51 +17,50 @@ import { useGSAP } from "@gsap/react";
 const posts = [
   {
     image: images.post1,
-    title: "CLIMATE CRISIS AND RISING COASTLINES",
+    title: "Rising Energy Costs Are Disrupting UK Business",
     description:
-      "Rising sea levels are threatening coastal communities across the globe, displacing thousands and endangering critical infrastructure. In early 2025, parts of Miami and Jakarta reported record-breaking floods, sparking renewed debate on climate adaptation and resilience strategies.",
+      "British companies are now paying some of the highest industrial electricity prices in the world — 46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
     link: "#",
   },
   {
     image: images.post2,
-    title: "CONFLUENCE OF FIRE AND PEOPLE",
+    title: "AI’s Growing Energy Demand: Why It Matters",
     description:
-      "Governments worldwide are racing to draft AI regulations. In 2025, the EU passed sweeping laws requiring transparency in algorithmic decision-making, as concerns grow over job displacement and misinformation driven by generative models.",
+      "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
     link: "#",
   },
   {
     image: images.post3,
-    title: "SPACE TOURISM TAKES OFF",
+    title: "The Grid Is Changing — And So Must Your Strategy",
     description:
-      "Private space travel entered a new era as three commercial flights carried civilians to low Earth orbit in Q1 2025. While hailed as a milestone, critics question its environmental cost and exclusivity.",
+      "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
     link: "#",
   },
   {
-    image: images.post1,
-    title: "CONFLUENCE OF FIRE AND PEOPLE",
-    description:
-      "On 7 January 2025, wildfires began in the Los Angeles (LA) area, two of which became the second and third most destructive in California history. As of 28 January 2025, the Eaton and Palisades Fires were nearly fully contained.",
+    image: images.post4,
+    title: "Decarbonization and Net-Zero Commitments",
+    description: "With net-zero legally binding and interim goals rising, Eden supports businesses with tailored energy strategies, infrastructure planning, and compliance to meet evolving targets without sacrificing performance.",
     link: "#",
   },
   {
-    image: images.post2,
-    title: "URBAN GREENING INITIATIVES EXPAND",
+    image: images.post5,
+    title: "Advanced Metering Empowers Energy Efficiency",
     description:
-      "Cities like Singapore, Paris, and Toronto are doubling down on urban greening, turning rooftops into gardens and highways into green corridors. Experts say these efforts are key to heat resilience and air quality improvement.",
+      "With 66% of UK meters now smart, Eden helps businesses maximise value from advanced metering by integrating usage data into broader procurement and risk strategies.",
     link: "#",
   },
   {
-    image: images.post3,
-    title: "THE RISE OF MICRO-MOBILITY",
+    image: images.post6,
+    title: "Cybersecurity and Energy Resilience",
     description:
-      "Electric scooters, bikes, and compact EVs are reshaping urban transit. In 2025, micro-mobility usage surged 40% in major cities, reducing congestion while prompting new infrastructure policies.",
+      "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
     link: "#",
   },
   {
-    image: images.post1,
-    title: "WATER SCARCITY HITS CRISIS LEVELS",
+    image: images.post7,
+    title: "Navigating Energy Compliance and Reporting",
     description:
-      "Prolonged droughts across southern Africa and parts of India have intensified water scarcity concerns. Relief efforts are underway, but experts warn that sustainable water management must be prioritized globally.",
+      "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
     link: "#",
   },
 ];

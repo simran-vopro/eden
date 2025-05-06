@@ -293,6 +293,9 @@ const LandingPage = () => {
           </p>
           <div className="box-btn">
             <Btn
+              rightIconChildren={boxBgColors[index % boxBgColors.length] === "#fafafa" ? <img src={images.icon_top} className="icon-top" alt="icon" /> :
+                <img src={images.icon_top_white} className="icon-top" alt="icon" />
+              }
               iconbackground={
                 boxBgColors[index % boxBgColors.length] === "#8DC74B"
                   ? "#8DC74B"
@@ -610,7 +613,7 @@ const LandingPage = () => {
         </h1>
 
         <div className="solution-text">
-          <Btn rightIcon padding="0 2rem">
+          <Btn onClick={openContactModal} rightIcon padding="0 2rem">
             Talk to An expert
           </Btn>
           <h1 className="edenText-title">solutions for</h1>

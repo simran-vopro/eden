@@ -19,6 +19,7 @@ import favicon from "../../assets/landing/favicon.png";
 
 // icons
 import icon_top from "../../assets/landing/icons/iconTop.png";
+import icon_top_white from "../../assets/landing/icons/iconTop2.png";
 import icon_search from "../../assets/landing/icons/outlineSearch.png";
 import view from "../../assets/landing/icons/view.png";
 import viewBottom from "../../assets/landing/icons/viewBottom.png";
@@ -43,11 +44,13 @@ import feature4 from "../../assets/landing/features/4.jpg";
 import feature5 from "../../assets/landing/features/5.jpg";
 
 //insights
-import post1 from "../../assets/insights/2.png";
-import post2 from "../../assets/insights/4.png";
-import post3 from "../../assets/insights/2.png";
-import post4 from "../../assets/insights/4.png";
-import post5 from "../../assets/insights/2.png";
+import post1 from "../../assets/insights/11.png";
+import post2 from "../../assets/insights/12.png";
+import post3 from "../../assets/insights/13.png";
+import post4 from "../../assets/insights/14.png";
+import post5 from "../../assets/insights/15.png";
+import post6 from "../../assets/insights/16.png";
+import post7 from "../../assets/insights/17.png";
 import tree_insight from "../../assets/insights/tree.png";
 import profile from "../../assets/insights/profile.webp";
 import profile2 from "../../assets/insights/profile2.jpg";
@@ -84,6 +87,7 @@ const images = {
   heroBackground,
   infinity_logo_transparent,
   icon_top,
+  icon_top_white,
   icon_search,
   flowers,
   leaf,
@@ -121,6 +125,8 @@ const images = {
   post3,
   post4,
   post5,
+  post6,
+  post7,
   tree_insight,
   profile,
   blog_single,

@@ -580,7 +580,12 @@
   }
 
   .box-content .box-btn .webBtn {
-    height: 6vh;
+    height: 5vh;
+    width: 46% !important;
+  }
+
+  .title-row .logo {
+    width: 127px !important;
   }
 
   #contact .edenText-title {
@@ -757,7 +762,12 @@
   }
 
   .box-content .box-btn .webBtn {
-    height: 6vh;
+    height: 5vh;
+    width: 46% !important;
+  }
+
+  .title-row .logo {
+    width: 127px !important;
   }
 
   #contact .edenText-title {
@@ -908,7 +918,7 @@
   }
 
   .box-content .box-btn .webBtn {
-    width: 50% !important;
+    width: 40% !important;
   }
 
   #contact .edenText-title {

@@ -26,7 +26,7 @@ const Header = ({ headerStyle, navItemStyle }) => {
     "About",
     "How it Works",
     "Insights",
-    "CSR",
+    // "CSR",
     // "Contact Us",
   ];
 

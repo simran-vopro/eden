@@ -6,8 +6,11 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import images from "../theme/imagesPath";
+import { Link } from "react-router-dom";
+import { useModal } from "../pages/ModalContext";
 
 const Footer = () => {
+  const { openContactModal } = useModal();
   return (
     <footer className="footer-container">
       <div className="custom-footer">
@@ -27,25 +30,25 @@ const Footer = () => {
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="footer-links">
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <a href="#">Services</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#">Eden Partnership</a>
+            </li> */}
+            <li>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Client</a>
+              <Link to="/how-it-works">How it Works</Link>
             </li>
             <li>
-              <a href="#">Packages</a>
+              <Link to="/insights">Insights</Link>
             </li>
             <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
+              <Link onClick={openContactModal}>Contact Us</Link>
             </li>
           </ul>
         </div>

@@ -4,6 +4,7 @@ import Btn from "../other/btn";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +49,8 @@ const Brands = ({ btn, style }) => {
     // ); // start overlapping with previous
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <section id="brands" style={style}>
       <h1 className="title">
@@ -75,7 +78,9 @@ const Brands = ({ btn, style }) => {
           ))}
         </div>
       </div>
-      {btn && <Btn rightIcon>See how eden Works</Btn>}
+      {btn && <Btn onClick={() => {
+        navigate("/how-it-works")
+      }} rightIcon>See how eden Works</Btn>}
     </section>
   );
 };

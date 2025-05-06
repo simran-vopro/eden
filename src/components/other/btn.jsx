@@ -9,7 +9,8 @@ const Btn = ({
   className,
   background,
   color,
-  iconbackground
+  iconbackground,
+  rightIconChildren
 }) => {
   return (
     <button
@@ -29,7 +30,10 @@ const Btn = ({
           className="btn-icon"
           style={{ backgroundColor: iconbackground || "#fff" }}
         >
-          <img src={images.icon_top} alt="icon" />
+          {
+            rightIconChildren ? rightIconChildren : <img src={images.icon_top} alt="icon" />
+          }
+
         </span>
       )}
     </button>

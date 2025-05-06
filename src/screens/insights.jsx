@@ -17,6 +17,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import TestimonialsSection from "./testimonialsSection";
+import { useModal } from "../components/pages/ModalContext";
 
 const blogPosts = [
   {
@@ -80,7 +81,7 @@ const blogPosts = [
     sub_title: "Safeguarding infrastructure in an age of rising threats.",
     content:
       "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
-    image: images.post1,
+    image: images.post6,
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 14, 2025",
@@ -91,113 +92,149 @@ const blogPosts = [
     sub_title: "Adapting to regulatory shifts with confidence.",
     content:
       "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
-    image: images.post2,
+    image: images.post7,
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 12, 2025",
   },
 ];
 
-
 const SideblogPosts = [
   {
     id: 1,
-    title: "Global Hydrogen Demand and Challenges",
+    title: "Rising Energy Costs - “When Energy Becomes a Boardroom Issue: How to Protect Growth in a Volatile Market” ",
     content:
       "Meeting global hydrogen demand requires innovative zero-carbon processes and sustainable market strategies.",
     image: images.post1,
   },
   {
     id: 2,
-    title: "Future of Renewable Energy Markets",
+    title: "Electricity Demand from AI & Data Centres - “AI’s Hidden Cost: Why the Smart Revolution Needs Smarter Energy Strategy”",
     content:
       "Exploring the expanding opportunities and challenges in renewable energy industries worldwide.",
     image: images.post2,
   },
   {
     id: 3,
-    title: "Building Smart Cities for Tomorrow",
+    title: "Grid Modernisation & Infrastructure Investment - “The Great Grid Shift: What Businesses Must Know About the UK's Energy Overhaul” ",
     content:
       "Technology-driven smart cities are reshaping urban landscapes with AI and IoT solutions.",
     image: images.post3,
   },
   {
     id: 4,
-    title: "Advances in Sustainable Construction Methods",
+    title: "Decarbonisation & Net-Zero Commitments  - “The Race to Net Zero: Turning Policy into Practical Progress for Your Business”",
     content:
       "New eco-friendly construction techniques are helping reduce the carbon footprint of cities.",
     image: images.post4,
   },
   {
     id: 5,
-    title: "Hydrogen Fuel: Powering the Future",
+    title: "Advanced Metering & Energy Management - “From Data to Decisions: How Smart Metering Transforms Business Energy Use” ",
     content:
       "Hydrogen energy is becoming a leading solution in the pursuit of zero-emission transportation.",
     image: images.post5,
   },
   {
     id: 6,
-    title: "AI Innovations Shaping Modern Industry",
+    title: "Cybersecurity & Resilience - “More Than a Power Cut: Building Cyber-Resilient Energy Systems”",
     content:
       "Artificial intelligence continues to transform industries from healthcare to automotive sectors rapidly.",
     image: images.post3,
   },
   {
     id: 7,
-    title: "Climate Change and Business Strategies",
+    title: "Regulatory Compliance & Reporting - “Keeping Up with Compliance: How to Stay Ahead in an Evolving Regulatory Landscape” ",
     content:
       "Businesses worldwide are adapting their strategies to address urgent climate change realities.",
     image: images.post4,
   },
-  {
-    id: 8,
-    title: "Unlocking Efficiency Through Automation",
-    content:
-      "Automation technologies are unlocking new efficiencies and revolutionizing traditional manufacturing workflows.",
-    image: images.post5,
-  },
-  {
-    id: 9,
-    title: "Next Generation Battery Storage Systems",
-    content:
-      "Innovations in battery technology are crucial for the transition to renewable energy systems.",
-    image: images.post3,
-  },
-  {
-    id: 10,
-    title: "Green Hydrogen: A Clean Energy Solution",
-    content:
-      "Green hydrogen offers a promising clean energy solution for multiple industries and sectors globally.",
-    image: images.post5,
-  },
+
 ];
 
 const LatestblogPosts = [
   {
     id: 1,
-    title: "Harnessing Solar Innovations for a Greener Future",
+    title: "Rising Energy Costs Are Disrupting UK Business — Eden Helps You Take Back Control ",
+    sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
-      "Discover how the latest advancements in solar technology are driving sustainable energy solutions worldwide.",
+      "British companies are now paying some of the highest industrial electricity prices in the world — 46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
     image: images.post1,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 25, 2025",
   },
   {
     id: 2,
-    title: "Wind Energy Expansion Across Coastal Regions",
+    title: "AI’s Growing Energy Demand: Why It Matters",
+    sub_title: "How Eden helps businesses stay ahead of accelerating power needs.",
     content:
-      "New wind farms are rapidly developing across coastlines, providing clean energy to millions of homes.",
+      "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
     image: images.post2,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 22, 2025",
   },
   {
     id: 3,
-    title: "Hydrogen Fuel: The Next Big Step in Clean Energy",
+    title: "The Grid Is Changing — And So Must Your Strategy",
+    sub_title: "Why the Great Grid Upgrade means new rules for business energy planning.",
     content:
-      "Hydrogen is emerging as a key player in the clean energy transition, promising lower emissions for transportation.",
+      "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
     image: images.post3,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 20, 2025",
+  },
+  {
+    id: 4,
+    title: "Decarbonization and Net-Zero Commitments",
+    sub_title: "Navigating the path to a sustainable future with Eden.",
+    content:
+      "With net-zero legally binding and interim goals rising, Eden supports businesses with tailored energy strategies, infrastructure planning, and compliance to meet evolving targets without sacrificing performance.",
+    image: images.post4,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 18, 2025",
+  },
+  {
+    id: 5,
+    title: "Advanced Metering Empowers Energy Efficiency",
+    sub_title: "Real-time data insights are reshaping energy decisions.",
+    content:
+      "With 66% of UK meters now smart, Eden helps businesses maximise value from advanced metering by integrating usage data into broader procurement and risk strategies.",
+    image: images.post5,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 16, 2025",
+  },
+  {
+    id: 6,
+    title: "Cybersecurity and Energy Resilience",
+    sub_title: "Safeguarding infrastructure in an age of rising threats.",
+    content:
+      "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
+    image: images.post6,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 14, 2025",
+  },
+  {
+    id: 7,
+    title: "Navigating Energy Compliance and Reporting",
+    sub_title: "Adapting to regulatory shifts with confidence.",
+    content:
+      "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
+    image: images.post7,
+    author: "Eden Insights",
+    authorImage: images.profile,
+    date: "April 12, 2025",
   },
 
 ];
 
 const Insights = () => {
+  const { openContactModal } = useModal();
   return (
     <div id="insights">
       <div id="insights-header">
@@ -240,7 +277,7 @@ const Insights = () => {
               </p>
             </div>
             <div className="me-4 mt-3 btn-hero">
-              <Btn rightIcon>Talk to an Expert</Btn>
+              <Btn onClick={openContactModal} rightIcon>Talk to an Expert</Btn>
             </div>
           </div>
         </div>
@@ -505,7 +542,7 @@ const Insights = () => {
 
             {/* Bottom Button */}
             <div className="mt-4 d-flex flex-wrap align-items-center gap-2">
-              <Btn rightIcon>Talk to an Expert</Btn>
+              <Btn rightIcon onClick={openContactModal}>Talk to an Expert</Btn>
             </div>
           </div>
         </div>
