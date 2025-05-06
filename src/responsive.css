@@ -681,6 +681,10 @@
     left: 2vw;
   }
 
+  #hero {
+    height: 100vh;
+  }
+
   #header {
     width: 68vw;
     height: 8vh;
