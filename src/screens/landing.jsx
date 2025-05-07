@@ -147,9 +147,13 @@ const LandingPage = () => {
     { dependencies: [infinityAboutLogoRef, aboutRef] }
   );
 
+
+  let screenWidth = window.innerWidth;
   // sevices section animation
   useGSAP(() => {
-    let screenWidth = window.innerWidth;
+
+
+    console.log("screenWidth ==> ", screenWidth )
     let scrollStartValue = "top";
 
     const ctx = gsap.context(() => {
@@ -215,25 +219,25 @@ const LandingPage = () => {
 
       } else {
         // Mobile & Tablet Animation (different simple scroll animation)
-        // panels.forEach((panel) => {
-        //   gsap.from(panel, {
-        //     opacity: 0,
-        //     y: 50,
-        //     duration: 0.8,
-        //     ease: "power3.out",
-        //     scrollTrigger: {
-        //       trigger: panel,
-        //       start: "top 85%",
-        //       end: "bottom 60%",
-        //       toggleActions: "play none none reverse",
-        //     },
-        //   });
-        // });
+        panels.forEach((panel) => {
+          gsap.from(panel, {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: panel,
+              start: "top 85%",
+              end: "bottom 60%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        });
       }
     }, slider);
 
     return () => ctx.revert();
-  }, []);
+  }, [screenWidth]);
 
 
   const ExpandableServicesBox = ({ index, title, content }) => {

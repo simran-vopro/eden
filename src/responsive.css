@@ -135,6 +135,10 @@
     margin-top: 15vh;
   }
 
+  .child-brand-title span {
+    padding-left: 10px;
+  }
+
   .top-title {
     font-size: 1.5rem;
     margin-top: 0;
@@ -209,7 +213,6 @@
     width: 10px;
     height: 10px;
     left: 0.3rem;
-    top: -1.3rem;
   }
 
   .d-letter::before {
@@ -284,14 +287,18 @@
 
   .brand-logo {
     margin: 0;
-    height: 6rem;
+    height: 45px;
   }
 
   .brands-slide {
-    gap: 0rem;
-    margin: 6vw 0;
+    gap: 2rem;
+    margin: 37px 0;
   }
 
+
+  #brands .title{
+    font-size: 15px !important; 
+  }
   #services {
     padding: 0 1rem;
   }
@@ -302,6 +309,7 @@
 
   #services-header {
     position: relative;
+    padding-top: 7rem;
   }
 
   #services .title {
@@ -315,7 +323,7 @@
   .side-leaves {
     height: 200px;
     left: -5vw;
-    top: -110px;
+    top: -45px;
   }
 
   .footer-address,
@@ -361,7 +369,7 @@
 
   .box-content .box-btn .webBtn {
     height: 40px;
-    width: 45%;
+    width: 45% !important;
   }
 
   #contact .edenText-title {
