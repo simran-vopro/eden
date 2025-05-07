@@ -153,7 +153,7 @@ const LandingPage = () => {
   useGSAP(() => {
 
 
-    console.log("screenWidth ==> ", screenWidth )
+    console.log("screenWidth ==> ", screenWidth)
     let scrollStartValue = "top";
 
     const ctx = gsap.context(() => {
@@ -488,14 +488,11 @@ const LandingPage = () => {
               </div>
               <div className="slide-up">
                 <p className="long-content slide-up-text">
-                  Mark’s expertise has shaped Eden Utilities from the ground up,
-                  embedding a consultative and sustainability-first ethos into
-                  the company’s foundation.
+          
+                  Mark’s expertise has shaped Eden Utilities from the ground up, embedding a consultative and sustainability-first ethos into the company’s foundation. Deeply aware of the changing energy landscape, he understands the growing need for trusted, future-focused advisory.
                   <br></br>
                   <br></br>
-                  Deeply aware of the changing energy
-                  landscape, he understands the growing need for trusted,
-                  future-focused advisory.
+                  This mindset is central not just to Eden’s services, but to every team member he brings on board — creating a company united by shared values and a long-term vision for smarter, greener utilities.
                 </p>
                 <p className="long-content text-left text-blue pt-4">
                   Read More..
@@ -580,7 +577,7 @@ const LandingPage = () => {
           </div>
           <div className="slide-up">
             <div className="title slide-up-text">
-              Optimize Costs & Efficiency
+              Optimise Costs & Efficiency
               <br />
               with Our Expert Services
             </div>

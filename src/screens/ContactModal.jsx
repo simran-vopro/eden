@@ -20,6 +20,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   ];
 
   const [selectedOptions, setSelectedOptions] = useState([]);
+  
 
   const options = [
     "Billing & Payments",
@@ -74,7 +75,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               <h1 className="top-title">
                 SPEAK WITH AN <span>EDEN EXPERT </span>!
               </h1>
-              <p className="long-content">
+              <p className="long-content-medium">
                 We'll listen to your challenges and goals, show you the content
                 and features you might need, and see if Eden is the right
                 solution for your organization!
