@@ -18,6 +18,9 @@ import { ModalProvider, useModal } from "./components/pages/ModalContext";
 import ContactModal from "./screens/ContactModal";
 import About from "./screens/about";
 import HowItWorks from "./screens/howItWorks";
+import InsightsDetails from "./screens/insights-details";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 const ScrollManager = ({ children }) => {
   const lenisRef = useRef(null);
@@ -135,10 +138,10 @@ const App = () => {
     <>
       <div id="main-loader">
         <div id="fs-loader">
-          <div id="loader-top-heading">
+          {/* <div id="loader-top-heading">
             <h5 className="reveal">You Don’t Choose Eden for the Logo — </h5>
             <h5 className="reveal">&copy; You Choose It for the People</h5>
-          </div>
+          </div> */}
           <h1 className="reveal">
             <span>We</span> <span>Are</span> <span>Eden</span>
           </h1>
@@ -157,6 +160,7 @@ const App = () => {
               <Route path="/insights" element={<Insights />} />
               <Route path="/about" element={<About />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
+              <Route path="/insight-details" element={<InsightsDetails />} />
             </Routes>
           </ScrollManager>
         </Router>

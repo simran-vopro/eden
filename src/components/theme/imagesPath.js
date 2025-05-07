@@ -49,6 +49,15 @@ import post2 from "../../assets/insights/12.png";
 import post3 from "../../assets/insights/13.png";
 import post4 from "../../assets/insights/14.png";
 import post5 from "../../assets/insights/15.png";
+
+
+import h1 from "../../assets/insights/h1.jpg";
+import h2 from "../../assets/insights/h2.jpg";
+import h3 from "../../assets/insights/h3.png";
+import h4 from "../../assets/insights/h4.jpg";
+
+
+
 import post6 from "../../assets/insights/16.png";
 import post7 from "../../assets/insights/17.png";
 import tree_insight from "../../assets/insights/tree.png";
@@ -127,6 +136,10 @@ const images = {
   post5,
   post6,
   post7,
+  h1,
+  h2,
+  h3,
+  h4,
   tree_insight,
   profile,
   blog_single,

@@ -7,20 +7,6 @@ import images from '../components/theme/imagesPath';
 import Header from '../components/other/header';
 import Footer from "../components/other/footer";
 
-const steps = [
-    {
-        title: "1. Consultation",
-        desc: "We begin with a personalized energy consultation to understand your specific needs and goals.",
-    },
-    {
-        title: "2. Strategy & Setup",
-        desc: "Our experts craft a tailored strategy and set up utility solutions aligned with sustainability and cost-efficiency.",
-    },
-    {
-        title: "3. Ongoing Support",
-        desc: "We provide continuous monitoring, expert guidance, and updates as your energy needs evolve.",
-    },
-];
 
 const HowItWorks = () => {
     const stepRefs = useRef([]);

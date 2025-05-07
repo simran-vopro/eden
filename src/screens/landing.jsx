@@ -33,7 +33,7 @@ const LandingPage = () => {
     {
       title: "Eden Infinity",
       content:
-        "The world is changing — fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes — Eden Infinity helps take it further.",
+        "The world is changing fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes. Eden Infinity helps take it further.",
     },
     {
       title: "Eden Strategy",
@@ -43,23 +43,23 @@ const LandingPage = () => {
     {
       title: "Eden Auditing",
       content:
-        "Utility bills are often affected by complex tariffs and ever-changing regulations — and errors can easily go unnoticed. At Eden, we carry out independent audits to uncover undue charges and recover any credit owed.",
+        "Utility bills are often affected by complex tariffs and ever-changing regulations and errors can easily go unnoticed. At Eden, we carry out independent audits to uncover undue charges and recover any credit owed.",
     },
     {
       title: "Eden Procedurement",
       content:
-        "Energy suppliers across the UK offer a range of purchasing options — each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.",
+        "Energy suppliers across the UK offer a range of purchasing options each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.",
     },
     {
       title: "Eden Analytics",
       content:
-        "Clear, accurate reporting is key to understanding and managing your energy costs effectively. At Eden, we tailor reporting to suit your needs — from high-level insights to detailed data.",
+        "Clear, accurate reporting is key to understanding and managing your energy costs effectively. At Eden, we tailor reporting to suit your needs from high-level insights to detailed data.",
     },
-    // {
-    //   title: "Eden Optimisation",
-    //   content:
-    //     "Our team helps ensure you're not overpaying for your energy. We optimise your current tariffs and charges while factoring in future consumption, protecting you from exceeding thresholds as your business grows.",
-    // },
+    {
+      title: "Eden Water",
+      content:
+        "Water is a growing priority for many businesses and so is managing it efficiently. At Eden, we handle the tender process for water and waste water services, ensuring supplier bids are thoroughly analysed",
+    },
   ];
 
   const slider = useRef();
@@ -76,7 +76,7 @@ const LandingPage = () => {
           opacity: 1,
           duration: 1,
           ease: "power3.out",
-          delay: i * 0.2,
+          // delay: i * 0.2,
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
@@ -167,13 +167,10 @@ const LandingPage = () => {
             pin: true,
             endTrigger: "#contact",
             onLeave: () => {
-              document
-                .getElementById("services-header")
-                ?.classList.add("scroll-ended");
+              document.getElementById("services-header")?.classList.add("scroll-ended");
             },
             onEnterBack: () => {
-              document.getElementById("services-header")
-                ?.classList.remove("scroll-ended");
+              document.getElementById("services-header")?.classList.remove("scroll-ended");
             },
           },
         });
@@ -184,7 +181,7 @@ const LandingPage = () => {
 
           // Animate panel shrink
           tl.to(panel, {
-            flexBasis: "19%",
+            flexBasis: "15%",
             backgroundImage: "none",
             duration: 1,
             ease: "power1.inOut",
@@ -194,12 +191,22 @@ const LandingPage = () => {
           tl.to(content, {
             ease: "power1.inOut",
             duration: 1,
+            delay: 1,
             opacity: 0
           }, 0); // Start at same time
 
           tl.to(".video-icon", {
             ease: "power1.inOut",
             duration: 1,
+            delay: 0.1,
+            opacity: 0
+          }, 0);
+
+
+          tl.to(".overlay-img", {
+            ease: "power1.inOut",
+            duration: 1,
+            delay: 0.1,
             opacity: 0
           }, 0);
 
@@ -243,7 +250,6 @@ const LandingPage = () => {
         className="expandable-box relative overflow-hidden"
         style={{
           backgroundColor: boxBgColors[index % boxBgColors.length],
-          backgroundImage: isFirstBox ? `url(${images.post1})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
           color:
@@ -276,8 +282,6 @@ const LandingPage = () => {
             {index < 10 ? `0${index + 1}` : index + 1}
           </div>
         </div>
-
-
 
         <div ref={contentRef} className="box-content">
           <p
@@ -321,6 +325,11 @@ const LandingPage = () => {
             </Btn>
           </div>
         </div>
+
+
+        {
+          isFirstBox && <img src={images.post1} className="overlay-img"></img>
+        }
 
 
         {
@@ -439,8 +448,8 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="slide-up slide-up-text-hero">
-            <Btn className="webBtn" onClick={openContactModal} rightIcon>
+          <div className="slide-up">
+            <Btn className="webBtn slide-up-text-hero" onClick={openContactModal} rightIcon>
               Talk to an Expert
             </Btn>
           </div>
@@ -477,12 +486,15 @@ const LandingPage = () => {
                 <p className="long-content slide-up-text">
                   Mark’s expertise has shaped Eden Utilities from the ground up,
                   embedding a consultative and sustainability-first ethos into
-                  the company’s foundation. Deeply aware of the changing energy
+                  the company’s foundation.
+                  <br></br>
+                  <br></br>
+                  Deeply aware of the changing energy
                   landscape, he understands the growing need for trusted,
-                  future-focused advisory. This mindset is central not just to
-                  Eden’s services, but to every team member he brings on board —
-                  creating a company united by shared values and a long-term
-                  vision for smarter, greener utilities
+                  future-focused advisory.
+                </p>
+                <p className="long-content text-left text-blue pt-4">
+                  Read More..
                 </p>
               </div>
             </div>

@@ -832,7 +832,7 @@
 }
 
 /* Extra large desktops (1441px to 1920px) */
-@media (min-width: 1441px) and (max-width: 1920px) {
+/* @media (min-width: 1441px) and (max-width: 1920px) {
   .line-wrapper {
     height: 80vh;
     right: 25%;
@@ -847,24 +847,6 @@
     bottom: 1.6vw;
   }
 
-  /* 
-  #header {
-    width: 68vw;
-    height: 9vh;
-    margin-right: 0;
- 
-  } */
-
-  /* .webBtn {
-    font-size: 1vw;
-    letter-spacing: 1px;
-    height: 6vh;
-    padding: 0px 1vw;
-  } */
-
-  /* #header .navItems {
-    gap: 1vw;
-  } */
 
   .a-letter::before {
     top: 2.5vw;
@@ -889,10 +871,6 @@
   .top-title {
     font-size: 1.74vw;
     margin: 0;
-  }
-
-  .logo {
-    width: 40vw;
   }
 
   .search-icon {
@@ -943,7 +921,7 @@
     flex: 1 1 17vw;
     min-width: 17vw;
   }
-}
+} */
 
 /* Ultra wide screens (1921px and up) */
 @media (min-width: 1921px) {
