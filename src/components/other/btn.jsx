@@ -10,11 +10,15 @@ const Btn = ({
   background,
   color,
   iconbackground,
-  rightIconChildren
+  rightIconChildren,
+  onMouseEnter,
+  onMouseLeave
 }) => {
   return (
     <button
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={`${className} webBtn`}
       style={{
         color: color || "#fff",

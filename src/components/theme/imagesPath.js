@@ -90,7 +90,13 @@ import g_meet from "../../assets/landing/icons/google-meet-logo.png";
 import teams from "../../assets/landing/icons/Microsoft_Office.png";
 import call from "../../assets/landing/icons/call.png";
 
+
+import about_video from "../../assets/about/about.mp4";
+import videoBg from "../../assets/about/videoBg.png";
+
 const images = {
+  videoBg,
+  about_video,
   favicon,
   logo,
   heroBackground,

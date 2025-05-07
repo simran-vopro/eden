@@ -166,13 +166,13 @@ const About = () => {
           <div className="col-12 col-md-6 p-0 p-md-5">
             <div className="content-width px-4 px-md-5">
               <div className="slide-up">
-                <div className="title slide-up-text" style={{ textAlign: 'justify' }}>
+                <div className="title slide-up-text" style={{ textAlign: 'left' }}>
                   You Don’t Choose Eden for the Logo, You Choose It for the
                   People
                 </div>
               </div>
               <div className="slide-up">
-                <div className="long-content slide-up-text" style={{ textAlign: 'justify' }}>
+                <div className="long-content slide-up-text" style={{ textAlign: 'left' }}>
                   Mark’s expertise has shaped Eden Utilities from the ground up, embedding a consultative and sustainability-first ethos into the company’s foundation.
                   <br></br>
                   <br></br>
@@ -301,13 +301,13 @@ const About = () => {
           </div>
 
           <p className="long-content text-start mb-4">
-            At Eden Utilities, partnership means more than a transaction. it's a shared commitment to long-term value. 
-            
+            At Eden Utilities, partnership means more than a transaction. it's a shared commitment to long-term value.
+
             <br></br>
             <br></br>
-            
+
             From the ground up, our approach has been shaped by deep expertise, sustainable thinking, and a consultative mindset.
-           
+
           </p>
           {/* <p className="long-content text-blue pb-4">Read More..</p> */}
           <Btn rightIcon onClick={openContactModal}>Speak to an expert</Btn>

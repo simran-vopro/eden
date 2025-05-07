@@ -52,6 +52,32 @@ body {
   box-sizing: border-box;
 }
 
+
+
+.portrait-float-box-service {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(var(--primary), var(--primary2));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 1vw;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  padding: 1vw;
+  color: white;
+}
+
+
+.portrait-content-service .long-content {
+  font-size: 16px !important;
+  margin-bottom: 0 !important;
+  color: #fff !important;
+}
+
+
 .icon-top {
   height: 10px;
   width: 10px;
@@ -928,7 +954,7 @@ a {
   margin-top: 10rem;
   overflow-x: hidden;
   width: 100%;
-
+  /* position: relative; */
 }
 
 .expandable-box {
