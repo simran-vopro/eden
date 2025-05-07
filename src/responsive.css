@@ -75,7 +75,7 @@
   }
 
   .mobile-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: -2rem;
@@ -90,6 +90,7 @@
 
   .mobile-menu.open {
     right: -1rem;
+    display: flex !important;
   }
 
   .close-icon {
