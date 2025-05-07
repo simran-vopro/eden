@@ -346,7 +346,7 @@ const Insights = () => {
                       <h3 className={"box-title"}>{item.title}</h3>
                       <p className="long-content">{item.content}</p>
                       {/* Small Read More link */}
-                      <Link to="/insight-details" className="read-more-link">
+                      <Link to="" className="read-more-link">
                         Read More...
                       </Link>
                     </div>
@@ -368,9 +368,13 @@ const Insights = () => {
               <div key={post.id} className="card mb-4 pb-4 border-bottom">
                 {/* Title and Subtitle */}
                 <div className="card-header bg-transparent border-0 p-0 mb-3">
-                  <h2 style={{ cursor: "pointer" }} onClick={() => {
-                    navigate("/insight-details")
-                  }} className="text-uppercase fw-bold text-black mb-1">
+                  <h2 style={{ cursor: "pointer" }} 
+                  
+                  // onClick={() => {
+                  //   navigate("/insight-details")
+                  // }} 
+                  
+                  className="text-uppercase fw-bold text-black mb-1">
                     {post.title}
                   </h2>
                   <h6 className="text-muted small mb-2">{post.sub_title}</h6>

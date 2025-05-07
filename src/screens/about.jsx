@@ -193,14 +193,13 @@ const About = () => {
       >
         <div className="row p-0">
           <div className="col-12 col-md-6 p-0 p-md-5 d-flex align-items-end mt-5">
-            <div className="content-width px-4 px-md-5 mt-5">
+            <div className="content-width px-4 px-md-5">
               <div className="slide-up">
                 <div
                   className="title slide-up-text"
                   style={{ textAlign: "left" }}
                 >
-                  You Don’t Choose Eden for the Logo, You Choose It for the
-                  People
+                  Eden is not just a company, It is a team of specialists you can't find anywhere else.
                 </div>
               </div>
               <div className="slide-up">
@@ -448,7 +447,7 @@ const About = () => {
           </div>
           <div>
             <div className="title title2 text-start">
-              BUSINESS WITH <br></br> COSCIENCE
+              BUSINESS WITH <br></br> CONSCIENCE
             </div>
           </div>
         </div>

@@ -98,12 +98,13 @@
 }
 
 #about-page-content .title {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 
 #about-page-content .content-width {
     width: 90%;
+    margin-top: 180px;
 }
 
 #about-page-content .founder {
