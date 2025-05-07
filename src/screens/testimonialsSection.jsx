@@ -11,13 +11,11 @@ export default function TestimonialsSection() {
       <div className="row align-items-center">
         {/* Left Side - Content */}
         <div className="col-md-6 col-lg-4 left-side">
-          <h1 className="fw-bold text-uppercase mb-5">
-            KIND WORDS FROM OUR CLIENTS
+          <h1 className="fw-bold mb-5">
+          What our clients say...
           </h1>
           <p className="text-black">
-            We won't just be executors. We'll be your partners, we promise. If
-            you're not convinced, check out our verified testimonials from
-            around the world about working with us.
+          We’re more than just a service provider. We’re a partner in every step. Don’t just take our word for it; hear directly from the businesses we’ve supported.
           </p>
 
           <img src={images.grass} alt="grass" className="img-fluid" />

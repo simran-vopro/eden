@@ -98,7 +98,8 @@
 }
 
 #about-page-content .title {
-    font-size: 35px;
+    font-size: 34px;
+    text-transform: none;
 }
 
 
@@ -139,7 +140,7 @@
 
 #utility-experts .title {
     text-transform: capitalize;
-    font-size: 2.5vw;
+    font-size: 2vw;
     line-height: 1.3;
 }
 

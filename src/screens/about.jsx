@@ -199,7 +199,8 @@ const About = () => {
                   className="title slide-up-text"
                   style={{ textAlign: "left" }}
                 >
-                  Eden is not just a company, It is a team of specialists you can't find anywhere else.
+                  Eden isn’t just a company, it’s a team of specialists you
+                  can’t find anywhere else.
                 </div>
               </div>
               <div className="slide-up">
@@ -289,7 +290,7 @@ const About = () => {
         <div id="utility-experts">
           <div className="content-width px-4 px-md-4">
             <div className="title text-start">
-              It’s Not Just About Service, It’s About the People Behind It.
+            Exceptional Service, Delivered by Exceptional People
             </div>
             <p className="long-content">
               Eden is built on deep expertise, precision, and care from seasoned

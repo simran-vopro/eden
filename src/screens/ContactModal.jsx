@@ -175,7 +175,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 
                     <p className="long-content text-muted">Great,</p>
                     <p className="long-content text-muted">
-                      <b>Mike,</b>  we’ve got an Eden Expert available at your chosen time.
+                      We’ve got an Eden Expert available at your chosen time.
                       <br></br>       <br></br>
                       Let us know what you’d like to discuss, and we’ll make sure the right specialist with the right experience joins your call.
                       <br></br>       <br></br>
