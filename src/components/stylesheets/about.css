@@ -458,6 +458,7 @@
     font-size: 85px !important;
     margin-top: 7vw;
     color: var(--primary);
+    text-transform: none;
 }
 
 #posts {

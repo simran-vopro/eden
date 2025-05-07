@@ -244,13 +244,14 @@ const About = () => {
                 <div className="supplier-percentage">65%</div>
                 <div className="supplier-label text-muted">Fixed Products</div>
               </div>
-              <div className="supplier-card">
-                <div className="supplier-percentage">65%</div>
-                <div className="supplier-label text-muted">Fixed Products</div>
-              </div>
+             
               <div className="supplier-card mb-0">
-                <div className="supplier-percentage">65%</div>
+                <div className="supplier-percentage">97%</div>
                 <div className="supplier-label text-muted">Retention</div>
+              </div>
+              <div className="supplier-card">
+                <div className="supplier-percentage">182+</div>
+                <div className="supplier-label text-muted">Happy Clients</div>
               </div>
             </div>
 
@@ -404,7 +405,7 @@ const About = () => {
             <p className="long-content text-start mb-5">
               At Eden, responsibility isn’t a statement, it’s a standard.
               <br></br>
-              <br></br> we believe business has a responsibility to do more than
+              <br></br> We believe business has a responsibility to do more than
               deliver results. It should also leave a positive mark on the
               environment and the communities it touches.
             </p>
@@ -448,7 +449,7 @@ const About = () => {
           </div>
           <div>
             <div className="title title2 text-start">
-              BUSINESS WITH <br></br> CONSCIENCE
+            Business with  <br></br>a Conscience
             </div>
           </div>
         </div>

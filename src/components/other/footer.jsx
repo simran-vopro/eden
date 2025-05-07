@@ -17,12 +17,12 @@ const Footer = () => {
         <div className="footer-col">
           <div>
             <img src={images.logo} alt="logo" className="logo mb-2" />
-            <p className="footer-text">
+            {/* <p className="footer-text">
               Do not hesitate to get in touch with us, or investigate the best
               way for us to help with your utilities. We can start supporting
               you immediately: contact us and one of our highly trained staff
               will be in touch shortly.
-            </p>
+            </p> */}
           </div>
         </div>
 
