@@ -139,7 +139,7 @@ const App = () => {
       <div id="main-loader">
         <div id="fs-loader">
           {/* <div id="loader-top-heading">
-            <h5 className="reveal">You Don’t Choose Eden for the Logo — </h5>
+            <h5 className="reveal">You Don’t Choose Eden for the Logo  </h5>
             <h5 className="reveal">&copy; You Choose It for the People</h5>
           </div> */}
           <h1 className="reveal">

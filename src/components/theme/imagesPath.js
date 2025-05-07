@@ -16,6 +16,8 @@ import pattern from "../../assets/landing/pattern.png";
 import contact from "../../assets/landing/1.png";
 import dotted from "../../assets/landing/dotted_line.png";
 import favicon from "../../assets/landing/favicon.png";
+import favicon_big from "../../assets/landing/Logos/logo-icon.png";
+
 
 // icons
 import icon_top from "../../assets/landing/icons/iconTop.png";
@@ -98,6 +100,7 @@ const images = {
   videoBg,
   about_video,
   favicon,
+  favicon_big,
   logo,
   heroBackground,
   infinity_logo_transparent,

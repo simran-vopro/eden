@@ -690,10 +690,6 @@
     left: 2vw;
   }
 
-  #hero {
-    height: 100vh;
-  }
-
   #header {
     width: 68vw;
     height: 8vh;
@@ -720,7 +716,7 @@
 
   #contentSection {
     padding: 0 4vw;
-    margin-bottom: 7rem;
+    margin-bottom: 9rem;
     width: 50vw;
   }
 

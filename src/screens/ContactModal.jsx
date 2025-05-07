@@ -130,7 +130,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       <p className="contact-time-text mb-0 ms-2">30 min</p>
                     </div>
                     <p className="long-content">
-                      Schedule a call with an Eden expert for clear, practical guidance — no jargon, just honest answers tailored to your energy needs.
+                      Schedule a call with an Eden expert for clear, practical guidance, no jargon, just honest answers tailored to your energy needs.
                     </p>
                   </div>
                 </div>

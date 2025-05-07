@@ -36,9 +36,6 @@ const LandingPage = () => {
   const [selectedService, setSelectedService] = useState(null);
 
 
-  const modalRef = useRef();
-  const overlayRef = useRef();
-
 
   const handleLearnMore = (service) => {
     setSelectedService(service);
@@ -57,10 +54,10 @@ const LandingPage = () => {
         "Helping your business turn waste into clean energy cutting emissions, reducing landfill, and showing the world you take sustainability seriously. Go further. Do better.",
       longContent: `
         <p><strong>Turning Waste Into Power. Turning Responsibility Into Action.</strong></p>
-        <p>The world is changing — fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes — Eden Infinity helps take it further.</p>
+        <p>The world is changing fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes, Eden Infinity helps take it further.</p>
         <p>Every business creates waste. Too often, it ends up in landfill. Eden Infinity works with trusted partners to turn that waste into energy, which is then allocated back to your business account.</p>
-        <p>It’s a smarter, traceable way to reduce your impact and support clean energy — without disrupting how you operate.</p>
-        <p>This isn’t just about having a greener footprint. It’s about showing you take sustainability seriously — to your clients, your people, and the world around you.</p>
+        <p>It’s a smarter, traceable way to reduce your impact and support clean energy without disrupting how you operate.</p>
+        <p>This isn’t just about having a greener footprint. It’s about showing you take sustainability seriously to your clients, your people, and the world around you.</p>
         <p>Already making progress? That’s a great start. Eden Infinity is how you go further.</p>
       `
     },
@@ -76,7 +73,7 @@ const LandingPage = () => {
           <li>Keep you informed of market movements, risks, and opportunities in real time</li>
           <li>Provide confidence that your risk strategy is clear, active, and aligned with your goals</li>
         </ul>
-        <p>It’s not just about reacting — it’s about staying ahead.</p>
+        <p>It’s not just about reacting, it’s about staying ahead.</p>
       `
     },
     {
@@ -84,7 +81,7 @@ const LandingPage = () => {
       title: "Eden Auditing",
       content:
         "Expertly auditing your utility bills line by line identifying errors, recovering lost credit, and giving you clear insight to plan ahead with confidence and control.",
-      longContent: `<p><strong>Utility bills are often affected by complex tariffs and ever-changing regulations — and errors can easily go unnoticed.</strong> At Eden, we carry out independent audits to uncover undue charges and recover any credit owed.</p>
+      longContent: `<p><strong>Utility bills are often affected by complex tariffs and ever-changing regulations and errors can easily go unnoticed.</strong> At Eden, we carry out independent audits to uncover undue charges and recover any credit owed.</p>
         <ul>
           <li>Every element of your bill is re-simulated and checked for accuracy</li>
           <li>Clear, easy-to-understand reports highlight findings and recovered amounts</li>
@@ -96,7 +93,7 @@ const LandingPage = () => {
       id: 4,
       title: "Eden Procedurement",
       longContent: `
-      <p><strong>Energy suppliers across the UK offer a range of purchasing options — each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.</strong></p>
+      <p><strong>Energy suppliers across the UK offer a range of purchasing options each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.</strong></p>
       <p>At Eden, we:</p>
       <ul>
         <li>Ensure your supply contracts are tailored to your operational and commercial needs</li>
@@ -113,7 +110,7 @@ const LandingPage = () => {
       content:
         "Delivering bespoke tailored energy reporting from daily forecasts to detailed KPI tracking giving you clear, timely insights to plan, control, and optimise your energy strategy.",
       longContent: `
-        <p><strong>Clear, accurate reporting is key to understanding and managing your energy costs effectively. At Eden, we tailor reporting to suit your needs — from high-level insights to detailed data.</strong></p>
+        <p><strong>Clear, accurate reporting is key to understanding and managing your energy costs effectively. At Eden, we tailor reporting to suit your needs from high-level insights to detailed data.</strong></p>
         <ul>
           <li>Budget and risk reports delivered monthly, weekly, or daily to suit your planning cycle</li>
           <li>Market price intelligence that puts real-time data and trends at your fingertips</li>
@@ -126,7 +123,7 @@ const LandingPage = () => {
       id: 6,
       title: "Eden Water",
       longContent: `
-      <p><strong>Water is a growing priority for many businesses — and so is managing it efficiently. At Eden, we handle the tender process for water and wastewater services, ensuring supplier bids are thoroughly analysed and cost-effective.</strong></p>
+      <p><strong>Water is a growing priority for many businesses and so is managing it efficiently. At Eden, we handle the tender process for water and wastewater services, ensuring supplier bids are thoroughly analysed and cost-effective.</strong></p>
       <ul>
         <li>Competitive tendering that often delivers savings of 12% or more</li>
         <li>Support with usage optimisation, efficiency, harvesting, and invoice audits</li>
@@ -229,7 +226,6 @@ const LandingPage = () => {
   let screenWidth = window.innerWidth;
   // sevices section animation
   useGSAP(() => {
-    console.log("screenWidth ==> ", screenWidth)
     let scrollStartValue = "top";
 
     const ctx = gsap.context(() => {
@@ -414,7 +410,8 @@ const LandingPage = () => {
           >
             {content}
           </p>
-          <div className="box-btn">
+          
+          {/* <div className="box-btn">
             <Btn
               onMouseEnter={() => handleHoverIn(index)}
               onMouseLeave={() => handleHoverOut(index)}
@@ -445,7 +442,10 @@ const LandingPage = () => {
             >
               Learn More
             </Btn>
-          </div>
+          </div> */}
+
+
+
         </div>
 
 
@@ -475,7 +475,7 @@ const LandingPage = () => {
         {isFirstBox && (
           <div
             className="video-icon"
-            onClick={onPlayVideo}
+            // onClick={onPlayVideo}
           >
             <FaPlayCircle />
           </div>
@@ -631,7 +631,7 @@ const LandingPage = () => {
                   Mark’s expertise has shaped Eden Utilities from the ground up, embedding a consultative and sustainability-first ethos into the company’s foundation. Deeply aware of the changing energy landscape, he understands the growing need for trusted, future-focused advisory.
                   <br></br>
                   <br></br>
-                  This mindset is central not just to Eden’s services, but to every team member he brings on board — creating a company united by shared values and a long-term vision for smarter, greener utilities.
+                  This mindset is central not just to Eden’s services, but to every team member he brings on board creating a company united by shared values and a long-term vision for smarter, greener utilities.
                 </p>
 
               </div>

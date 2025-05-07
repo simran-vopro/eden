@@ -22,10 +22,10 @@ import { useModal } from "../components/pages/ModalContext";
 const blogPosts = [
   {
     id: 1,
-    title: "Rising Energy Costs Are Disrupting UK Business — Eden Helps You Take Back Control ",
+    title: "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
     sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
-      "British companies are now paying some of the highest industrial electricity prices in the world — 46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
+      "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
     image: images.post1,
     author: "Eden Insights",
     authorImage: images.profile,
@@ -44,7 +44,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "The Grid Is Changing — And So Must Your Strategy",
+    title: "The Grid Is Changing  And So Must Your Strategy",
     sub_title: "Why the Great Grid Upgrade means new rules for business energy planning.",
     content:
       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
@@ -188,10 +188,10 @@ const SideblogPostsHighlights = [
 const LatestblogPosts = [
   {
     id: 1,
-    title: "Rising Energy Costs Are Disrupting UK Business — Eden Helps You Take Back Control ",
+    title: "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
     sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
-      "British companies are now paying some of the highest industrial electricity prices in the world — 46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
+      "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
     image: images.post1,
     author: "Eden Insights",
     authorImage: images.profile,
@@ -210,7 +210,7 @@ const LatestblogPosts = [
   },
   {
     id: 3,
-    title: "The Grid Is Changing — And So Must Your Strategy",
+    title: "The Grid Is Changing  And So Must Your Strategy",
     sub_title: "Why the Great Grid Upgrade means new rules for business energy planning.",
     content:
       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",

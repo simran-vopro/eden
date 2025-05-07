@@ -193,15 +193,18 @@
     width: 40vw;
   }
   #about-page-content .title {
-    font-size: 35px;
+    font-size: 25px;
   }
   #features2 {
     right: 5vw;
   }
   #features3 {
-    height: 50vh;
+    height: 75vh;
     width: 37%;
     left: 45vw;
+  }
+  #about-page-content {
+    height: 266vh;
   }
   #video-section {
     height: 50vw;
@@ -258,17 +261,17 @@
     width: 31%;
     left: 46vw;
   }
-  #video-section {
+  /* #video-section {
     height: 50vw;
     width: 50vw;
     right: 15vw;
-  }
+  } */
   #about-page-content .person-info .name {
     margin-top: 5px;
   }
   #partnership {
     height: 100vh;
-    margin-top: 28vh;
+    margin-top: 38vh;
   }
   #partnership .circle {
     width: 53%;
@@ -286,7 +289,7 @@
     height: 150vh;
   }
   .title2 {
-    font-size: 80px !important;
+    font-size: 65px !important;
     margin-top: 3vw;
   }
   .leaf2 {

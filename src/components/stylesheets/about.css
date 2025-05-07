@@ -59,7 +59,7 @@
 }
 
 #hero-about {
-    height: 70vh;
+    height: 85vh;
     position: relative;
 }
 
@@ -81,7 +81,7 @@
 
 
 .written-img img {
-    width: 80%;
+    width: 100%;
 }
 
 .lines-img img {
@@ -92,8 +92,8 @@
 }
 
 #about-page-content {
-    height: 240vh;
-    margin-top: 10vh;
+    height: 269vh;
+    margin-top: -25vh;
     position: relative;
 }
 
@@ -112,6 +112,7 @@
     object-fit: cover;
     border-radius: 20px;
     border: 2px solid var(--secondary);
+    margin-top: -125px;
 }
 
 
@@ -119,7 +120,7 @@
     height: 54vw;
     width: 54vw;
     border-radius: 50%;
-    margin-top: -28vh;
+    margin-top: 0;
     margin-left: -10vw;
     border: 1px solid var(--primary);
     position: relative;
@@ -198,7 +199,7 @@
     position: absolute;
     right: 12vw;
     background: #fff;
-    top: 60vw;
+    top: 65.4vw;
     display: flex;
     justify-content: center;
     align-items: center;
