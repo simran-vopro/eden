@@ -1,0 +1,32 @@
+     <section id="services" ref={slider} className="block--spc">
+
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+
+            <div className="col-md-4">
+              <div id="services-header">
+                <p className="text-muted text-start">
+                  Smart Energy Solutions for Businesses
+                </p>
+
+                <h1 className="text-start">
+                  We’re transforming the way businesses engage with energy. Our <b>Energy Management</b> and <b>Net Zero service</b> are supporting businesses to save time, money, and carbon.
+                </h1>
+              </div>
+            </div>
+            <div className="col-md-8">
+              <Accordion defaultActiveKey="0" flush>
+                {data.map((service, index) => (
+                  <Accordion.Item eventKey={index.toString()} key={service.id}>
+                    <Accordion.Header>{service.title}</Accordion.Header>
+                    <Accordion.Body>{service.content}</Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
+
+            </div>
+          </div>
+        </div>
+
+
+      </section>

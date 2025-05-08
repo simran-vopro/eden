@@ -47,19 +47,20 @@ const LandingPage = () => {
 
   const data = [
     {
-      id: 1,
-      title: "Eden Infinity",
-      logo: images.infinity_logo,
-      content:
-        "Helping your business turn waste into clean energy cutting emissions, reducing landfill, and showing the world you take sustainability seriously. Go further. Do better.",
+      id: 6,
+      title: "Eden Water",
       longContent: `
-        <p><strong>Turning Waste Into Power. Turning Responsibility Into Action.</strong></p>
-        <p>The world is changing fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes, Eden Infinity helps take it further.</p>
-        <p>Every business creates waste. Too often, it ends up in landfill. Eden Infinity works with trusted partners to turn that waste into energy, which is then allocated back to your business account.</p>
-        <p>It’s a smarter, traceable way to reduce your impact and support clean energy without disrupting how you operate.</p>
-        <p>This isn’t just about having a greener footprint. It’s about showing you take sustainability seriously to your clients, your people, and the world around you.</p>
-        <p>Already making progress? That’s a great start. Eden Infinity is how you go further.</p>
-      `
+      <p><strong>Water is a growing priority for many businesses and so is managing it efficiently. At Eden, we handle the tender process for water and wastewater services, ensuring supplier bids are thoroughly analysed and cost-effective.</strong></p>
+      <ul>
+        <li>Competitive tendering that often delivers savings of 12% or more</li>
+        <li>Support with usage optimisation, efficiency, harvesting, and invoice audits</li>
+        <li>Solutions that reduce costs, improve sustainability, and strengthen business continuity</li>
+      </ul>
+      <p>Practical support, measurable impact, and a smarter approach to water management.</p>
+    `,
+
+      content:
+        "Helping to manage water smarter, securing competitive supply contracts, improving efficiency, and supporting sustainability through expert tendering, usage audits, and forward-thinking resource planning.",
     },
     {
       id: 2,
@@ -120,21 +121,22 @@ const LandingPage = () => {
       `
     },
     {
-      id: 6,
-      title: "Eden Water",
-      longContent: `
-      <p><strong>Water is a growing priority for many businesses and so is managing it efficiently. At Eden, we handle the tender process for water and wastewater services, ensuring supplier bids are thoroughly analysed and cost-effective.</strong></p>
-      <ul>
-        <li>Competitive tendering that often delivers savings of 12% or more</li>
-        <li>Support with usage optimisation, efficiency, harvesting, and invoice audits</li>
-        <li>Solutions that reduce costs, improve sustainability, and strengthen business continuity</li>
-      </ul>
-      <p>Practical support, measurable impact, and a smarter approach to water management.</p>
-    `,
-
+      id: 1,
+      title: "Eden Optimisation",
+      logo: images.infinity_logo,
       content:
-        "Helping to manage water smarter, securing competitive supply contracts, improving efficiency, and supporting sustainability through expert tendering, usage audits, and forward-thinking resource planning.",
+        "Helping your business turn waste into clean energy cutting emissions, reducing landfill, and showing the world you take sustainability seriously. Go further. Do better.",
+      longContent: `
+        <p><strong>Turning Waste Into Power. Turning Responsibility Into Action.</strong></p>
+        <p>The world is changing fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes, Eden Infinity helps take it further.</p>
+        <p>Every business creates waste. Too often, it ends up in landfill. Eden Infinity works with trusted partners to turn that waste into energy, which is then allocated back to your business account.</p>
+        <p>It’s a smarter, traceable way to reduce your impact and support clean energy without disrupting how you operate.</p>
+        <p>This isn’t just about having a greener footprint. It’s about showing you take sustainability seriously to your clients, your people, and the world around you.</p>
+        <p>Already making progress? That’s a great start. Eden Infinity is how you go further.</p>
+      `
     },
+
+
   ];
 
   const slider = useRef();
@@ -222,195 +224,147 @@ const LandingPage = () => {
     { dependencies: [infinityAboutLogoRef, aboutRef] }
   );
 
+  // let screenWidth = window.innerWidth;
+  // useGSAP(() => {
+  //   let scrollStartValue = "top";
 
-  let screenWidth = window.innerWidth;
-  // sevices section animation
-  useGSAP(() => {
-    let scrollStartValue = "top";
+  //   const ctx = gsap.context(() => {
+  //     const panels = gsap.utils.toArray(".expandable-box");
+  //     const panelWidth = panels[0].getBoundingClientRect().width;
 
-    const ctx = gsap.context(() => {
-      const panels = gsap.utils.toArray(".expandable-box");
-      const panelWidth = panels[0].getBoundingClientRect().width;
+  //     if (screenWidth >= 769) {
+  //       // Desktop Animation (your current pinned scroll animation)
+  //       const timeline = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: slider.current,
+  //           start: scrollStartValue,
+  //           end: "+=" + panels.length * panelWidth,
+  //           scrub: 1,
+  //           pin: true,
+  //           endTrigger: "#contact",
+  //           onLeave: () => {
+  //             document.getElementById("services-header")?.classList.add("scroll-ended");
+  //           },
+  //           onEnterBack: () => {
+  //             document.getElementById("services-header")?.classList.remove("scroll-ended");
+  //           },
+  //         },
+  //       });
 
-      if (screenWidth >= 769) {
-        // Desktop Animation (your current pinned scroll animation)
-        const timeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: slider.current,
-            start: scrollStartValue,
-            end: "+=" + panels.length * panelWidth,
-            scrub: 1,
-            pin: true,
-            endTrigger: "#contact",
-            onLeave: () => {
-              document.getElementById("services-header")?.classList.add("scroll-ended");
-            },
-            onEnterBack: () => {
-              document.getElementById("services-header")?.classList.remove("scroll-ended");
-            },
-          },
-        });
+  //       panels.forEach((panel, i) => {
+  //         const tl = gsap.timeline();
+  //         const content = panel.querySelector(".box-content");
 
-        panels.forEach((panel, i) => {
-          const tl = gsap.timeline();
-          const content = panel.querySelector(".box-content");
+  //         // Animate panel shrink
+  //         tl.to(panel, {
+  //           flexBasis: "15%",
+  //           backgroundImage: "none",
+  //           duration: 1,
+  //           ease: "power1.inOut",
+  //         }, 0);
 
-          // Animate panel shrink
-          tl.to(panel, {
-            flexBasis: "15%",
-            backgroundImage: "none",
-            duration: 1,
-            ease: "power1.inOut",
-          }, 0);
+  //         // Animate content width to 100% inside the shrinking panel
+  //         tl.to(content, {
+  //           ease: "power1.inOut",
+  //           duration: 1,
+  //           delay: 1,
+  //           opacity: 0
+  //         }, 0); // Start at same time
 
-          // Animate content width to 100% inside the shrinking panel
-          tl.to(content, {
-            ease: "power1.inOut",
-            duration: 1,
-            delay: 1,
-            opacity: 0
-          }, 0); // Start at same time
-
-          tl.to(".video-icon", {
-            ease: "power1.inOut",
-            duration: 1,
-            delay: 0.1,
-            opacity: 0
-          }, 0);
+  //         tl.to(".video-icon", {
+  //           ease: "power1.inOut",
+  //           duration: 1,
+  //           delay: 0.1,
+  //           opacity: 0
+  //         }, 0);
 
 
-          tl.to(".overlay-img", {
-            ease: "power1.inOut",
-            duration: 1,
-            delay: 0.1,
-            opacity: 0
-          }, 0);
+  //         tl.to(".overlay-img", {
+  //           ease: "power1.inOut",
+  //           duration: 1,
+  //           delay: 0.1,
+  //           opacity: 0
+  //         }, 0);
 
-          timeline.add(tl, i);
-        });
+  //         timeline.add(tl, i);
+  //       });
 
-      } else {
-        // Mobile & Tablet Animation (different simple scroll animation)
-        panels.forEach((panel) => {
-          gsap.from(panel, {
-            opacity: 0,
-            y: 50,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: panel,
-              start: "top 85%",
-              end: "bottom 60%",
-              toggleActions: "play none none reverse",
-            },
-          });
-        });
-      }
-    }, slider);
+  //     } else {
+  //       // Mobile & Tablet Animation (different simple scroll animation)
+  //       panels.forEach((panel) => {
+  //         gsap.from(panel, {
+  //           opacity: 0,
+  //           y: 50,
+  //           duration: 0.8,
+  //           ease: "power3.out",
+  //           scrollTrigger: {
+  //             trigger: panel,
+  //             start: "top 85%",
+  //             end: "bottom 60%",
+  //             toggleActions: "play none none reverse",
+  //           },
+  //         });
+  //       });
+  //     }
+  //   }, slider);
 
-    return () => ctx.revert();
-  }, [screenWidth]);
-
+  //   return () => ctx.revert();
+  // }, [screenWidth]);
 
   const [showVideoModal, setShowVideoModal] = useState(false);
+
   const ExpandableServicesBox = ({ index, title, content, onPlayVideo, onLearnMore, infinity_logo, description }) => {
     const boxRef = useRef();
     const contentRef = useRef();
     const titleRef = useRef();
     const boxBgColors = ["#fafafa", "#8DC74B", "#2F98D0"];
 
-    // 1. Refs to each portrait box
-    const boxRefs = useRef([]);
-    // 2. Timelines per box
-    const timelines = useRef([]);
-
-    useEffect(() => {
-      boxRefs.current.forEach((box, i) => {
-        // start every box hidden + shifted down
-        gsap.set(box, { opacity: 0, y: 20, pointerEvents: "none" });
-        // build the show-then-hide timeline
-        timelines.current[i] = gsap
-          .timeline({ paused: true })
-          .to(box, {
-            opacity: 1,
-            y: 0,
-            duration: 0.4,
-            ease: "power3.out",
-            pointerEvents: "auto",
-          });
-      });
-      // cleanup if unmount
-      return () => timelines.current.forEach((tl) => tl.kill());
-    }, []);
-
-
-    const handleHoverIn = (i) => {
-      timelines.current[i].play();
-    };
-
-    const handleHoverOut = (i) => {
-      timelines.current[i].reverse();
-    };
-
-
-    const isFirstBox = index === 0;
     return (
       <div
         ref={boxRef}
-        className="expandable-box relative overflow-hidden"
+        className="expandable-box-2 relative overflow-hidden"
         style={{
           backgroundColor: boxBgColors[index % boxBgColors.length],
           backgroundSize: "cover",
           backgroundPosition: "center",
-          color:
-            boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#000" : "#fff",
-          flexShrink: 0,
+          color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#000" : "#fff",
+          height: "450px"
         }}
       >
-        <div className="title-row">
-          {
-            isFirstBox ? <img src={infinity_logo} alt="logo" className="logo slide-up-text" /> : <h3
-              ref={titleRef}
-              className="box-title">
-              {title}
-            </h3>
-          }
+        <div>
 
-          <div
-            className="index-badge"
-            style={{
-              backgroundColor:
-                boxBgColors[index % boxBgColors.length] === "#fafafa"
-                  ? "#2F98D0"
-                  : "#fff",
-              color:
-                boxBgColors[index % boxBgColors.length] === "#fafafa"
-                  ? "#fff"
-                  : "#000",
-            }}
-          >
-            {index < 10 ? `0${index + 1}` : index + 1}
-          </div>
+          <h3
+            ref={titleRef}
+            className="box-title-service">
+            {title}
+          </h3>
         </div>
 
-        <div ref={contentRef} className="box-content">
+
+        <div
+          className="index-badge-service"
+          style={{
+            backgroundColor: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#2F98D0" : "#fff",
+            color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#fff" : "#000",
+          }}
+        >
+          {
+            boxBgColors[index % boxBgColors.length] === "#fafafa" ? <img src={images.icon_top_white} className="icon-top" alt="icon" /> :
+              <img src={images.icon_top} className="icon-top" alt="icon" />}
+        </div>
+
+        <div ref={contentRef} className="box-content" style={{ opacity: 0 }}>
           <p
             className="long-content"
-            style={{
-              color:
-                boxBgColors[index % boxBgColors.length] === "#fafafa"
-                  ? "#828282"
-                  : "#fff",
-            }}
-          >
+            style={{ color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#828282" : "#fff" }}>
             {content}
           </p>
-          
-          {/* <div className="box-btn">
+
+          <div className="box-btn" style={{ opacity: 0 }}>
             <Btn
               onMouseEnter={() => handleHoverIn(index)}
               onMouseLeave={() => handleHoverOut(index)}
-              onClick={onLearnMore}
+              // onClick={onLearnMore}
               rightIconChildren={boxBgColors[index % boxBgColors.length] === "#fafafa" ? <img src={images.icon_top} className="icon-top" alt="icon" /> :
                 <img src={images.icon_top_white} className="icon-top" alt="icon" />
               }
@@ -437,44 +391,8 @@ const LandingPage = () => {
             >
               Learn More
             </Btn>
-          </div> */}
-
-
-
-        </div>
-
-
-        {
-          isFirstBox && <img src={images.videoBg} className="overlay-img"></img>
-        }
-
-        {
-          isFirstBox && <div className="overlay-video"></div>
-        }
-
-
-        <div
-          className="portrait-float-box-service"
-          ref={(el) => (boxRefs.current[index] = el)}
-        >
-          <div className="portrait-content-service">
-            <div
-              className="modal-body"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
           </div>
         </div>
-
-
-        {/* Special video icon overlay for index === 0 */}
-        {isFirstBox && (
-          <div
-            className="video-icon"
-            // onClick={onPlayVideo}
-          >
-            <FaPlayCircle />
-          </div>
-        )}
 
         <img src={images.pattern} alt="pattern" id="pattern" />
       </div>
@@ -698,6 +616,56 @@ const LandingPage = () => {
       </section>
 
       <Brands btn />
+
+
+      <section className="eden-service position-relative block--spc">
+        <img src={images.infinity_logo} alt="logo" className="logo" />
+        <div className="p-md-3 video-section position-relative overflow-hidden">
+
+
+          <div className="box-content-2">
+
+
+            <div> <div className="title-row">
+              <h3 className="box-title-2">
+                Smart Energy Solutions for Businesses
+              </h3>
+            </div>
+              <p
+                className="long-content"
+                style={{
+                  color: "#828282",
+                }}
+              >
+                Helping your business turn waste into clean energy cutting emissions, reducing landfill, and showing the world you take sustainability seriously. Go further. Do better.
+              </p></div>
+
+
+            <div className="box-btn-2">
+              <Btn
+                rightIcon
+              >
+                Learn More
+              </Btn>
+            </div>
+
+          </div>
+
+
+          <img src={images.videoBg} className="overlay-img-2"></img>
+
+          {/* Special video icon overlay for index === 0 */}
+
+          <div
+            className="video-icon-2"
+          // onClick={onPlayVideo}
+          >
+            <FaPlayCircle />
+          </div>
+
+        </div>
+      </section>
+
 
       <section id="services" ref={slider} className="section-with-animations">
         <div id="services-header">

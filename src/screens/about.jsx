@@ -245,11 +245,11 @@ const About = () => {
                 <div className="supplier-label text-muted">Fixed Products</div>
               </div>
              
-              <div className="supplier-card mb-0">
+              <div className="supplier-card ">
                 <div className="supplier-percentage">97%</div>
                 <div className="supplier-label text-muted">Retention</div>
               </div>
-              <div className="supplier-card">
+              <div className="supplier-card mb-0">
                 <div className="supplier-percentage">182+</div>
                 <div className="supplier-label text-muted">Happy Clients</div>
               </div>
@@ -449,7 +449,7 @@ const About = () => {
           </div>
           <div>
             <div className="title title2 text-start">
-            Business with  <br></br>a Conscience
+            Business With  <br></br>A Conscience
             </div>
           </div>
         </div>

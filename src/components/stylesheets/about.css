@@ -92,7 +92,7 @@
 }
 
 #about-page-content {
-    height: 269vh;
+    height: 242vh;
     margin-top: -25vh;
     position: relative;
 }
@@ -199,9 +199,9 @@
     border-radius: 50%;
     border: 1px solid var(--primary);
     position: absolute;
-    right: 12vw;
+    right: 8vw;
     background: #fff;
-    top: 65.4vw;
+    top: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,7 +216,7 @@
     background-color: #ffffff;
     border-radius: 50%;
     top: -4.0vw;
-    right: 7.34vw;
+    right: 8.56vw;
 }
 
 .outer-video-img {
@@ -434,9 +434,10 @@
     margin-top: 3px;
 }
 
-.csr-features{
+.csr-features {
     margin-top: 5vw;
 }
+
 .csr-features .feature {
     width: 50%;
 

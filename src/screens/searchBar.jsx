@@ -281,7 +281,7 @@ const SearchBar = () => {
               </span>{" "}
               <span className="eden-highlight">
                 <span className="d-wrapper">
-                  E
+                  e
                   <span className="d-letter" ref={addCircleRef}>
                     d
                   </span>

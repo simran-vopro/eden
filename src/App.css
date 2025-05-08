@@ -292,7 +292,7 @@ a {
 
 /* hero section */
 #hero {
-  height: 130vh;
+  height: 120vh;
   display: flex;
   align-items: flex-end;
   background-image: url("./assets/landing/heroBackground.png");
@@ -1354,4 +1354,143 @@ img.dotted {
 .footer-bottom .social-icon:hover {
   background-color: var(--primary);
   color: white;
+}
+
+
+
+/* ------------------------------------------------------- */
+/* landing-2 */
+/* ------------------------------------------------------- */
+
+#contentSection2 {
+  padding: 4vw;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 40vw;
+}
+
+
+#hero2 {
+  height: 110vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: url("./assets/landing/heroBackground.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 95% 100%;
+}
+
+
+#infinity-logo-transparent2 {
+  position: absolute;
+  bottom: -8vw;
+  right: 17vw;
+  opacity: 35%;
+  width: 19vw;
+}
+
+.block--spc {
+  padding: 3.125rem 3.125rem;
+}
+
+.box-row-2 {
+  display: flex;
+  gap: 1%;
+  margin-top: 10rem;
+  overflow-x: hidden;
+  width: 100%;
+  /* position: relative; */
+}
+
+.expandable-box-2 {
+  padding: 1.2vw;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  /* flex-basis: 90%; */
+}
+
+
+.eden-service .video-section {
+  height: 450px;
+  border-radius: 15px;
+}
+
+
+.overlay-img-2 {
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+
+.video-icon-2 {
+  top: 50%;
+  right: 30%;
+  transform: translateY(-50%);
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  position: absolute;
+}
+
+
+.box-content-2 {
+  margin-top: 1rem;
+  width: 40%;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.box-title-2 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5F5F5F;
+  z-index: 1;
+}
+
+
+.box-title-service {
+  font-family: "Lato-Bold";
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  flex: 1;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+
+
+.index-badge-service {
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  z-index: 1;
+  position: absolute;
+  right: 10px;
 }

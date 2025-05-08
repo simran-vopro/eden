@@ -12,10 +12,12 @@ const Btn = ({
   iconbackground,
   rightIconChildren,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
+  disabled
 }) => {
   return (
     <button
+      disabled={disabled}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

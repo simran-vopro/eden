@@ -20,6 +20,7 @@ import About from "./screens/about";
 import HowItWorks from "./screens/howItWorks";
 import InsightsDetails from "./screens/insights-details";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import LandingPage2 from "./screens/landing-2";
 
 
 const ScrollManager = ({ children }) => {
@@ -161,6 +162,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/insight-details" element={<InsightsDetails />} />
+              <Route path="/landing-2" element={<LandingPage2 />} />
             </Routes>
           </ScrollManager>
         </Router>
