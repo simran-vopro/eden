@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/other/header";
 import Footer from "../components/other/footer";
 import Brands from "../components/pages/brands";
@@ -8,9 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../insights.css";
 import images from "../components/theme/imagesPath";
 import Btn from "../components/other/btn";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,7 +19,8 @@ import { useModal } from "../components/pages/ModalContext";
 const blogPosts = [
   {
     id: 1,
-    title: "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
+    title:
+      "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
     sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
       "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
@@ -30,28 +28,36 @@ const blogPosts = [
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 25, 2025",
+    tag: "Costs",
+    tagColor: "bg-danger",
   },
   {
     id: 2,
     title: "AI’s Growing Energy Demand: Why It Matters",
-    sub_title: "How Eden helps businesses stay ahead of accelerating power needs.",
+    sub_title:
+      "How Eden helps businesses stay ahead of accelerating power needs.",
     content:
       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
     image: images.post2,
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 22, 2025",
+    tag: "Technology",
+    tagColor: "bg-primary",
   },
   {
     id: 3,
     title: "The Grid Is Changing  And So Must Your Strategy",
-    sub_title: "Why the Great Grid Upgrade means new rules for business energy planning.",
+    sub_title:
+      "Why the Great Grid Upgrade means new rules for business energy planning.",
     content:
       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
     image: images.post3,
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 20, 2025",
+    tag: "Infrastructure",
+    tagColor: "bg-secondary",
   },
   {
     id: 4,
@@ -63,6 +69,8 @@ const blogPosts = [
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 18, 2025",
+    tag: "Sustainability",
+    tagColor: "bg-success",
   },
   {
     id: 5,
@@ -74,6 +82,8 @@ const blogPosts = [
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 16, 2025",
+    tag: "Data",
+    tagColor: "bg-info",
   },
   {
     id: 6,
@@ -85,6 +95,8 @@ const blogPosts = [
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 14, 2025",
+    tag: "Cybersecurity",
+    tagColor: "bg-dark",
   },
   {
     id: 7,
@@ -96,99 +108,188 @@ const blogPosts = [
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 12, 2025",
+    tag: "Compliance",
+    tagColor: "bg-warning text-dark",
+  },
+];
+
+const blogTopPosts = [
+  {
+    id: 1,
+    title:
+      "Rising Energy Costs Are Disrupting UK Business. Eden Helps You Take Back Control",
+    content:
+      "British companies are now paying some of the highest industrial electricity prices in the world.",
+    image: images.post1,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "May 06, 2025",
+    tag: "Opinion",
+  },
+  {
+    id: 2,
+    title: "AI’s Growing Energy Demand: Why It Matters",
+    content:
+      "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate challenges.",
+    image: images.post2,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "April 22, 2025",
+    tag: "Tech",
+  },
+  {
+    id: 3,
+    title: "The Grid Is Changing – And So Must Your Strategy",
+    content:
+      "The UK’s £35B grid upgrade promises major improvements but brings uncertainty.",
+    image: images.post3,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "April 20, 2025",
+    tag: "Strategy",
+  },
+  {
+    id: 4,
+    title: "Decarbonization and Net-Zero Commitments",
+    content:
+      "With net-zero goals rising, Eden supports businesses with tailored strategies.",
+    image: images.post4,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "April 18, 2025",
+    tag: "Sustainability",
+  },
+  {
+    id: 5,
+    title: "Advanced Metering Empowers Energy Efficiency",
+    content:
+      "With 66% of UK meters now smart, Eden helps maximise value from advanced metering.",
+    image: images.post5,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "April 16, 2025",
+    tag: "Innovation",
+  },
+  {
+    id: 6,
+    title: "Cybersecurity and Energy Resilience",
+    content:
+      "Eden provides strategies that integrate cybersecurity with energy planning.",
+    image: images.post6,
+    author: "Eden Insights",
+    authorImage: "images/profile.jpg",
+    date: "April 14, 2025",
+    tag: "Security",
   },
 ];
 
 const SideblogPosts = [
   {
     id: 1,
-    title: "Rising Energy Costs - “When Energy Becomes a Boardroom Issue: How to Protect Growth in a Volatile Market” ",
+    title:
+      "Rising Energy Costs - “When Energy Becomes a Boardroom Issue: How to Protect Growth in a Volatile Market” ",
     content:
       "Meeting global hydrogen demand requires innovative zero-carbon processes and sustainable market strategies.",
     image: images.post1,
   },
   {
     id: 2,
-    title: "Electricity Demand from AI & Data Centres - “AI’s Hidden Cost: Why the Smart Revolution Needs Smarter Energy Strategy”",
+    title:
+      "Electricity Demand from AI & Data Centres - “AI’s Hidden Cost: Why the Smart Revolution Needs Smarter Energy Strategy”",
     content:
       "Exploring the expanding opportunities and challenges in renewable energy industries worldwide.",
     image: images.post2,
   },
   {
     id: 3,
-    title: "Grid Modernisation & Infrastructure Investment - “The Great Grid Shift: What Businesses Must Know About the UK's Energy Overhaul” ",
+    title:
+      "Grid Modernisation & Infrastructure Investment - “The Great Grid Shift: What Businesses Must Know About the UK's Energy Overhaul” ",
     content:
       "Technology-driven smart cities are reshaping urban landscapes with AI and IoT solutions.",
     image: images.post3,
   },
   {
     id: 4,
-    title: "Decarbonisation & Net-Zero Commitments  - “The Race to Net Zero: Turning Policy into Practical Progress for Your Business”",
+    title:
+      "Decarbonisation & Net-Zero Commitments  - “The Race to Net Zero: Turning Policy into Practical Progress for Your Business”",
     content:
       "New eco-friendly construction techniques are helping reduce the carbon footprint of cities.",
     image: images.post4,
   },
   {
     id: 5,
-    title: "Advanced Metering & Energy Management - “From Data to Decisions: How Smart Metering Transforms Business Energy Use” ",
+    title:
+      "Advanced Metering & Energy Management - “From Data to Decisions: How Smart Metering Transforms Business Energy Use” ",
     content:
       "Hydrogen energy is becoming a leading solution in the pursuit of zero-emission transportation.",
     image: images.post5,
   },
   {
     id: 6,
-    title: "Cybersecurity & Resilience - “More Than a Power Cut: Building Cyber-Resilient Energy Systems”",
+    title:
+      "Cybersecurity & Resilience - “More Than a Power Cut: Building Cyber-Resilient Energy Systems”",
     content:
       "Artificial intelligence continues to transform industries from healthcare to automotive sectors rapidly.",
     image: images.post3,
   },
   {
     id: 7,
-    title: "Regulatory Compliance & Reporting - “Keeping Up with Compliance: How to Stay Ahead in an Evolving Regulatory Landscape” ",
+    title:
+      "Regulatory Compliance & Reporting - “Keeping Up with Compliance: How to Stay Ahead in an Evolving Regulatory Landscape” ",
     content:
       "Businesses worldwide are adapting their strategies to address urgent climate change realities.",
     image: images.post4,
   },
-
 ];
-
 
 const SideblogPostsHighlights = [
   {
     id: 1,
     title: "Eden Utilities Becomes Back-of-Shirt Partner for Crawley Town FC",
     content:
-      "Eden Utilities has expanded its partnership with Crawley Town Football Club by becoming the new back-of-shirt sponsor. This collaboration underscores Eden's commitment to supporting local sports and community initiatives.X (formerly Twitter)+2Log in or sign up to view+2X (formerly Twitter)+2 Source: Crawley Town FC, July 2024. .",
+      "Eden Utilities has expanded its partnership with Crawley Town Football Club by becoming the new back-of-shirt sponsor. This collaboration underscores Eden's commitment to supporting local sports and community initiatives. Source: Crawley Town FC, July 2024.",
     image: images.h1,
+    tag: "Partnership",
+    date: "July 2024",
+    tagColor: "bg-primary", // Directly adding color
   },
   {
     id: 2,
-    title: "Eden Utilities Partners with Manor Royal Business District ",
+    title: "Eden Utilities Partners with Manor Royal Business District",
     content:
-      "Eden Utilities has announced a landmark partnership with the Manor Royal Business Improvement District (BID). This collaboration aims to provide businesses within the district with energy cost risk management services and promote sustainable energy solutions. Source: Eleven Sports Media. ",
+      "Eden Utilities has announced a landmark partnership with the Manor Royal Business Improvement District (BID). This collaboration aims to provide businesses within the district with energy cost risk management services and promote sustainable energy solutions. Source: Eleven Sports Media.",
     image: images.h2,
+    tag: "Business",
+    date: "June 2024",
+    tagColor: "bg-success", // Directly adding color
   },
   {
     id: 3,
     title: "Eden Utilities Empowers Businesses to Turn Waste into Electricity",
     content:
-      "Through its Eden Infinity initiative, Eden Utilities is helping organizations convert waste into electricity, thereby reducing environmental impact and promoting sustainability. By partnering with businesses to generate power from waste, Eden Utilities ensures that this energy is allocated directly to the participating organizations' accounts, supporting their journey towards a greener footprint. Source: Eleven Sports Media.",
+      "Through its Eden Infinity initiative, Eden Utilities is helping organizations convert waste into electricity, thereby reducing environmental impact and promoting sustainability. Source: Eleven Sports Media.",
     image: images.h3,
+    tag: "Sustainability",
+    date: "May 2024",
+    tagColor: "bg-warning", // Directly adding color
   },
   {
     id: 4,
     title: "Eden Utilities Supports The Olive Tree Cancer Support Centre",
     content:
-      "Eden Utilities has demonstrated its commitment to community support by contributing £577.49 to The Olive Tree Cancer Support Centre. This donation was raised through the auctioning of signed Crawley Town FC training tops, highlighting Eden's dedication to charitable causes.olivetreecancersupport.org.uk.Source: Olive Tree Cancer Support Centre. ",
+      "Eden Utilities has demonstrated its commitment to community support by contributing £577.49 to The Olive Tree Cancer Support Centre. This donation was raised through the auctioning of signed Crawley Town FC training tops. Source: Olive Tree Cancer Support Centre.",
     image: images.h4,
+    tag: "Charity",
+    date: "April 2024",
+    tagColor: "bg-danger", // Directly adding color
   },
- 
 ];
 
 const LatestblogPosts = [
   {
     id: 1,
-    title: "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
+    title:
+      "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
     sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
       "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
@@ -200,7 +301,8 @@ const LatestblogPosts = [
   {
     id: 2,
     title: "AI’s Growing Energy Demand: Why It Matters",
-    sub_title: "How Eden helps businesses stay ahead of accelerating power needs.",
+    sub_title:
+      "How Eden helps businesses stay ahead of accelerating power needs.",
     content:
       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
     image: images.post2,
@@ -211,7 +313,8 @@ const LatestblogPosts = [
   {
     id: 3,
     title: "The Grid Is Changing  And So Must Your Strategy",
-    sub_title: "Why the Great Grid Upgrade means new rules for business energy planning.",
+    sub_title:
+      "Why the Great Grid Upgrade means new rules for business energy planning.",
     content:
       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
     image: images.post3,
@@ -263,12 +366,29 @@ const LatestblogPosts = [
     authorImage: images.profile,
     date: "April 12, 2025",
   },
-
 ];
 
 const Insights = () => {
   const { openContactModal } = useModal();
   const navigate = useNavigate();
+
+  const [activeTag, setActiveTag] = useState("All");
+
+  // Collect all unique tags from blogPosts
+  const tags = [
+    "All",
+    ...Array.from(new Set(blogPosts.map((p) => p.tag).filter(Boolean))),
+  ];
+
+  console.log("tags ==> ", tags);
+
+  // Filter posts based on active tag
+  const filteredPosts =
+    activeTag === "All"
+      ? blogPosts
+      : blogPosts.filter((post) => post.tag === activeTag);
+
+  console.log("filteredPosts ==> ", filteredPosts);
 
   return (
     <div id="insights">
@@ -276,7 +396,7 @@ const Insights = () => {
         <img src={images.logo} alt="logo" className="logo" />
         <Header navItemStyle={{ color: "#000" }} />
       </div>
-
+      {/* 
       <section id="hero-blog" className="img-fluid">
         <div className="top-curve">
           <svg
@@ -345,7 +465,6 @@ const Insights = () => {
                     <div className="box-content">
                       <h3 className={"box-title"}>{item.title}</h3>
                       <p className="long-content">{item.content}</p>
-                      {/* Small Read More link */}
                       <Link to="" className="read-more-link">
                         Read More...
                       </Link>
@@ -356,145 +475,222 @@ const Insights = () => {
             </Swiper>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* <div className="p-5"></div> */}
+      <div className="px-2 px-md-5 mt-5">
+        <h1 className="fw-bold text-capitalize mb-4 title-insight">Insights</h1>
+        <p className="long-content text-dark fs-5">
+          Keep up with the latest company updates, opinion pieces, and news from
+          the world of business energy.
+        </p>
+      </div>
 
       <div className="container-fluid p-md-5">
         <div className="row py-5 py-sm-0">
           {/* Left Side - Blogs */}
           <div className="col-lg-8">
-            {blogPosts.map((post) => (
-              <div key={post.id} className="card mb-4 pb-4 border-bottom">
-                {/* Title and Subtitle */}
-                <div className="card-header bg-transparent border-0 p-0 mb-3">
-                  <h2 style={{ cursor: "pointer" }} 
-                  
-                  // onClick={() => {
-                  //   navigate("/insight-details")
-                  // }} 
-                  
-                  className="text-uppercase fw-bold text-black mb-1">
-                    {post.title}
-                  </h2>
-                  <h6 className="text-muted small mb-2">{post.sub_title}</h6>
-                </div>
-
-                {/* Content */}
-                <div className="card-body p-0">
-                  <p className="card-text mb-3">{post.content}</p>
-
-                  {/* Image */}
+            {/* top blogs posts */}
+            <div className="row g-4 mb-5">
+              {/* First Row: One large, two small */}
+              <div className="col-lg-7">
+                <div
+                  className="position-relative text-white blog-grid-item-lg"
+                  style={{ height: "100%" }}
+                >
                   <img
-                    src={post.image}
-                    className="img-fluid rounded mb-3"
-                    alt={post.title}
+                    src={blogTopPosts[0].image}
+                    alt=""
+                    className="img-fluid w-100 h-100 object-fit-cover"
+                    style={{ filter: "brightness(0.4)" }}
                   />
-
-                  {/* Bottom Section */}
-                  <div className="d-flex  justify-content-between align-items-center mt-3 gap-3">
-                    {/* Author Details */}
-                    <div className="d-flex align-items-center gap-2">
-                      <img
-                        src={post.authorImage}
-                        alt={post.author}
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <div>
-                        <small className="text-muted d-block">
-                          By {post.author}
-                        </small>
-                        <small className="text-muted">{post.date}</small>
-                      </div>
-                    </div>
-
-                    <div className="d-flex gap-1 gap-sm-3">
-                      {/* Share */}
-                      <div
-                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
-                        style={{ borderColor: "#ddd" }}
-                      >
-                        <div
-                          className="pe-2 me-2 border-end d-none d-sm-block"
-                          style={{ borderColor: "#ddd" }}
-                        >
-                          <FaShareAlt />
-                        </div>
-                        <div className="d-sm-none">
-                          <FaShareAlt />
-                        </div>
-                        <span className="d-none d-sm-inline">Share</span>
-                      </div>
-
-                      {/* Facebook */}
-                      <div
-                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
-                        style={{ borderColor: "#ddd" }}
-                      >
-                        <div
-                          className="pe-2 me-2 border-end d-none d-sm-block"
-                          style={{ borderColor: "#ddd" }}
-                        >
-                          <FaFacebookF />
-                        </div>
-                        <div className="d-sm-none">
-                          <FaFacebookF />
-                        </div>
-                        <span className="d-none d-sm-inline">Facebook</span>
-                      </div>
-
-                      {/* Twitter */}
-                      <div
-                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
-                        style={{ borderColor: "#ddd" }}
-                      >
-                        <div
-                          className="pe-2 me-2 border-end d-none d-sm-block"
-                          style={{ borderColor: "#ddd" }}
-                        >
-                          <FaTwitter />
-                        </div>
-                        <div className="d-sm-none">
-                          <FaTwitter />
-                        </div>
-                        <span className="d-none d-sm-inline">Twitter</span>
-                      </div>
+                  <div className="position-absolute top-0 start-0 p-4">
+                    <small className="badge text-white tag-date-style p-0">
+                      {blogTopPosts[0].tag} <span className="dot">•</span>
+                      {blogTopPosts[0].date}
+                    </small>
+                  </div>
+                  <div className="position-absolute bottom-0 p-4">
+                    <h4 className="blog-grid-title">{blogTopPosts[0].title}</h4>
+                    <p>{blogTopPosts[0].content}</p>
+                    <div
+                      onClick={() => {
+                        navigate("/insight-details", { state: { singlePost: blogTopPosts[0] } });
+                      }}
+                      className="text-link"
+                    >
+                      {blogTopPosts[0].title}
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+              <div className="col-lg-5">
+                <div className="row g-4">
+                  {[blogTopPosts[1], blogTopPosts[2]].map((post) => (
+                    <div className="col-12" key={post.id}>
+                      <div
+                        className="position-relative text-white blog-grid-item"
+                        style={{ height: "100%" }}
+                      >
+                        <img
+                          src={post.image}
+                          alt=""
+                          className="img-fluid w-100 h-100 object-fit-cover"
+                          style={{ filter: "brightness(0.4)" }}
+                        />
+                        <div className="position-absolute top-0 start-0 p-3">
+                          <small className="badge text-white tag-date-style p-0">
+                            {post.tag} <span className="dot">•</span>
+                            {post.date}
+                          </small>
+                        </div>
+                        <div className="position-absolute bottom-0 p-3">
+                          <h4 className="blog-grid-title">{post.title}</h4>
+                          <div
+                            onClick={() => {
+                              navigate("/insight-details", {
+                                state: { singlePost },
+                              });
+                            }}
+                            className="text-link"
+                          >
+                            {post.title}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Second Row: Three equally spaced */}
+              {[blogTopPosts[3], blogTopPosts[4], blogTopPosts[5]].map(
+                (post) => (
+                  <div className="col-lg-4" key={post.id}>
+                    <div
+                      className="position-relative text-white blog-grid-item"
+                      style={{ height: "100%" }}
+                    >
+                      <img
+                        src={post.image}
+                        alt=""
+                        className="img-fluid w-100 h-100 object-fit-cover"
+                        style={{ filter: "brightness(0.4)" }}
+                      />
+                      <div className="position-absolute top-0 start-0 p-3">
+                        <small className="badge text-white tag-date-style p-0">
+                          {post.tag} <span className="dot">•</span>
+                          {post.date}
+                        </small>
+                      </div>
+                      <div className="position-absolute bottom-0 p-3">
+                        <h4 className="blog-grid-title">{post.title}</h4>
+                        <div
+                          onClick={() => {
+                            navigate("/insight-details", {
+                              state: { singlePost },
+                            });
+                          }}
+                          className="text-link"
+                        >
+                          {post.title}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+
+            {/* Tabs */}
+            <div className="d-flex flex-wrap gap-3 mb-4">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  onClick={() => setActiveTag(tag)}
+                  className={`cursor-pointer ${
+                    activeTag === tag ? "fw-bold text-black" : "text-muted"
+                  }`}
+                  style={{ cursor: "pointer" }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Grid of Filtered Posts */}
+            <div className="row g-4">
+              {filteredPosts.map((post) => (
+                <div className="col-lg-4 mb-4" key={post.id}>
+                  <div className="blog-card h-100 border shadow-sm rounded overflow-hidden bg-white">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="img-fluid w-100"
+                      style={{ height: "200px", objectFit: "cover" }}
+                    />
+
+                    <div className="d-flex justify-content-between align-items-center p-3 text-muted small">
+                      <small
+                        className={`badge ${post.tagColor} tag-date-style p-1 me-2`}
+                      >
+                        {post.tag}
+                      </small>
+                      <span>
+                        {post.date} <span className="dot mx-1">•</span>{" "}
+                        {post.author}
+                      </span>
+                    </div>
+
+                    <div className="px-3 pb-3">
+                      <h5 className="fw-bold text-dark">{post.title}</h5>
+                      <p className="text-muted small">{post.sub_title}</p>
+                      <div
+                        onClick={() => {
+                          navigate("/insight-details", {
+                            state: { singlePost },
+                          });
+                        }}
+                        className="text-dark text-link text-decoration-underline fw-semibold"
+                      >
+                        Read More
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Right Side - Blog List */}
           <div className="col-lg-4 px-md-5 px-lg-2 sideBar">
-
             {/* Clean Energy Section */}
             <section className="cleanEnergy mb-4">
-              <h4 className="mb-4 mx-5 mx-lg-3">Highlights</h4>
+              <h4 className="mb-4 mx-5 mx-lg-3 text-black">Highlights</h4>
               <div className="border border-gray-300 rounded p-3 mx-5 mx-lg-3">
                 {SideblogPostsHighlights?.map((post) => (
-                  <div key={post.id} className="mb-5">
-                    {/* Image */}
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="img-fluid rounded mb-3"
-                    />
+                  <div className="mb-4" key={post.id}>
+                    <div className="blog-card h-100 border shadow-sm rounded overflow-hidden bg-white">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="img-fluid w-100"
+                        style={{ objectFit: "cover" }}
+                      />
 
-                    {/* Title */}
-                    <h6 className="fw-bold text-blue">{post.title}</h6>
+                      <div className="d-flex justify-content-between align-items-center p-3 text-muted small">
+                        <small
+                          className={`badge ${post.tagColor} tag-date-style p-1 me-2`}
+                        >
+                          {post.tag}
+                        </small>
+                        <span>{post.date}</span>
+                      </div>
 
-                    {/* Content */}
-                    <p className="text-muted small">{post.content}</p>
-
-                    {/* Read More Button */}
-
+                      <div className="px-3 pb-3">
+                        <h5 className="fw-bold text-dark">{post.title}</h5>
+                        <p className="text-muted small">{post.content}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -520,24 +716,20 @@ const Insights = () => {
             </section>
 
             {/* ---- New Blog List Section ---- */}
-            <h4 className="mt-5 mb-4 mx-5 mx-lg-3">Latest Articles</h4>
+            {/* <h4 className="mt-5 mb-4 mx-5 mx-lg-3">Latest Articles</h4>
             <div className="border border-gray-300 rounded p-3 mx-5 mx-lg-3 latestArticles">
               {LatestblogPosts?.map((post) => (
                 <div key={post.id} className="mb-5">
-                  {/* Image */}
                   <img
                     src={post.image}
                     alt={post.title}
                     className="img-fluid rounded mb-3"
                   />
 
-                  {/* Title */}
                   <h6 className="fw-bold">{post.title}</h6>
 
-                  {/* Content */}
                   <p className="text-muted small">{post.content}</p>
 
-                  {/* Read More Button */}
                   <div className="text-end">
                     <button className="btn btn-primary btn-sm">
                       Read More
@@ -545,7 +737,7 @@ const Insights = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -615,7 +807,9 @@ const Insights = () => {
 
             {/* Bottom Button */}
             <div className="mt-4 d-flex flex-wrap align-items-center gap-2">
-              <Btn rightIcon onClick={openContactModal}>Talk to an Expert</Btn>
+              <Btn rightIcon onClick={openContactModal}>
+                Talk to an Expert
+              </Btn>
             </div>
           </div>
         </div>
@@ -623,7 +817,34 @@ const Insights = () => {
 
       <TestimonialsSection />
 
-      <Brands style={{ padding: "15rem 0 0" }} />
+      <section className="contact-us-section row align-items-center justify-content-between py-5">
+        <div className="contact-text-section col-md-8">
+          <h2 className="contact-heading">
+            Contact us to see how our experience and expertise could benefit
+            your business’s energy strategy and support your Net Zero journey.
+          </h2>
+        </div>
+        <div className="contact-button-section col-md-4 d-flex justify-content-center justify-content-md-end">
+          <Btn
+            rightIcon
+            background={"#fff"}
+            iconbackground={"#2f98d0"}
+            color={"#555"}
+            rightIconChildren={
+              <img
+                className="img-fluid w-50"
+                src={images.icon_top_white}
+                alt="icon"
+              />
+            }
+            onClick={openContactModal}
+          >
+            Talk to an Expert
+          </Btn>
+        </div>
+      </section>
+
+      {/* <Brands style={{ padding: "15rem 0 0" }} /> */}
       <Footer />
     </div>
   );
