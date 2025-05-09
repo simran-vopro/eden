@@ -966,7 +966,5 @@
   }
 
   .line-wrapper {
-    right: calc((100vw - 1921px) / 2 + 480.25px);
-    /* 25% of 1921px is ~480.25 */
-  }
+    right: 24.4%;  }
 }

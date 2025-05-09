@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import Btn from "../components/other/btn";
 import Header from "../components/other/header";
@@ -21,7 +21,7 @@ ScrollTrigger.config({
 });
 
 const LandingPage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
@@ -47,6 +47,7 @@ const LandingPage = () => {
     {
       id: 6,
       title: "Eden Water",
+      img: images.post1,
       longContent: `
       <p><strong>Water is a growing priority for many businesses and so is managing it efficiently. At Eden, we handle the tender process for water and wastewater services, ensuring supplier bids are thoroughly analysed and cost-effective.</strong></p>
       <ul>
@@ -56,12 +57,12 @@ const LandingPage = () => {
       </ul>
       <p>Practical support, measurable impact, and a smarter approach to water management.</p>
     `,
-
       content:
         "Helping to manage water smarter, securing competitive supply contracts, improving efficiency, and supporting sustainability through expert tendering, usage audits, and forward-thinking resource planning.",
     },
     {
       id: 2,
+      img: images.post2,
       title: "Eden Strategy",
       content:
         "In an unpredictable energy market, manage risk intelligently with expert insight, real-time updates, and strategies built around your business, not just the market.",
@@ -77,6 +78,7 @@ const LandingPage = () => {
     },
     {
       id: 3,
+      img: images.post3,
       title: "Eden Auditing",
       content:
         "Expertly auditing your utility bills line by line identifying errors, recovering lost credit, and giving you clear insight to plan ahead with confidence and control.",
@@ -90,6 +92,7 @@ const LandingPage = () => {
     },
     {
       id: 4,
+      img: images.post4,
       title: "Eden Procurement",
       longContent: `
       <p><strong>Energy suppliers across the UK offer a range of purchasing options each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.</strong></p>
@@ -105,6 +108,7 @@ const LandingPage = () => {
     },
     {
       id: 5,
+      img: images.post5,
       title: "Eden Analytics",
       content:
         "Delivering bespoke tailored energy reporting from daily forecasts to detailed KPI tracking giving you clear, timely insights to plan, control, and optimise your energy strategy.",
@@ -120,6 +124,7 @@ const LandingPage = () => {
     },
     {
       id: 1,
+      img: images.post6,
       title: "Eden Optimisation",
       logo: images.infinity_logo,
       content:
@@ -221,8 +226,6 @@ const LandingPage = () => {
   );
 
   const [showVideoModal, setShowVideoModal] = useState(false);
-
- 
 
   //leaf animation
   const leafRef = useRef(null);
@@ -511,7 +514,7 @@ const LandingPage = () => {
 
         <div className="box-row">
           {data.map((item, index) => (
-            <>
+            <React.Fragment key={index}>
               <ExpandableServicesBox
                 key={index}
                 index={index}
@@ -523,8 +526,34 @@ const LandingPage = () => {
                 onClick={() =>
                   setActiveIndex(activeIndex === index ? null : index)
                 }
+                activeIndex={activeIndex}
+                totalItems={data.length}
+                shouldShrink={activeIndex !== null}
               />
-            </>
+            </React.Fragment>
+          ))}
+        </div>
+
+        <div className="box-row">
+          {data.map((item, index) => (
+            <React.Fragment key={index}>
+              <ExpandableServicesBox
+                key={index}
+                index={index}
+                title={item.title}
+                content={item.content}
+                description={item.longContent}
+                infinity_logo={item.logo}
+                isActive={activeIndex === index}
+                onClick={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
+                activeIndex={activeIndex}
+                totalItems={data.length}
+                shouldShrink={activeIndex !== null}
+                backgroundImage={item.img}
+              />
+            </React.Fragment>
           ))}
         </div>
       </section>

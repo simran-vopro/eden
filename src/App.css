@@ -490,7 +490,7 @@ a {
 .line-wrapper {
   position: absolute;
   height: 65vh;
-  right: 24.8%;
+  right: 25.4%;
   top: 70%;
   z-index: revert-layer;
 }
@@ -1382,23 +1382,23 @@ img.dotted {
   margin-top: 10rem;
   overflow-x: hidden;
   width: 100%;
-  /* position: relative; */
 }
 
 .expandable-box-2 {
   padding: 1.2vw;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: flex-basis 0.3s ease-in-out, padding 0.3s ease-in-out;
+  will-change: flex-basis, padding;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   position: relative;
-  flex: 0 0 auto;
-  flex-shrink: 0;
+  transition: all 0.3s ease;
   flex-basis: 15.5%;
+  height: 500px;
 }
 
 .eden-service .video-section {
@@ -1422,6 +1422,17 @@ img.dotted {
   color: rgb(255, 255, 255);
   font-size: 4rem;
   position: absolute;
+}
+
+.box-content-service {
+  margin-top: 1rem;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.box-content-service p {
+  font-size: 17px;
 }
 
 .box-content-2 {
@@ -1452,17 +1463,14 @@ img.dotted {
   font-weight: 600;
   font-size: 37px;
   text-transform: uppercase;
-  transform: rotate(-90deg) translateY(50%);
   transform-origin: left center;
+  transform: rotate(-90deg) translateY(50%);
   position: absolute;
   left: 0;
   bottom: 0%;
-  transform: rotate(-90deg) translateY(50%);
   padding-top: 1rem;
   white-space: nowrap;
-
 }
-
 
 @media (max-width: 768px) {
   .box-title-service {
@@ -1484,8 +1492,7 @@ img.dotted {
   right: 10px;
 }
 
-
 .index-badge-service .icon-top {
-    height: auto;
-    width: 35%;
+  height: auto;
+  width: 35%;
 }
