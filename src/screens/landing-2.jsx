@@ -13,10 +13,11 @@ import "../responsive.css";
 import { useModal } from "../components/pages/ModalContext";
 import SearchBar from "./searchBar";
 import { FaPlayCircle } from "react-icons/fa";
+import ExpandableServicesBox from "../components/pages/expandableBox";
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 ScrollTrigger.config({
-  invalidateOnRefresh: true
+  invalidateOnRefresh: true,
 });
 
 const LandingPage = () => {
@@ -35,15 +36,12 @@ const LandingPage = () => {
   const [showServiceModal, setShowServiceModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
 
-
-
   const handleLearnMore = (service) => {
     setSelectedService(service);
     setShowServiceModal(true);
     // Refresh ScrollTrigger after modal opens
     setTimeout(() => ScrollTrigger.refresh(), 100);
   };
-
 
   const data = [
     {
@@ -75,7 +73,7 @@ const LandingPage = () => {
           <li>Provide confidence that your risk strategy is clear, active, and aligned with your goals</li>
         </ul>
         <p>It’s not just about reacting, it’s about staying ahead.</p>
-      `
+      `,
     },
     {
       id: 3,
@@ -88,7 +86,7 @@ const LandingPage = () => {
           <li>Clear, easy-to-understand reports highlight findings and recovered amounts</li>
           <li>Advanced insights available to support forward planning and cost control</li>
         </ul>
-        <p>No assumptions. No missed details. Just clarity and value.</p>` ,
+        <p>No assumptions. No missed details. Just clarity and value.</p>`,
     },
     {
       id: 4,
@@ -118,7 +116,7 @@ const LandingPage = () => {
           <li>Bespoke reporting on usage, wastage, and KPIs to support smarter energy decisions</li>
         </ul>
         <p>Get the right information, in the right format, at the right time.</p>
-      `
+      `,
     },
     {
       id: 1,
@@ -133,10 +131,8 @@ const LandingPage = () => {
         <p>It’s a smarter, traceable way to reduce your impact and support clean energy without disrupting how you operate.</p>
         <p>This isn’t just about having a greener footprint. It’s about showing you take sustainability seriously to your clients, your people, and the world around you.</p>
         <p>Already making progress? That’s a great start. Eden Infinity is how you go further.</p>
-      `
+      `,
     },
-
-
   ];
 
   const slider = useRef();
@@ -224,180 +220,9 @@ const LandingPage = () => {
     { dependencies: [infinityAboutLogoRef, aboutRef] }
   );
 
-  // let screenWidth = window.innerWidth;
-  // useGSAP(() => {
-  //   let scrollStartValue = "top";
-
-  //   const ctx = gsap.context(() => {
-  //     const panels = gsap.utils.toArray(".expandable-box");
-  //     const panelWidth = panels[0].getBoundingClientRect().width;
-
-  //     if (screenWidth >= 769) {
-  //       // Desktop Animation (your current pinned scroll animation)
-  //       const timeline = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: slider.current,
-  //           start: scrollStartValue,
-  //           end: "+=" + panels.length * panelWidth,
-  //           scrub: 1,
-  //           pin: true,
-  //           endTrigger: "#contact",
-  //           onLeave: () => {
-  //             document.getElementById("services-header")?.classList.add("scroll-ended");
-  //           },
-  //           onEnterBack: () => {
-  //             document.getElementById("services-header")?.classList.remove("scroll-ended");
-  //           },
-  //         },
-  //       });
-
-  //       panels.forEach((panel, i) => {
-  //         const tl = gsap.timeline();
-  //         const content = panel.querySelector(".box-content");
-
-  //         // Animate panel shrink
-  //         tl.to(panel, {
-  //           flexBasis: "15%",
-  //           backgroundImage: "none",
-  //           duration: 1,
-  //           ease: "power1.inOut",
-  //         }, 0);
-
-  //         // Animate content width to 100% inside the shrinking panel
-  //         tl.to(content, {
-  //           ease: "power1.inOut",
-  //           duration: 1,
-  //           delay: 1,
-  //           opacity: 0
-  //         }, 0); // Start at same time
-
-  //         tl.to(".video-icon", {
-  //           ease: "power1.inOut",
-  //           duration: 1,
-  //           delay: 0.1,
-  //           opacity: 0
-  //         }, 0);
-
-
-  //         tl.to(".overlay-img", {
-  //           ease: "power1.inOut",
-  //           duration: 1,
-  //           delay: 0.1,
-  //           opacity: 0
-  //         }, 0);
-
-  //         timeline.add(tl, i);
-  //       });
-
-  //     } else {
-  //       // Mobile & Tablet Animation (different simple scroll animation)
-  //       panels.forEach((panel) => {
-  //         gsap.from(panel, {
-  //           opacity: 0,
-  //           y: 50,
-  //           duration: 0.8,
-  //           ease: "power3.out",
-  //           scrollTrigger: {
-  //             trigger: panel,
-  //             start: "top 85%",
-  //             end: "bottom 60%",
-  //             toggleActions: "play none none reverse",
-  //           },
-  //         });
-  //       });
-  //     }
-  //   }, slider);
-
-  //   return () => ctx.revert();
-  // }, [screenWidth]);
-
   const [showVideoModal, setShowVideoModal] = useState(false);
 
-  const ExpandableServicesBox = ({ index, title, content, onPlayVideo, onLearnMore, infinity_logo, description }) => {
-    const boxRef = useRef();
-    const contentRef = useRef();
-    const titleRef = useRef();
-    const boxBgColors = ["#fafafa", "#8DC74B", "#2F98D0"];
-
-    return (
-      <div
-        ref={boxRef}
-        className="expandable-box-2 relative overflow-hidden"
-        style={{
-          backgroundColor: boxBgColors[index % boxBgColors.length],
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#000" : "#fff",
-          height: "450px"
-        }}
-      >
-        <div>
-
-          <h3
-            ref={titleRef}
-            className="box-title-service">
-            {title}
-          </h3>
-        </div>
-
-
-        <div
-          className="index-badge-service"
-          style={{
-            backgroundColor: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#2F98D0" : "#fff",
-            color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#fff" : "#000",
-          }}
-        >
-          {
-            boxBgColors[index % boxBgColors.length] === "#fafafa" ? <img src={images.icon_top_white} className="icon-top" alt="icon" /> :
-              <img src={images.icon_top} className="icon-top" alt="icon" />}
-        </div>
-
-        <div ref={contentRef} className="box-content" style={{ opacity: 0 }}>
-          <p
-            className="long-content"
-            style={{ color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#828282" : "#fff" }}>
-            {content}
-          </p>
-
-          <div className="box-btn" style={{ opacity: 0 }}>
-            <Btn
-              onMouseEnter={() => handleHoverIn(index)}
-              onMouseLeave={() => handleHoverOut(index)}
-              // onClick={onLearnMore}
-              rightIconChildren={boxBgColors[index % boxBgColors.length] === "#fafafa" ? <img src={images.icon_top} className="icon-top" alt="icon" /> :
-                <img src={images.icon_top_white} className="icon-top" alt="icon" />
-              }
-              iconbackground={
-                boxBgColors[index % boxBgColors.length] === "#8DC74B"
-                  ? "#8DC74B"
-                  : boxBgColors[index % boxBgColors.length] === "#2F98D0"
-                    ? "#2F98D0"
-                    : "#fff"
-              }
-              color={
-                boxBgColors[index % boxBgColors.length] === "#8DC74B"
-                  ? "#8DC74B"
-                  : boxBgColors[index % boxBgColors.length] === "#2F98D0"
-                    ? "#2F98D0"
-                    : "#fff"
-              }
-              background={
-                boxBgColors[index % boxBgColors.length] === "#fafafa"
-                  ? "linear-gradient(86.2deg, #2F98D0 8.59%, #47ADE3 89.8%)"
-                  : "linear-gradient(86.2deg,#ffffff 8.59%, #ffffff 89.8%)"
-              }
-              rightIcon
-            >
-              Learn More
-            </Btn>
-          </div>
-        </div>
-
-        <img src={images.pattern} alt="pattern" id="pattern" />
-      </div>
-    );
-  };
+ 
 
   //leaf animation
   const leafRef = useRef(null);
@@ -462,16 +287,6 @@ const LandingPage = () => {
 
   const { openContactModal } = useModal();
 
-
-
-  const handleCloseModal = () => {
-    setShowServiceModal(false);
-    // Refresh ScrollTrigger after modal closes
-    setTimeout(() => ScrollTrigger.refresh(), 100);
-  };
-
-
-
   return (
     <>
       <div id="header-outer">
@@ -488,7 +303,11 @@ const LandingPage = () => {
 
         <div id="contentSection">
           <div className="slide-up">
-            <img src={images.logo} alt="logo" className="logo slide-up-text-hero" />
+            <img
+              src={images.logo}
+              alt="logo"
+              className="logo slide-up-text-hero"
+            />
           </div>
           <div className="slide-up">
             <h1 className="top-title slide-up-text-hero" ref={topTitleRef}>
@@ -505,7 +324,11 @@ const LandingPage = () => {
           </div>
 
           <div className="slide-up">
-            <Btn className="webBtn slide-up-text-hero" onClick={openContactModal} rightIcon>
+            <Btn
+              className="webBtn slide-up-text-hero"
+              onClick={openContactModal}
+              rightIcon
+            >
               Talk to an Expert
             </Btn>
           </div>
@@ -540,12 +363,18 @@ const LandingPage = () => {
               </div>
               <div className="slide-up">
                 <p className="long-content slide-up-text">
-                  Mark’s expertise has shaped Eden Utilities from the ground up, embedding a consultative and sustainability-first ethos into the company’s foundation. Deeply aware of the changing energy landscape, he understands the growing need for trusted, future-focused advisory.
+                  Mark’s expertise has shaped Eden Utilities from the ground up,
+                  embedding a consultative and sustainability-first ethos into
+                  the company’s foundation. Deeply aware of the changing energy
+                  landscape, he understands the growing need for trusted,
+                  future-focused advisory.
                   <br></br>
                   <br></br>
-                  This mindset is central not just to Eden’s services, but to every team member he brings on board creating a company united by shared values and a long-term vision for smarter, greener utilities.
+                  This mindset is central not just to Eden’s services, but to
+                  every team member he brings on board creating a company united
+                  by shared values and a long-term vision for smarter, greener
+                  utilities.
                 </p>
-
               </div>
             </div>
           </div>
@@ -617,40 +446,33 @@ const LandingPage = () => {
 
       <Brands btn />
 
-
       <section className="eden-service position-relative block--spc">
         <img src={images.infinity_logo} alt="logo" className="logo" />
         <div className="p-md-3 video-section position-relative overflow-hidden">
-
-
           <div className="box-content-2">
-
-
-            <div> <div className="title-row">
-              <h3 className="box-title-2">
-                Smart Energy Solutions for Businesses
-              </h3>
-            </div>
+            <div>
+              {" "}
+              <div className="title-row">
+                <h3 className="box-title-2">
+                  Smart Energy Solutions for Businesses
+                </h3>
+              </div>
               <p
                 className="long-content"
                 style={{
                   color: "#828282",
                 }}
               >
-                Helping your business turn waste into clean energy cutting emissions, reducing landfill, and showing the world you take sustainability seriously. Go further. Do better.
-              </p></div>
-
-
-            <div className="box-btn-2">
-              <Btn
-                rightIcon
-              >
-                Learn More
-              </Btn>
+                Helping your business turn waste into clean energy cutting
+                emissions, reducing landfill, and showing the world you take
+                sustainability seriously. Go further. Do better.
+              </p>
             </div>
 
+            <div className="box-btn-2">
+              <Btn rightIcon>Learn More</Btn>
+            </div>
           </div>
-
 
           <img src={images.videoBg} className="overlay-img-2"></img>
 
@@ -658,14 +480,12 @@ const LandingPage = () => {
 
           <div
             className="video-icon-2"
-          // onClick={onPlayVideo}
+            // onClick={onPlayVideo}
           >
             <FaPlayCircle />
           </div>
-
         </div>
       </section>
-
 
       <section id="services" ref={slider} className="section-with-animations">
         <div id="services-header">
@@ -687,10 +507,9 @@ const LandingPage = () => {
             className="side-leaves"
             src={images.side_leaves}
           />
-
         </div>
 
-        <div className="box-row" >
+        <div className="box-row">
           {data.map((item, index) => (
             <>
               <ExpandableServicesBox
@@ -704,10 +523,7 @@ const LandingPage = () => {
                 onClick={() =>
                   setActiveIndex(activeIndex === index ? null : index)
                 }
-                onPlayVideo={() => setShowVideoModal(true)}
-                onLearnMore={() => handleLearnMore(item)}
               />
-
             </>
           ))}
         </div>
@@ -725,7 +541,10 @@ const LandingPage = () => {
             role="document"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="modal-content modal-centered border-0" style={{ backgroundColor: "#000000c4" }}>
+            <div
+              className="modal-content modal-centered border-0"
+              style={{ backgroundColor: "#000000c4" }}
+            >
               <div className="modal-header border-0">
                 <button
                   type="button"

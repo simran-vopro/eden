@@ -24,6 +24,126 @@ const blogPosts = [
     sub_title: "Eden helps you take back control in a volatile energy market.",
     content:
       "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
+    longContent: `<p className="card-text mb-3">
+                      The UK is facing a growing competitiveness problem and at the
+                      heart of it is energy. According to The Times (April 2024),
+                      British companies are now paying industrial electricity prices
+                      that are 46% higher than the average across countries in the
+                      International Energy Agency (IEA). That figure is not just a
+                      statistic; it represents a major threat to growth,
+                      productivity, and investment across the country.
+                    </p>
+                    <p>
+                      Manufacturers are feeling the pressure acutely. CF Fertilisers
+                      shut down its ammonia plant in Billingham due to unsustainable
+                      energy costs. Large industrial groups like Tata Steel and
+                      Ineos are publicly questioning their long-term presence in the
+                      UK. These aren’t isolated incidents they’re symptoms of a
+                      deeper issue.
+                    </p>
+                    <p>
+                      A report published by Make UK and the Centre for Progressive
+                      Policy outlines how rising energy costs are now one of the
+                      primary factors preventing British companies from expanding or
+                      investing further. The concern is particularly high among
+                      manufacturers, where 70% say energy is affecting their
+                      decisions on future growth and location.
+                    </p>
+                    {/* Small Image Grid */}
+                    <div className="row my-4 g-3">
+                      <div className="col-4">
+                        <img
+                          src={images.post1}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 1"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post2}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 2"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post3}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 3"
+                        />
+                      </div>
+                    </div>
+    
+                    <p>
+                      The problem isn’t just the cost of energy itself it’s the
+                      structure. UK firms face disproportionately high network
+                      charges and green levies compared to competitors overseas.
+                      That structural disadvantage is making British businesses less
+                      attractive for future investment, even among UK-based firms.
+                    </p>
+                    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+                      "The UK is a great place to invest, but the cost of energy is
+                      becoming a real block to that growth." Stephen Phipson, Chief
+                      Executive of Make UK
+                    </blockquote>
+                    <p>
+                      Government interventions, such as the Energy Bills Discount
+                      Scheme, are helping to a degree, but they’re not enough to
+                      offset the broader pricing disadvantage. As energy markets
+                      remain volatile and global competition sharpens, businesses
+                      need more than discounts they need strategy.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      How Eden Supports UK Businesses Facing Energy Pressures
+                    </h5>
+                    <p>
+                      At Eden, we understand that energy is now a critical lever in
+                      operational resilience and growth planning. Rising costs and
+                      complex market structures make it harder for large and
+                      medium-sized businesses to make confident decisions that’s
+                      where we step in.
+                    </p>
+                    <ul>
+                      <li>
+                        Design procurement strategies that adapt to market
+                        volatility
+                      </li>
+                      <li>
+                        Audit and optimise contracts to eliminate unnecessary costs
+                      </li>
+                      <li>
+                        Negotiate directly with suppliers to secure better terms
+                      </li>
+                      <li>
+                        Analyse risk exposure and usage patterns to improve
+                        efficiency
+                      </li>
+                      <li>
+                        Support long-term planning with real-time market
+                        intelligence and forecasting
+                      </li>
+                    </ul>
+                    <p>
+                      Whether you're managing a multi-site operation or scaling in
+                      an energy-intensive industry, our team helps you protect
+                      performance without compromising on sustainability or control.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      Don’t Let Energy Costs Undermine Your Future
+                    </h5>
+                    <p>
+                      If rising electricity prices are slowing your growth or
+                      forcing difficult choices, you're not alone but you don’t have
+                      to face it without support.
+                    </p>
+                    <p>
+                      <strong>Speak with an Eden expert today.</strong> We’ll help
+                      you make sense of your energy position and build a strategy
+                      that keeps your business moving forward no matter how the
+                      market shifts.
+                    </p>`,
     image: images.post1,
     author: "Eden Insights",
     authorImage: images.profile,
@@ -38,6 +158,126 @@ const blogPosts = [
       "How Eden helps businesses stay ahead of accelerating power needs.",
     content:
       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
+    longContent: `<p className="card-text mb-3">
+                      The UK is facing a growing competitiveness problem and at the
+                      heart of it is energy. According to The Times (April 2024),
+                      British companies are now paying industrial electricity prices
+                      that are 46% higher than the average across countries in the
+                      International Energy Agency (IEA). That figure is not just a
+                      statistic; it represents a major threat to growth,
+                      productivity, and investment across the country.
+                    </p>
+                    <p>
+                      Manufacturers are feeling the pressure acutely. CF Fertilisers
+                      shut down its ammonia plant in Billingham due to unsustainable
+                      energy costs. Large industrial groups like Tata Steel and
+                      Ineos are publicly questioning their long-term presence in the
+                      UK. These aren’t isolated incidents they’re symptoms of a
+                      deeper issue.
+                    </p>
+                    <p>
+                      A report published by Make UK and the Centre for Progressive
+                      Policy outlines how rising energy costs are now one of the
+                      primary factors preventing British companies from expanding or
+                      investing further. The concern is particularly high among
+                      manufacturers, where 70% say energy is affecting their
+                      decisions on future growth and location.
+                    </p>
+                    {/* Small Image Grid */}
+                    <div className="row my-4 g-3">
+                      <div className="col-4">
+                        <img
+                          src={images.post1}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 1"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post2}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 2"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post3}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 3"
+                        />
+                      </div>
+                    </div>
+    
+                    <p>
+                      The problem isn’t just the cost of energy itself it’s the
+                      structure. UK firms face disproportionately high network
+                      charges and green levies compared to competitors overseas.
+                      That structural disadvantage is making British businesses less
+                      attractive for future investment, even among UK-based firms.
+                    </p>
+                    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+                      "The UK is a great place to invest, but the cost of energy is
+                      becoming a real block to that growth." Stephen Phipson, Chief
+                      Executive of Make UK
+                    </blockquote>
+                    <p>
+                      Government interventions, such as the Energy Bills Discount
+                      Scheme, are helping to a degree, but they’re not enough to
+                      offset the broader pricing disadvantage. As energy markets
+                      remain volatile and global competition sharpens, businesses
+                      need more than discounts they need strategy.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      How Eden Supports UK Businesses Facing Energy Pressures
+                    </h5>
+                    <p>
+                      At Eden, we understand that energy is now a critical lever in
+                      operational resilience and growth planning. Rising costs and
+                      complex market structures make it harder for large and
+                      medium-sized businesses to make confident decisions that’s
+                      where we step in.
+                    </p>
+                    <ul>
+                      <li>
+                        Design procurement strategies that adapt to market
+                        volatility
+                      </li>
+                      <li>
+                        Audit and optimise contracts to eliminate unnecessary costs
+                      </li>
+                      <li>
+                        Negotiate directly with suppliers to secure better terms
+                      </li>
+                      <li>
+                        Analyse risk exposure and usage patterns to improve
+                        efficiency
+                      </li>
+                      <li>
+                        Support long-term planning with real-time market
+                        intelligence and forecasting
+                      </li>
+                    </ul>
+                    <p>
+                      Whether you're managing a multi-site operation or scaling in
+                      an energy-intensive industry, our team helps you protect
+                      performance without compromising on sustainability or control.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      Don’t Let Energy Costs Undermine Your Future
+                    </h5>
+                    <p>
+                      If rising electricity prices are slowing your growth or
+                      forcing difficult choices, you're not alone but you don’t have
+                      to face it without support.
+                    </p>
+                    <p>
+                      <strong>Speak with an Eden expert today.</strong> We’ll help
+                      you make sense of your energy position and build a strategy
+                      that keeps your business moving forward no matter how the
+                      market shifts.
+                    </p>`,
     image: images.post2,
     author: "Eden Insights",
     authorImage: images.profile,
@@ -125,6 +365,126 @@ const blogTopPosts = [
     authorImage: "images/profile.jpg",
     date: "May 06, 2025",
     tag: "Opinion",
+    longContent: `<p className="card-text mb-3">
+                      The UK is facing a growing competitiveness problem and at the
+                      heart of it is energy. According to The Times (April 2024),
+                      British companies are now paying industrial electricity prices
+                      that are 46% higher than the average across countries in the
+                      International Energy Agency (IEA). That figure is not just a
+                      statistic; it represents a major threat to growth,
+                      productivity, and investment across the country.
+                    </p>
+                    <p>
+                      Manufacturers are feeling the pressure acutely. CF Fertilisers
+                      shut down its ammonia plant in Billingham due to unsustainable
+                      energy costs. Large industrial groups like Tata Steel and
+                      Ineos are publicly questioning their long-term presence in the
+                      UK. These aren’t isolated incidents they’re symptoms of a
+                      deeper issue.
+                    </p>
+                    <p>
+                      A report published by Make UK and the Centre for Progressive
+                      Policy outlines how rising energy costs are now one of the
+                      primary factors preventing British companies from expanding or
+                      investing further. The concern is particularly high among
+                      manufacturers, where 70% say energy is affecting their
+                      decisions on future growth and location.
+                    </p>
+                    {/* Small Image Grid */}
+                    <div className="row my-4 g-3">
+                      <div className="col-4">
+                        <img
+                          src={images.post1}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 1"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post2}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 2"
+                        />
+                      </div>
+                      <div className="col-4">
+                        <img
+                          src={images.post3}
+                          className="img-fluid rounded"
+                          alt="Energy Impact 3"
+                        />
+                      </div>
+                    </div>
+    
+                    <p>
+                      The problem isn’t just the cost of energy itself it’s the
+                      structure. UK firms face disproportionately high network
+                      charges and green levies compared to competitors overseas.
+                      That structural disadvantage is making British businesses less
+                      attractive for future investment, even among UK-based firms.
+                    </p>
+                    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+                      "The UK is a great place to invest, but the cost of energy is
+                      becoming a real block to that growth." Stephen Phipson, Chief
+                      Executive of Make UK
+                    </blockquote>
+                    <p>
+                      Government interventions, such as the Energy Bills Discount
+                      Scheme, are helping to a degree, but they’re not enough to
+                      offset the broader pricing disadvantage. As energy markets
+                      remain volatile and global competition sharpens, businesses
+                      need more than discounts they need strategy.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      How Eden Supports UK Businesses Facing Energy Pressures
+                    </h5>
+                    <p>
+                      At Eden, we understand that energy is now a critical lever in
+                      operational resilience and growth planning. Rising costs and
+                      complex market structures make it harder for large and
+                      medium-sized businesses to make confident decisions that’s
+                      where we step in.
+                    </p>
+                    <ul>
+                      <li>
+                        Design procurement strategies that adapt to market
+                        volatility
+                      </li>
+                      <li>
+                        Audit and optimise contracts to eliminate unnecessary costs
+                      </li>
+                      <li>
+                        Negotiate directly with suppliers to secure better terms
+                      </li>
+                      <li>
+                        Analyse risk exposure and usage patterns to improve
+                        efficiency
+                      </li>
+                      <li>
+                        Support long-term planning with real-time market
+                        intelligence and forecasting
+                      </li>
+                    </ul>
+                    <p>
+                      Whether you're managing a multi-site operation or scaling in
+                      an energy-intensive industry, our team helps you protect
+                      performance without compromising on sustainability or control.
+                    </p>
+    
+                    <h5 className="mt-4 fw-bold">
+                      Don’t Let Energy Costs Undermine Your Future
+                    </h5>
+                    <p>
+                      If rising electricity prices are slowing your growth or
+                      forcing difficult choices, you're not alone but you don’t have
+                      to face it without support.
+                    </p>
+                    <p>
+                      <strong>Speak with an Eden expert today.</strong> We’ll help
+                      you make sense of your energy position and build a strategy
+                      that keeps your business moving forward no matter how the
+                      market shifts.
+                    </p>`,
   },
   {
     id: 2,
@@ -514,7 +874,9 @@ const Insights = () => {
                     <p>{blogTopPosts[0].content}</p>
                     <div
                       onClick={() => {
-                        navigate("/insight-details", { state: { singlePost: blogTopPosts[0] } });
+                        navigate("/insight-details", {
+                          state: { singlePost: blogTopPosts[0] },
+                        });
                       }}
                       className="text-link"
                     >
