@@ -32,7 +32,7 @@ const ExpandableServicesBox = ({
       tl.to(boxRef.current, {
         flexBasis: "100%",
         padding: "20px",
-        duration: 0.5, // increased for smoothness
+        duration: 0.5,
       })
         .to(
           titleRef.current,
@@ -42,24 +42,21 @@ const ExpandableServicesBox = ({
             y: 0,
             top: "1rem",
             left: "1.5rem",
+            width: "fit-content",
             position: "absolute",
             duration: 0.5,
             ease: "power2.out",
           },
-          0
+          "<" // keep title animating with box
         )
-        .set(badgeRef.current, { display: "flex" })
-        .to(
-          badgeRef.current,
-          {
-            opacity: 1,
-            rotate: "180deg",
-            duration: 0.5,
-            ease: "power2.out",
-          },
-          "<"
-        )
-        .to(contentRef.current, { opacity: 1 }, "-=0.2");
+        .to(contentRef.current, { opacity: 1 }, "-=0.2") // fade in content slightly before badge
+        .set(badgeRef.current, { display: "flex", opacity:0 }) // make badge visible
+        .to(badgeRef.current, {
+          opacity: 1,
+          rotate: "180deg",
+          duration: 0.4,
+          ease: "power2.out",
+        }); // badge comes in LAST
     } else if (activeIndex !== null && index < activeIndex) {
       tl.to(boxRef.current, {
         flexBasis: "10%",
@@ -84,10 +81,10 @@ const ExpandableServicesBox = ({
             x: "10%",
             y: 0,
             left: 0,
-            bottom: "0%",
-            top: "auto",
+            top: "65%",
             duration: 0.5,
             ease: "power2.out",
+            width: "300px",
           },
           0
         )
@@ -189,7 +186,8 @@ const ExpandableServicesBox = ({
         className="box-content-service"
         style={{ opacity: 0, zIndex: 1 }}
       >
-        <div
+        <p
+          className="mb-3"
           style={{
             color: backgroundImage
               ? "#fff"
@@ -197,8 +195,9 @@ const ExpandableServicesBox = ({
               ? "#828282"
               : "#fff",
           }}
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+        >
+          {content}
+        </p>
 
         <div className="box-btn">
           <Btn

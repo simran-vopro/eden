@@ -95,8 +95,10 @@ import call from "../../assets/landing/icons/call.png";
 
 import about_video from "../../assets/about/about.mp4";
 import videoBg from "../../assets/about/videoBg.png";
+import videoIconBg from "../../assets/landing/video_icon_bg.png";
 
 const images = {
+  videoIconBg,
   videoBg,
   about_video,
   favicon,

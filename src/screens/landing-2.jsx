@@ -457,7 +457,7 @@ const LandingPage = () => {
               {" "}
               <div className="title-row">
                 <h3 className="box-title-2">
-                  Smart Energy Solutions for Businesses
+                  Converting Your Waste into Energy
                 </h3>
               </div>
               <p
@@ -466,9 +466,11 @@ const LandingPage = () => {
                   color: "#828282",
                 }}
               >
-                Helping your business turn waste into clean energy cutting
-                emissions, reducing landfill, and showing the world you take
-                sustainability seriously. Go further. Do better.
+                The world is changing fast. Businesses and consumers are more
+                aware than ever of the need for genuine sustainability.
+                Expectations are rising, and responsibility is no longer
+                optional. Many organisations are making changes Eden Infinity
+                helps take it further.
               </p>
             </div>
 
@@ -478,6 +480,7 @@ const LandingPage = () => {
           </div>
 
           <img src={images.videoBg} className="overlay-img-2"></img>
+           <div className="overlay-video"></div>
 
           {/* Special video icon overlay for index === 0 */}
 
@@ -485,7 +488,8 @@ const LandingPage = () => {
             className="video-icon-2"
             // onClick={onPlayVideo}
           >
-            <FaPlayCircle />
+          
+             <img src={images.videoIconBg} className="img-fluid"></img>
           </div>
         </div>
       </section>

@@ -11,7 +11,7 @@ import Btn from "../components/other/btn";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import TestimonialsSection from "./testimonialsSection";
 import { useModal } from "../components/pages/ModalContext";
 
@@ -62,91 +62,362 @@ const LatestblogPosts = [
   {
     id: 1,
     title:
-      "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
-    sub_title: "Eden helps you take back control in a volatile energy market.",
+      "Rising Energy Costs Are Disrupting UK Business - Eden Helps You Take Back Control",
+    sub_title: "Eden helps you take back control in a volatile energy market",
     content:
-      "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
+      "British companies now pay 46% higher industrial electricity prices than IEA average. Discover how Eden helps businesses maintain competitiveness.",
+    longContent: `<p className="card-text mb-3">
+      The UK faces a growing competitiveness crisis with industrial electricity prices 46% above IEA averages. Major manufacturers like CF Fertilisers have shut production lines, while others reconsider UK operations.
+    </p>
+    <div className="row my-4 g-3">
+      <div className="col-4">
+        <img src={images.post1} className="img-fluid rounded" alt="UK energy prices chart"/>
+      </div>
+      <div className="col-4">
+        <img src={images.post2} className="img-fluid rounded" alt="Factory shutdown"/>
+      </div>
+      <div className="col-4">
+        <img src={images.post3} className="img-fluid rounded" alt="Energy comparison graph"/>
+      </div>
+    </div>
+    <h5 className="mt-4 fw-bold">Eden's Strategic Support:</h5>
+    <ul>
+      <li>Bespoke procurement strategies adapting to market volatility</li>
+      <li>Supplier negotiation and contract optimization</li>
+      <li>Real-time market intelligence and forecasting</li>
+      <li>Risk exposure analysis and mitigation planning</li>
+    </ul>
+    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+      "Energy is no longer just a utility - it's a strategic risk requiring expert management."<br/>
+      - Eden Energy Strategist
+    </blockquote>`,
     image: images.post1,
     author: "Eden Insights",
     authorImage: images.profile,
-    date: "April 25, 2025",
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+    date: "April 25, 2024",
+    tag: "Blogs",
+    tagColor: "bg-danger",
   },
   {
     id: 2,
-    title: "AI’s Growing Energy Demand: Why It Matters",
-    sub_title:
-      "How Eden helps businesses stay ahead of accelerating power needs.",
+    title:
+      "AI's Growing Energy Demand: Why It Matters - And How Eden Helps You Stay Ahead",
+    sub_title: "Navigating the hidden costs of AI infrastructure expansion",
     content:
-      "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
+      "Global data center electricity demand expected to double by 2030. Learn how Eden helps balance AI growth with sustainable energy strategies.",
+    longContent: `<p className="card-text mb-3">
+      AI infrastructure expansion is driving unprecedented energy demands, with UK data centers increasingly relying on gas-fired generators. Eden's solutions include:
+    </p>
+    <div className="row my-4 g-3">
+      <div className="col-6">
+        <img src={images.post4} className="img-fluid rounded" alt="Data center energy use"/>
+      </div>
+      <div className="col-6">
+        <img src={images.post5} className="img-fluid rounded" alt="Renewable integration"/>
+      </div>
+    </div>
+    <h5 className="mt-4 fw-bold">Our 4-Pillar Approach:</h5>
+    <ol>
+      <li>Strategic energy procurement for high-demand sectors</li>
+      <li>Grid infrastructure planning and support</li>
+      <li>Sustainable energy integration solutions</li>
+      <li>Advanced risk modeling and forecasting</li>
+    </ol>
+    <p>
+      With training large AI models consuming up to 42GWh (equivalent to 10,000 UK homes), Eden helps organizations:
+    </p>
+    <ul>
+      <li>Navigate grid connection challenges</li>
+      <li>Implement waste-to-energy solutions</li>
+      <li>Maintain ESG compliance</li>
+    </ul>`,
     image: images.post2,
     author: "Eden Insights",
     authorImage: images.profile,
-    date: "April 22, 2025",
+    date: "April 22, 2024",
+    tag: "Events",
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+    tagColor: "bg-primary",
   },
   {
     id: 3,
-    title: "The Grid Is Changing  And So Must Your Strategy",
-    sub_title:
-      "Why the Great Grid Upgrade means new rules for business energy planning.",
+    title:
+      "The Great Grid Upgrade: What Businesses Must Know About the UK's Energy Overhaul",
+    sub_title: "Navigating the £35 billion infrastructure transformation",
     content:
-      "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
+      "With 200+ billion in renewable projects stuck in grid queues, discover how Eden ensures energy continuity during transition.",
+    longContent: `<p className="card-text mb-3">
+      The UK's grid modernization brings both opportunities and challenges. Key projects like the £4.3B Eastern Green Link cable require strategic planning:
+    </p>
+    <img src={images.post6} className="img-fluid rounded mb-3" alt="Grid upgrade map"/>
+    <h5 className="mt-4 fw-bold">Critical Considerations:</h5>
+    <ul>
+      <li>Managing connection delays up to 15 years</li>
+      <li>Balancing onsite vs grid-supplied energy</li>
+      <li>Adapting procurement strategies for flux infrastructure</li>
+    </ul>
+    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+      "The grid overhaul isn't just about cables and substations - it's about rethinking business energy strategies for the next decade."
+    </blockquote>`,
     image: images.post3,
     author: "Eden Insights",
     authorImage: images.profile,
-    date: "April 20, 2025",
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+    date: "April 20, 2024",
+    tag: "Explainer",
+    tagColor: "bg-secondary",
   },
   {
     id: 4,
-    title: "Decarbonization and Net-Zero Commitments",
-    sub_title: "Navigating the path to a sustainable future with Eden.",
+    title:
+      "From Data to Decisions: How Smart Metering Transforms Business Energy Use",
+    sub_title:
+      "Leveraging 66% UK smart meter penetration for strategic advantage",
     content:
-      "With net-zero legally binding and interim goals rising, Eden supports businesses with tailored energy strategies, infrastructure planning, and compliance to meet evolving targets without sacrificing performance.",
+      "Advanced metering insights drive 18-22% efficiency gains. Learn to transform raw data into actionable strategies.",
+    longContent: `<p className="card-text mb-3">
+      With 34 million smart meters operational, Eden helps businesses:
+    </p>
+    <div className="row my-4 g-3">
+      <div className="col-4">
+        <img src={images.post7} className="img-fluid rounded" alt="Smart meter dashboard"/>
+      </div>
+      <div className="col-8">
+        <ul>
+          <li>Identify hidden consumption patterns</li>
+          <li>Optimize tariff structures</li>
+          <li>Prevent billing errors</li>
+          <li>Improve demand forecasting</li>
+        </ul>
+      </div>
+    </div>
+    <h5 className="mt-4 fw-bold">Implementation Framework:</h5>
+    <ol>
+      <li>Meter data aggregation & normalization</li>
+      <li>Anomaly detection & reporting</li>
+      <li>Integration with procurement systems</li>
+      <li>Continuous optimization cycle</li>
+    </ol>`,
     image: images.post4,
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
     author: "Eden Insights",
     authorImage: images.profile,
-    date: "April 18, 2025",
+    date: "April 18, 2024",
+    tag: "Guides",
+    tagColor: "bg-success",
   },
   {
     id: 5,
-    title: "Advanced Metering Empowers Energy Efficiency",
-    sub_title: "Real-time data insights are reshaping energy decisions.",
+    title:
+      "Cybersecurity and Energy Resilience: Protecting Critical Infrastructure",
+    sub_title:
+      "Building cyber-resilient energy systems in high-risk environments",
     content:
-      "With 66% of UK meters now smart, Eden helps businesses maximise value from advanced metering by integrating usage data into broader procurement and risk strategies.",
+      "With 68% of UK energy firms reporting increased attacks, discover Eden's layered defense approach.",
+    longContent: `<p className="card-text mb-3">
+      Recent incidents highlight critical vulnerabilities. Eden's cybersecurity framework includes:
+    </p>
+    <div className="row my-4 g-3">
+      <div className="col-6">
+        <img src={images.post5} className="img-fluid rounded" alt="Cyber defense layers"/>
+      </div>
+      <div className="col-6">
+        <ul>
+          <li>Real-time threat monitoring</li>
+          <li>Supplier chain audits</li>
+          <li>Incident response planning</li>
+          <li>Employee training programs</li>
+        </ul>
+      </div>
+    </div>
+    <h5 className="mt-4 fw-bold">Key Statistics:</h5>
+    <ul>
+      <li>42% increase in energy sector ransomware attacks (2023-2024)</li>
+      <li>Average outage cost: £12,000/minute for large manufacturers</li>
+      <li>78% of attacks target third-party vendors</li>
+    </ul>`,
     image: images.post5,
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
     author: "Eden Insights",
     authorImage: images.profile,
-    date: "April 16, 2025",
+    date: "April 16, 2024",
+    tag: "Interviews",
+    tagColor: "bg-info",
   },
   {
     id: 6,
-    title: "Cybersecurity and Energy Resilience",
-    sub_title: "Safeguarding infrastructure in an age of rising threats.",
+    title:
+      "Decarbonization in Action: Practical Strategies for Net-Zero Transition",
+    sub_title:
+      "Meeting 2035's 81% emission reduction target without compromising operations",
     content:
-      "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
+      "From solar mandates to waste-to-energy solutions - Eden's roadmap for sustainable transformation.",
+    longContent: `<p className="card-text mb-3">
+      With mandatory solar panels on new homes by 2027 and commercial targets accelerating, Eden helps:
+    </p>
+    <div className="row my-4 g-3">
+      <div className="col-4">
+        <img src={images.post6} className="img-fluid rounded" alt="Solar installation"/>
+      </div>
+      <div className="col-4">
+        <img src={images.post7} className="img-fluid rounded" alt="Wind farm"/>
+      </div>
+      <div className="col-4">
+        <img src={images.post1} className="img-fluid rounded" alt="Eden Infinity"/>
+      </div>
+    </div>
+    <h5 className="mt-4 fw-bold">Implementation Pathway:</h5>
+    <ol>
+      <li>Carbon footprint analysis</li>
+      <li>Renewable integration planning</li>
+      <li>Eden Infinity waste-to-energy solutions</li>
+      <li>Continuous compliance monitoring</li>
+    </ol>`,
     image: images.post6,
     author: "Eden Insights",
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
     authorImage: images.profile,
-    date: "April 14, 2025",
+    date: "April 14, 2024",
+    tag: "News",
+    tagColor: "bg-dark",
   },
   {
     id: 7,
-    title: "Navigating Energy Compliance and Reporting",
-    sub_title: "Adapting to regulatory shifts with confidence.",
+    title:
+      "Regulatory Compliance 2024: Navigating ESOS Phase 3 and New RIGs Requirements",
+    sub_title: "Staying ahead in evolving energy compliance landscape",
     content:
-      "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
+      "With June 2024 deadlines passed, ensure ongoing compliance with Eden's expert guidance.",
+    longContent: `<p className="card-text mb-3">
+      Key regulatory updates demand proactive management:
+    </p>
+    <ul>
+      <li>Enhanced RFPR reporting requirements</li>
+      <li>ESOS Phase 3 validation processes</li>
+      <li>New energy efficiency thresholds</li>
+    </ul>
+    <div className="row my-4 g-3">
+      <div className="col-6">
+        <img src={images.post7} className="img-fluid rounded" alt="Compliance checklist"/>
+      </div>
+      <div className="col-6">
+        <h5>Eden's Compliance Services:</h5>
+        <ul>
+          <li>Audit preparation & support</li>
+          <li>Documentation management</li>
+          <li>Continuous regulation tracking</li>
+          <li>Stakeholder training programs</li>
+        </ul>
+      </div>
+    </div>`,
     image: images.post7,
     author: "Eden Insights",
+    authorBio:
+      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
     authorImage: images.profile,
-    date: "April 12, 2025",
+    date: "April 12, 2024",
+    tag: "Videos",
+    tagColor: "bg-warning text-dark",
   },
 ];
 
+// const LatestblogPosts = [
+//   {
+//     id: 1,
+//     title:
+//       "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
+//     sub_title: "Eden helps you take back control in a volatile energy market.",
+//     content:
+//       "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
+//     image: images.post1,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 25, 2025",
+//   },
+//   {
+//     id: 2,
+//     title: "AI’s Growing Energy Demand: Why It Matters",
+//     sub_title:
+//       "How Eden helps businesses stay ahead of accelerating power needs.",
+//     content:
+//       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
+//     image: images.post2,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 22, 2025",
+//   },
+//   {
+//     id: 3,
+//     title: "The Grid Is Changing  And So Must Your Strategy",
+//     sub_title:
+//       "Why the Great Grid Upgrade means new rules for business energy planning.",
+//     content:
+//       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
+//     image: images.post3,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 20, 2025",
+//   },
+//   {
+//     id: 4,
+//     title: "Decarbonization and Net-Zero Commitments",
+//     sub_title: "Navigating the path to a sustainable future with Eden.",
+//     content:
+//       "With net-zero legally binding and interim goals rising, Eden supports businesses with tailored energy strategies, infrastructure planning, and compliance to meet evolving targets without sacrificing performance.",
+//     image: images.post4,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 18, 2025",
+//   },
+//   {
+//     id: 5,
+//     title: "Advanced Metering Empowers Energy Efficiency",
+//     sub_title: "Real-time data insights are reshaping energy decisions.",
+//     content:
+//       "With 66% of UK meters now smart, Eden helps businesses maximise value from advanced metering by integrating usage data into broader procurement and risk strategies.",
+//     image: images.post5,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 16, 2025",
+//   },
+//   {
+//     id: 6,
+//     title: "Cybersecurity and Energy Resilience",
+//     sub_title: "Safeguarding infrastructure in an age of rising threats.",
+//     content:
+//       "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
+//     image: images.post6,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 14, 2025",
+//   },
+//   {
+//     id: 7,
+//     title: "Navigating Energy Compliance and Reporting",
+//     sub_title: "Adapting to regulatory shifts with confidence.",
+//     content:
+//       "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
+//     image: images.post7,
+//     author: "Eden Insights",
+//     authorImage: images.profile,
+//     date: "April 12, 2025",
+//   },
+// ];
+
 const InsightsDetails = () => {
   const { openContactModal } = useModal();
-  const { state } = useLocation();
-  const singlePost = state?.singlePost;
+  const location = useLocation();
+  const { post } = location.state || {};
+  const navigate = useNavigate();
 
-  console.log("single post ==> ", singlePost);
+  console.log("single post ==> ", post);
 
   return (
     <div id="insights">
@@ -162,34 +433,50 @@ const InsightsDetails = () => {
             <div className="card mb-4 pb-4 border-bottom">
               {/* Title and Subtitle */}
               <div className="card-header bg-transparent border-0 p-0 mb-3">
-                <h6 className="text-muted small mb-2">
-                  Published April 2024 | Source: The Times
-                </h6>
+                <div className="flex items-center flex-wrap gap-2 text-sm text-gray-600 mb-2">
+                  <span
+                    className={`badge ${post.tagColor} tag-date-style px-2 py-1`}
+                  >
+                    {post.tag}
+                  </span>
+                  <span
+                    className="text-muted text-sm text-gray-600"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    Published{" "}
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}{" "}
+                    &nbsp;&bull;&nbsp; {post.author}
+                  </span>
+                </div>
+
                 <h3 className="text-uppercase fw-bold text-black mb-1">
-                  {singlePost.title}
+                  {post.title}
                 </h3>
-                <p className="long-content text-dark fs-5">
-                  {singlePost.content}
-                </p>
+                <p className="long-content text-dark fs-5">{post.content}</p>
               </div>
 
               {/* Optional Main Image */}
               <img
-                src={singlePost.image}
+                src={post.image}
                 className="img-fluid rounded mb-3"
-                alt={singlePost.title}
+                alt={post.title}
               />
 
               {/* Content */}
               <div className="card-body p-0">
-                <div  dangerouslySetInnerHTML={{ __html: description }}>{singlePost.longContent}</div>
+                <div dangerouslySetInnerHTML={{ __html: post.longContent }} />
 
                 {/* Author and Share section */}
-                <div className="d-flex justify-content-between align-items-center mt-3 gap-3">
+              </div>
+              {/* <div className="d-flex justify-content-between align-items-center mt-3 gap-3">
                   <div className="d-flex align-items-center gap-2">
                     <img
-                      src={singlePost.authorImage}
-                      alt={singlePost.author}
+                      src={post.authorImage}
+                      alt={post.author}
                       style={{
                         width: "40px",
                         height: "40px",
@@ -199,13 +486,13 @@ const InsightsDetails = () => {
                     />
                     <div>
                       <small className="text-muted d-block">
-                        By {singlePost.author}
+                        By {post.author}
                       </small>
-                      <small className="text-muted">{singlePost.date}</small>
+                      <small className="text-muted">{post.date}</small>
                     </div>
                   </div>
                   <div className="d-flex gap-1 gap-sm-3">
-                    {/* Share */}
+                    
                     <div
                       className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
                       style={{ borderColor: "#ddd" }}
@@ -222,7 +509,7 @@ const InsightsDetails = () => {
                       <span className="d-none d-sm-inline">Share</span>
                     </div>
 
-                    {/* Facebook */}
+                    
                     <div
                       className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
                       style={{ borderColor: "#ddd" }}
@@ -239,7 +526,6 @@ const InsightsDetails = () => {
                       <span className="d-none d-sm-inline">Facebook</span>
                     </div>
 
-                    {/* Twitter */}
                     <div
                       className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
                       style={{ borderColor: "#ddd" }}
@@ -256,6 +542,85 @@ const InsightsDetails = () => {
                       <span className="d-none d-sm-inline">Twitter</span>
                     </div>
                   </div>
+                </div> */}
+            </div>
+            <div className="d-flex gap-3 mt-3">
+              {/* Share */}
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  border: "2px solid #B45309",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#B45309",
+                  cursor: "pointer",
+                }}
+              >
+                <FaShareAlt size={20} />
+              </div>
+
+              {/* Facebook */}
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  border: "2px solid #B45309",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#B45309",
+                  cursor: "pointer",
+                }}
+              >
+                <FaFacebookF size={20} />
+              </div>
+
+              {/* Twitter */}
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  border: "2px solid #B45309",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#B45309",
+                  cursor: "pointer",
+                }}
+              >
+                <FaTwitter size={20} />
+              </div>
+            </div>
+
+            <div
+              className="mt-4 p-4"
+              style={{ backgroundColor: "#5B7342", borderRadius: "8px" }}
+            >
+              <div className="d-flex flex-column flex-md-row align-items-start gap-4">
+                {/* Author Image */}
+                <img
+                  src={post.authorImage}
+                  alt={post.author}
+                  style={{
+                    width: "160px",
+                    height: "160px",
+                    borderRadius: "4px",
+                    objectFit: "cover",
+                  }}
+                />
+
+                {/* Author Info */}
+                <div>
+                  <p className="text-white mb-1">Meet the author</p>
+                  <h4 className="text-white fw-bold">{post.author}</h4>
+                  <p className="text-white" style={{ maxWidth: "600px" }}>
+                    {post.authorBio}
+                  </p>
                 </div>
               </div>
             </div>
@@ -295,34 +660,6 @@ const InsightsDetails = () => {
                 ))}
               </div>
             </section>
-
-            {/* ---- New Blog List Section ---- */}
-            <h4 className="mb-4 mx-5 mx-lg-3">Latest Articles</h4>
-            <div className="border border-gray-300 rounded p-3 mx-5 mx-lg-3 latestArticles">
-              {LatestblogPosts?.map((post) => (
-                <div key={post.id} className="mb-5">
-                  {/* Image */}
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="img-fluid rounded mb-3"
-                  />
-
-                  {/* Title */}
-                  <h6 className="fw-bold">{post.title}</h6>
-
-                  {/* Content */}
-                  <p className="text-muted small">{post.content}</p>
-
-                  {/* Read More Button */}
-                  <div className="text-end">
-                    <button className="btn btn-primary btn-sm">
-                      Read More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

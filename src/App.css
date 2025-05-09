@@ -966,7 +966,7 @@ a {
   background: linear-gradient(to right, #fafafa, #fafafa, #fff0);
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 65%;
   top: 0;
   left: 0;
 }
@@ -1417,11 +1417,13 @@ img.dotted {
 
 .video-icon-2 {
   top: 50%;
-  right: 30%;
+  right: 25%;
   transform: translateY(-50%);
   color: rgb(255, 255, 255);
-  font-size: 4rem;
+  width: 125px;
   position: absolute;
+  height: auto;
+  cursor: pointer;
 }
 
 .box-content-service {
@@ -1429,6 +1431,7 @@ img.dotted {
   transition: height 0.3s ease;
   overflow: hidden;
   z-index: 1;
+  width: 55%;
 }
 
 .box-content-service p {
@@ -1445,12 +1448,12 @@ img.dotted {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .box-title-2 {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.6vw;
   line-height: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1463,13 +1466,14 @@ img.dotted {
   font-weight: 600;
   font-size: 37px;
   text-transform: uppercase;
-  transform-origin: left center;
+  transform-origin: top left;
   transform: rotate(-90deg) translateY(50%);
   position: absolute;
   left: 0;
-  bottom: 0%;
-  padding-top: 1rem;
   white-space: nowrap;
+  width: 300px;
+  text-align: right;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
@@ -1480,8 +1484,8 @@ img.dotted {
 
 .index-badge-service {
   color: #000;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1495,4 +1499,17 @@ img.dotted {
 .index-badge-service .icon-top {
   height: auto;
   width: 35%;
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .box-title-service {
+    font-size: 24px;
+  }
+  .eden-service .video-section {
+    height: 350px;
+  }
+  .box-title-2 {
+    font-weight: 400;
+    font-size: 21px;
+  }
 }
