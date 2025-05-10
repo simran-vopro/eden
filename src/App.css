@@ -314,16 +314,19 @@ a {
 }
 
 #contentSection {
+  display: flex;
   padding: 4vw;
-  margin-bottom: 10rem;
+  margin-bottom: 16rem;
   position: relative;
   width: 40vw;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .top-title {
   font-weight: 400;
   font-size: 1.621rem;
-  line-height: 150%;
+  /* line-height: 150%; */
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   color: var(--primary);
@@ -688,12 +691,16 @@ a {
   overflow: hidden;
 }
 
-.slide-up-text,
-.slide-up-text-hero {
+/* .slide-up-text {
   opacity: 0;
   transform: translateY(100%);
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
+} */
+
+/* .slide-up-text-hero {
+  opacity: 0;
+  transform: translateY(100%);
+} */
 
 #about-title {
   font-family: "Lato-bold";
@@ -837,7 +844,7 @@ a {
   flex-shrink: 0;
   opacity: 1;
   transition: transform 0.6s ease;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
 }
 
 .brand-logo:hover {
@@ -863,7 +870,7 @@ a {
   letter-spacing: 2px;
   text-align: center;
   color: #1d303a;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 #brands .parent {
@@ -1361,7 +1368,7 @@ img.dotted {
   background-image: url("./assets/landing/heroBackground.png");
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: 95% 100%;
+  background-size: 100% 100%;
 }
 
 #infinity-logo-transparent2 {
@@ -1380,24 +1387,27 @@ img.dotted {
   display: flex;
   gap: 1%;
   margin-top: 10rem;
-  overflow-x: hidden;
+  overflow-x: auto;
   width: 100%;
+  scroll-behavior: smooth; /* optional: smooth scroll */
+  flex-wrap: nowrap;
 }
 
 .expandable-box-2 {
   padding: 1.2vw;
   border-radius: 12px;
   cursor: pointer;
-  transition: flex-basis 0.3s ease-in-out, padding 0.3s ease-in-out;
-  will-change: flex-basis, padding;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   position: relative;
-  transition: all 0.3s ease;
+  flex-grow: 1;
+  flex-shrink: 1;
   flex-basis: 15.5%;
+  transition: flex-basis 0.4s ease, padding 0.3s ease;
+  will-change: flex-basis, padding;
   height: 500px;
 }
 
@@ -1431,7 +1441,7 @@ img.dotted {
   transition: height 0.3s ease;
   overflow: hidden;
   z-index: 1;
-  width: 55%;
+  width: 40%;
 }
 
 .box-content-service p {
@@ -1464,7 +1474,7 @@ img.dotted {
 .box-title-service {
   font-family: "Lato-Bold";
   font-weight: 600;
-  font-size: 37px;
+  font-size: 25px;
   text-transform: uppercase;
   transform-origin: top left;
   transform: rotate(-90deg) translateY(50%);

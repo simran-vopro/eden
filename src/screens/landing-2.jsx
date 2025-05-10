@@ -148,12 +148,12 @@ const LandingPage = () => {
     elements.forEach((el, i) => {
       gsap.fromTo(
         el,
-        { y: "100%", opacity: 0 },
+        { transform: "translateY(100%)", opacity: 0},
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 0.2,
+          // ease: "power3.out",
           // delay: i * 0.2,
           scrollTrigger: {
             trigger: el,
@@ -192,25 +192,22 @@ const LandingPage = () => {
   useGSAP(() => {
     const slideUpElements = gsap.utils.toArray(".slide-up-text-hero");
 
-    // Create the GSAP timeline
     const tl = gsap.timeline({
-      delay: 4, // Start the entire timeline after 3 seconds
+      delay: 4,
     });
 
-    // Slide-up animation with stagger
     tl.fromTo(
       slideUpElements,
-      { y: "100%", opacity: 0 },
+      {  transform: "translateY(100%)", opacity: 0 }, // Using yPercent to control the movement
       {
-        y: 0,
+        transform: "translateY(0%)",
         opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.2,
+        duration: 0.6, // Adjusted duration for smoother transition
+        ease: "power4.out", // Smoother easing for less bounce
       }
     );
 
-    // Rotation animation for infinity logo on scroll
+    // Keep your infinity logo animation
     animateInfinityLogo(infinityLogoRef, heroRef);
   }, []);
 
@@ -480,7 +477,7 @@ const LandingPage = () => {
           </div>
 
           <img src={images.videoBg} className="overlay-img-2"></img>
-           <div className="overlay-video"></div>
+          <div className="overlay-video"></div>
 
           {/* Special video icon overlay for index === 0 */}
 
@@ -488,8 +485,7 @@ const LandingPage = () => {
             className="video-icon-2"
             // onClick={onPlayVideo}
           >
-          
-             <img src={images.videoIconBg} className="img-fluid"></img>
+            <img src={images.videoIconBg} className="img-fluid"></img>
           </div>
         </div>
       </section>

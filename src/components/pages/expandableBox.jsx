@@ -25,15 +25,19 @@ const ExpandableServicesBox = ({
 
   useGSAP(() => {
     const tl = gsap.timeline({
-      defaults: { ease: "power1.inOut", duration: 0.4 }, // smoother default
+      defaults: { ease: "power2.out", duration: 0.2 }, // shortened default duration
     });
 
+    const backgroundImageOpacity = isActive && backgroundImage ? 1 : 0;
+
     if (isActive) {
-      tl.to(boxRef.current, {
-        flexBasis: "100%",
-        padding: "20px",
-        duration: 0.5,
-      })
+      // active box
+      tl.to(badgeRef.current, { opacity: 0, duration: 0.1 })
+        .to(boxRef.current, {
+          flexBasis: "100%",
+          padding: "20px",
+          duration: 0.25,
+        })
         .to(
           titleRef.current,
           {
@@ -44,36 +48,37 @@ const ExpandableServicesBox = ({
             left: "1.5rem",
             width: "fit-content",
             position: "absolute",
-            duration: 0.5,
-            ease: "power2.out",
+            duration: 0.25, // title animation synchronized with box expansion
           },
-          "<" // keep title animating with box
+          "<" // start this at the same time as the box expansion
         )
-        .to(contentRef.current, { opacity: 1 }, "-=0.2") // fade in content slightly before badge
-        .set(badgeRef.current, { display: "flex", opacity:0 }) // make badge visible
+        .fromTo(
+          contentRef.current,
+          { opacity: 0, x: -20 },
+          { opacity: 1, x: 0, duration: 0.3 },
+          "+=0.3" // slight delay after box expands
+        )
         .to(badgeRef.current, {
+          display: "flex",
           opacity: 1,
           rotate: "180deg",
-          duration: 0.4,
-          ease: "power2.out",
-        }); // badge comes in LAST
-    } else if (activeIndex !== null && index < activeIndex) {
-      tl.to(boxRef.current, {
-        flexBasis: "10%",
-        padding: "10px",
-        duration: 0.4,
-        ease: "power2.inOut",
-      })
-        .to(contentRef.current, { opacity: 0 }, 0)
-        .to(badgeRef.current, { opacity: 0 })
-        .set(badgeRef.current, { display: "none" });
-    } else {
-      tl.to(boxRef.current, {
-        flexBasis: "15.5%",
-        padding: "20px",
-        display: "flex",
-        duration: 0.4,
-      })
+          duration: 0.2,
+        })
+        .to(document.querySelector(".expandable-box-2"), {
+          backgroundColor: "transparent",
+          opacity: backgroundImageOpacity,
+          duration: 0.25,
+        });
+    } else if (shouldHide) {
+      // right side boxes
+      tl.to(badgeRef.current, { opacity: 0, duration: 0.1 })
+        .to(contentRef.current, { opacity: 0, x: -20, duration: 0.2 }) // fade out left
+        .to(boxRef.current, {
+          flexBasis: "0%",
+          opacity: 0,
+          duration: 0.2,
+          padding: 0,
+        })
         .to(
           titleRef.current,
           {
@@ -82,55 +87,98 @@ const ExpandableServicesBox = ({
             y: 0,
             left: 0,
             top: "65%",
-            duration: 0.5,
-            ease: "power2.out",
+            duration: 0.25, // title shrinking synchronized with box
+          },
+          "<" // synchronize title with box shrinking
+        )
+        .set(badgeRef.current, { display: "none" })
+        .to(document.querySelector(".expandable-box-2"), {
+          backgroundColor: "transparent",
+          opacity: 0,
+          duration: 0.25,
+        });
+    } else if (activeIndex !== null && index < activeIndex) {
+      // left side boxes
+      tl.to(badgeRef.current, { opacity: 0, duration: 0.1 })
+        .to(contentRef.current, { opacity: 0, x: -20, duration: 0.2 }) // fade out left
+        .to(boxRef.current, {
+          flexBasis: "10%",
+          padding: "10px",
+          duration: 0.2,
+        })
+        .to(contentRef.current, { opacity: 0 }, 0)
+        .to(
+          titleRef.current,
+          {
+            rotate: -90,
+            x: "10%",
+            y: 0,
+            left: 0,
+            top: "65%",
+            duration: 0.2, // title shrinking synchronized with box
+          },
+          "<" // synchronize title with box shrinking
+        )
+        .set(badgeRef.current, { display: "none" })
+        .to(document.querySelector(".expandable-box-2"), {
+          backgroundColor: "transparent",
+          opacity: 0,
+          duration: 0.25,
+        });
+    } else {
+      // default box
+      tl.to(badgeRef.current, { opacity: 0, duration: 0.1 })
+        .to(contentRef.current, { opacity: 0, x: -20, duration: 0.1 })
+        .to(contentRef.current, { opacity: 0, duration: 0.1 })
+        .to(boxRef.current, {
+          flexBasis: "15.5%",
+          padding: "20px",
+          opacity: 1,
+          duration: 0.25,
+        })
+        .to(
+          titleRef.current,
+          {
+            rotate: -90,
+            x: "10%",
+            y: 0,
+            left: 0,
+            top: "65%",
+            duration: 0.25,
             width: "300px",
           },
-          0
-        )
-        .to(contentRef.current, { opacity: 0 }, 0)
-        .set(badgeRef.current, { display: "flex" })
-        .to(
-          badgeRef.current,
-          { opacity: 1, rotate: "0deg", ease: "power2.out", duration: 0.4 },
           "<"
-        );
+        )
+        .to(badgeRef.current, {
+          display: "flex",
+          opacity: 1,
+          rotate: "0deg",
+          duration: 0.2,
+        })
+        .to(document.querySelector(".expandable-box-2"), {
+          backgroundColor: "transparent",
+          opacity: backgroundImageOpacity,
+          duration: 0.25,
+        });
     }
-  }, [isActive, shouldShrink]);
+  }, [isActive, activeIndex, index]);
 
-  useEffect(() => {
-    if (shouldHide) {
-      const tl = gsap.timeline();
-      tl.to(boxRef.current, {
-        flexBasis: "0%",
-        padding: 0,
-        duration: 0.5,
-        delay: 0.2,
-        ease: "power1.inOut", // smoother hide
-        onComplete: () => {
-          boxRef.current.style.display = "none";
-        },
-      });
-    }
-  }, [shouldHide]);
-
-  const backgroundStyle = backgroundImage
-    ? {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
-        color: "#fff",
-      }
-    : {
-        backgroundColor: boxBgColors[index % boxBgColors.length],
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color:
-          boxBgColors[index % boxBgColors.length] === "#fafafa"
-            ? "#000"
-            : "#fff",
-      };
+  const backgroundStyle =
+    isActive && backgroundImage
+      ? {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
+          position: "relative",
+          color: "#fff",
+        }
+      : {
+          backgroundColor: boxBgColors[index % boxBgColors.length],
+          color:
+            boxBgColors[index % boxBgColors.length] === "#fafafa"
+              ? "#000"
+              : "#fff",
+        };
 
   return (
     <div
@@ -141,7 +189,7 @@ const ExpandableServicesBox = ({
         ...backgroundStyle,
       }}
     >
-      {backgroundImage && (
+      {backgroundImage && isActive && (
         <div
           className="overlay"
           style={{

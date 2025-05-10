@@ -13,7 +13,7 @@ const Brands = ({ btn, style }) => {
     images.brand1,
     images.brand2,
     images.brand3,
-    images.brand4,
+    // images.brand4,
     images.brand1,
     images.brand2,
   ];
@@ -54,7 +54,7 @@ const Brands = ({ btn, style }) => {
   return (
     <section id="brands" style={style}>
       <h1 className="title">
-        {["BRANDS ", "WHO ", "TRUST ", "EDEN"].map((word, i) => (
+        {["Brands ", "who ", "trust ", "eden"].map((word, i) => (
           <span className="parent" key={i}>
             <span
               className={`child-brand-title ${word === "EDEN" ? "eden-highlight" : ""
