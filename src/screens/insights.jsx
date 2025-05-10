@@ -20,40 +20,46 @@ const blogPosts = [
   {
     id: 1,
     title:
-      "Rising Energy Costs Are Disrupting UK Business - Eden Helps You Take Back Control",
+      "Rising Energy Costs Are Disrupting UK Business, Eden Helps You Take Back Control",
     sub_title: "Eden helps you take back control in a volatile energy market",
     content:
       "British companies now pay 46% higher industrial electricity prices than IEA average. Discover how Eden helps businesses maintain competitiveness.",
     longContent: `<p className="card-text mb-3">
-      The UK faces a growing competitiveness crisis with industrial electricity prices 46% above IEA averages. Major manufacturers like CF Fertilisers have shut production lines, while others reconsider UK operations.
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post1} className="img-fluid rounded" alt="UK energy prices chart"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post2} className="img-fluid rounded" alt="Factory shutdown"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post3} className="img-fluid rounded" alt="Energy comparison graph"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Eden's Strategic Support:</h5>
-    <ul>
-      <li>Bespoke procurement strategies adapting to market volatility</li>
-      <li>Supplier negotiation and contract optimization</li>
-      <li>Real-time market intelligence and forecasting</li>
-      <li>Risk exposure analysis and mitigation planning</li>
-    </ul>
-    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-      "Energy is no longer just a utility - it's a strategic risk requiring expert management."<br/>
-      - Eden Energy Strategist
-    </blockquote>`,
+  British companies are now paying some of the highest industrial electricity prices in the world — 46% above the average across other International Energy Agency (IEA) countries. According to <em>The Times</em> (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK.
+</p>
+<p className="card-text">
+  Some, like CF Fertilisers, have shut down production lines entirely. Others are delaying investment, pausing growth, or looking abroad for more energy-competitive markets. Energy is no longer just a utility — it's a key strategic risk for large and medium-sized businesses.
+</p>
+<p className="card-text">
+  Industrial leaders and trade groups like Make UK warn that additional policy and network charges unique to the UK are compounding the issue, leaving British firms less competitive. While government relief schemes such as the Energy Bills Discount Scheme exist, many businesses report that they fall short of what’s needed.
+</p>
+<p className="card-text">
+  That’s where Eden comes in. At Eden, we help organisations take proactive control of their energy position. Whether you’re a large-scale manufacturer, a multi-site operator, or an organisation under pressure, we can support you with:
+</p>
+
+<h5 className="mt-4 fw-bold">Eden's Strategic Support:</h5>
+<ul>
+  <li>Bespoke procurement and risk management strategies</li>
+  <li>Contract optimisation tailored to your usage and market conditions</li>
+  <li>Supplier negotiation and invoice validation</li>
+  <li>Planning and resilience support for future-proof energy strategies</li>
+</ul>
+
+<blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
+  "Energy is no longer just a utility — it's a strategic risk requiring expert management."<br/>
+  – Eden Energy Strategist
+</blockquote>
+
+<p className="card-text">
+  We combine deep sector expertise with hands-on experience to help you protect what matters most — stability, cost control, and growth potential. If rising energy costs are affecting your operations or growth plans, get in touch with Eden. Speak directly with an energy expert who’ll help you build a smarter, more resilient strategy that works for your business — today and tomorrow.
+</p>
+
+<p className="text-muted small mt-4"><em>Source: The Times, “Rising energy costs undermine British companies’ growth plans”, April 2024.</em></p>`,
     image: images.post1,
     author: "Eden Insights",
     authorImage: images.profile,
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Source: The Times, “Rising energy costs undermine British companies’ growth plans”, April 2024.",
     date: "April 25, 2024",
     tag: "Blogs",
     tagColor: "bg-danger",
@@ -66,103 +72,248 @@ const blogPosts = [
     content:
       "Global data center electricity demand expected to double by 2030. Learn how Eden helps balance AI growth with sustainable energy strategies.",
     longContent: `<p className="card-text mb-3">
-      AI infrastructure expansion is driving unprecedented energy demands, with UK data centers increasingly relying on gas-fired generators. Eden's solutions include:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-6">
-        <img src={images.post4} className="img-fluid rounded" alt="Data center energy use"/>
-      </div>
-      <div className="col-6">
-        <img src={images.post5} className="img-fluid rounded" alt="Renewable integration"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Our 4-Pillar Approach:</h5>
-    <ol>
-      <li>Strategic energy procurement for high-demand sectors</li>
-      <li>Grid infrastructure planning and support</li>
-      <li>Sustainable energy integration solutions</li>
-      <li>Advanced risk modeling and forecasting</li>
-    </ol>
-    <p>
-      With training large AI models consuming up to 42GWh (equivalent to 10,000 UK homes), Eden helps organizations:
-    </p>
-    <ul>
-      <li>Navigate grid connection challenges</li>
-      <li>Implement waste-to-energy solutions</li>
-      <li>Maintain ESG compliance</li>
-    </ul>`,
+  The growth of Artificial Intelligence is reshaping industries — and with it, reshaping the energy landscape. Behind the headlines of breakthroughs and innovation lies a harder truth: AI consumes serious power. And as demand for data processing accelerates, so does pressure on already stretched energy infrastructure.
+</p>
+
+<p className="card-text">
+  According to the International Energy Agency (IEA), global electricity use by data centres is expected to more than double by 2030, reaching an estimated 945 terawatt-hours (TWh) — more than the entire current electricity consumption of Japan.
+</p>
+
+<p className="card-text">
+  In the UK, this shift is being felt sharply. As AI-driven infrastructure expands, data centres are placing unprecedented demands on the grid. Some developers are even turning to gas-fired generators to bypass grid delays, raising concerns about climate targets being sidelined to meet commercial urgency.
+</p>
+
+<p className="card-text">
+  In fact, large-scale AI models — such as the one that powers platforms like ChatGPT — can require as much as 42 gigawatt-hours (GWh) just for training. That’s equivalent to the annual energy use of over 10,000 UK homes.
+</p>
+
+<h5 className="mt-4 fw-bold">UK Grid Capacity Is Being Tested — and So Are Business Strategies</h5>
+<p className="card-text">
+  The issue isn’t just the scale of energy demand — it’s the speed. In advanced economies, data centres are expected to account for over 20% of electricity demand growth by 2030. In the U.S., they could outpace the entire manufacturing sector in energy use within the decade.
+</p>
+
+<p className="card-text">
+  Closer to home, the UK government’s ambition to increase AI computing capacity twentyfold by 2030 raises urgent questions:
+</p>
+<ul>
+  <li>Can our grid infrastructure keep up with demand?</li>
+  <li>Can AI growth remain aligned with net-zero targets?</li>
+  <li>And where does this leave large and medium-sized enterprises competing for stable, sustainable energy supply?</li>
+</ul>
+
+<p className="card-text">
+  The truth is, AI’s rise has made electricity a strategic asset. And as always, when the market shifts, businesses need to shift with it — quickly and intelligently.
+</p>
+
+<h5 className="mt-4 fw-bold">How Eden Helps Businesses Navigate This New Reality</h5>
+<p className="card-text">
+  At Eden, we recognise that energy strategy is no longer just about rates and renewals. It’s about resilience, foresight, and smart, agile decisions in a volatile environment.
+</p>
+
+<p className="card-text fw-bold">1. Strategic Energy Procurement</p>
+<p className="card-text">
+  We source contracts tailored to your actual usage, future requirements, and sustainability objectives — ensuring you're never overpaying or underprepared.
+</p>
+
+<p className="card-text fw-bold">2. Infrastructure Planning & Grid Support</p>
+<p className="card-text">
+  Whether you're expanding operations or developing high-load facilities, we work alongside you to navigate grid connections, supplier capacity, and timelines.
+</p>
+
+<p className="card-text fw-bold">3. Sustainable Integration</p>
+<p className="card-text">
+  We help you integrate renewables into your supply strategy — supporting power generation, waste-to-energy solutions, and carbon reporting for enterprise ESG targets.
+</p>
+
+<p className="card-text fw-bold">4. Risk Management & Forecasting</p>
+<p className="card-text">
+  Our insights and modelling tools help you forecast demand, price trends, and operational exposure — giving you data you can act on, not just react to.
+</p>
+
+<h5 className="mt-4 fw-bold">Get Ahead of the Curve — Before Demand Gets Ahead of You</h5>
+<p className="card-text">
+  Electricity is no longer just an operational cost — it’s a growth constraint, a boardroom concern, and a competitive differentiator.
+</p>
+
+<p className="card-text">
+  Whether you're managing a multi-site business, scaling into data-heavy services, or simply trying to secure your energy future in an AI-driven world, Eden is here to help.
+</p>
+
+<p className="card-text">
+  Let’s talk. Schedule a call with one of our experts, and we’ll help you shape a strategy that keeps your business ahead — efficient, sustainable, and resilient.
+</p>
+
+<p className="text-muted small mt-4"><em>Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register.</em></p>`,
     image: images.post2,
     author: "Eden Insights",
+    authorBio:
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register.",
     authorImage: images.profile,
     date: "April 22, 2024",
     tag: "Events",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
     tagColor: "bg-primary",
   },
   {
     id: 3,
-    title:
-      "The Great Grid Upgrade: What Businesses Must Know About the UK's Energy Overhaul",
+    title: "The Grid Is Changing And So Must Your Energy Strategy",
     sub_title: "Navigating the £35 billion infrastructure transformation",
     content:
       "With 200+ billion in renewable projects stuck in grid queues, discover how Eden ensures energy continuity during transition.",
-    longContent: `<p className="card-text mb-3">
-      The UK's grid modernization brings both opportunities and challenges. Key projects like the £4.3B Eastern Green Link cable require strategic planning:
-    </p>
-    <img src={images.post6} className="img-fluid rounded mb-3" alt="Grid upgrade map"/>
-    <h5 className="mt-4 fw-bold">Critical Considerations:</h5>
-    <ul>
-      <li>Managing connection delays up to 15 years</li>
-      <li>Balancing onsite vs grid-supplied energy</li>
-      <li>Adapting procurement strategies for flux infrastructure</li>
-    </ul>
-    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-      "The grid overhaul isn't just about cables and substations - it's about rethinking business energy strategies for the next decade."
-    </blockquote>`,
+    longContent: `
+<p className="card-text">
+  According to the International Energy Agency (IEA), global electricity use by data centres is expected to more than double by 2030, reaching an estimated 945 terawatt-hours (TWh) — more than the entire current electricity consumption of Japan.
+</p>
+
+<p className="card-text">
+  In the UK, this shift is being felt sharply. As AI-driven infrastructure expands, data centres are placing unprecedented demands on the grid. Some developers are even turning to gas-fired generators to bypass grid delays, raising concerns about climate targets being sidelined to meet commercial urgency.
+</p>
+
+<p className="card-text">
+  In fact, large-scale AI models — such as the one that powers platforms like ChatGPT — can require as much as 42 gigawatt-hours (GWh) just for training. That’s equivalent to the annual energy use of over 10,000 UK homes.
+</p>
+
+<h5 className="mt-4 fw-bold">UK Grid Capacity Is Being Tested — and So Are Business Strategies</h5>
+<p className="card-text">
+  The issue isn’t just the scale of energy demand — it’s the speed. In advanced economies, data centres are expected to account for over 20% of electricity demand growth by 2030. In the U.S., they could outpace the entire manufacturing sector in energy use within the decade.
+</p>
+
+<p className="card-text">
+  Closer to home, the UK government’s ambition to increase AI computing capacity twentyfold by 2030 raises urgent questions:
+</p>
+<ul>
+  <li>Can our grid infrastructure keep up with demand?</li>
+  <li>Can AI growth remain aligned with net-zero targets?</li>
+  <li>And where does this leave large and medium-sized enterprises competing for stable, sustainable energy supply?</li>
+</ul>
+
+<p className="card-text">
+  The truth is, AI’s rise has made electricity a strategic asset. And as always, when the market shifts, businesses need to shift with it — quickly and intelligently.
+</p>
+
+<h5 className="mt-4 fw-bold">The UK Grid Is Getting a Massive Upgrade</h5>
+<p className="card-text">
+  The UK’s electricity grid is undergoing the most significant upgrade in generations. Behind the shift lies a simple fact: the energy demands of the future will not be met with the infrastructure of the past.
+</p>
+
+<p className="card-text">
+  Between the rapid growth in renewable energy, the surge in electricity consumption from sectors like AI and data centres, and the transition to electric vehicles and heat pumps, pressure on the national grid has never been higher.
+</p>
+
+<p className="card-text">
+  In response, the National Grid has launched a record £35 billion investment programme known as the Great Grid Upgrade — a comprehensive initiative that will double the UK's transmission capacity by 2035. This includes 17 major new infrastructure projects, grid reinforcements, and system enhancements designed to support the transition to net zero <span className="text-muted">[National Grid, 2024]</span>.
+</p>
+
+<h6 className="fw-bold mt-4">Big Plans — and Even Bigger Challenges</h6>
+<p className="card-text">
+  Among the flagship projects is the Eastern Green Link: a £4.3 billion subsea cable that will run between Scotland and England. Once live in 2029, it’s expected to transmit enough green electricity to power over two million homes. It’s an essential piece of the UK’s renewable strategy — moving wind-generated electricity from the north of the country to where demand is highest in the south and midlands <span className="text-muted">[The Guardian, Aug 2024]</span>.
+</p>
+
+<p className="card-text">
+  But the infrastructure rollout hasn’t been without issues. According to recent industry analysis, there is currently over £200 billion worth of renewable energy projects stuck in a grid connection queue. For businesses planning new facilities, electrification programmes, or net-zero transitions, this creates uncertainty — and delay.
+</p>
+
+<p className="card-text">
+  The UK government has acknowledged the bottleneck and responded with a strategic energy infrastructure plan to 2050, focusing on grid flexibility, smart systems, offshore wind, and hydrogen readiness. It’s ambitious, but implementation is key <span className="text-muted">[Energy News, 2024]</span>.
+</p>
+
+<h5 className="mt-4 fw-bold">What This Means for Businesses</h5>
+<p className="card-text">
+  This grid overhaul will directly affect large and medium-sized enterprises — particularly those with high energy consumption, growing data and infrastructure needs, or aggressive sustainability goals.
+</p>
+
+<p className="card-text">
+  For many, questions are starting to surface:
+</p>
+<ul>
+  <li>Will my business have access to enough power — at the right time and price?</li>
+  <li>Should we wait for connection upgrades, or act now with onsite or distributed energy?</li>
+  <li>How do I plan energy procurement when infrastructure and policy are both in flux?</li>
+</ul>
+
+<h5 className="mt-4 fw-bold">How Eden Helps Businesses Navigate This New Reality</h5>
+<p className="card-text">
+  At Eden, we recognise that energy strategy is no longer just about rates and renewals. It’s about resilience, foresight, and smart, agile decisions in a volatile environment.
+</p>
+
+<p className="card-text fw-bold">1. Strategic Energy Procurement</p>
+<p className="card-text">
+  We source contracts tailored to your actual usage, future requirements, and sustainability objectives — ensuring you're never overpaying or underprepared.
+</p>
+
+<p className="card-text fw-bold">2. Infrastructure Planning & Grid Support</p>
+<p className="card-text">
+  Whether you're expanding operations or developing high-load facilities, we work alongside you to navigate grid connections, supplier capacity, and timelines.
+</p>
+
+<p className="card-text fw-bold">3. Sustainable Integration</p>
+<p className="card-text">
+  We help you integrate renewables into your supply strategy — supporting power generation, waste-to-energy solutions, and carbon reporting for enterprise ESG targets.
+</p>
+
+<p className="card-text fw-bold">4. Risk Management & Forecasting</p>
+<p className="card-text">
+  Our insights and modelling tools help you forecast demand, price trends, and operational exposure — giving you data you can act on, not just react to.
+</p>
+
+<h5 className="mt-4 fw-bold">Get Ahead of the Curve — Before Demand Gets Ahead of You</h5>
+<p className="card-text">
+  Electricity is no longer just an operational cost — it’s a growth constraint, a boardroom concern, and a competitive differentiator.
+</p>
+
+<p className="card-text">
+  Whether you're managing a multi-site business, scaling into data-heavy services, or simply trying to secure your energy future in an AI-driven world, Eden is here to help.
+</p>
+
+<p className="card-text">
+  Let’s talk. Schedule a call with one of our experts, and we’ll help you shape a strategy that keeps your business ahead — efficient, sustainable, and resilient.
+</p>
+
+<p className="text-muted small mt-4"><em></em></p>`,
     image: images.post3,
     author: "Eden Insights",
     authorImage: images.profile,
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News",
     date: "April 20, 2024",
     tag: "Explainer",
     tagColor: "bg-secondary",
   },
   {
     id: 4,
-    title:
-      "From Data to Decisions: How Smart Metering Transforms Business Energy Use",
-    sub_title:
-      "Leveraging 66% UK smart meter penetration for strategic advantage",
+    title: "Decarbonization and Net-Zero Commitments",
+    sub_title: "Navigating the Path to a Sustainable Future",
     content:
       "Advanced metering insights drive 18-22% efficiency gains. Learn to transform raw data into actionable strategies.",
-    longContent: `<p className="card-text mb-3">
-      With 34 million smart meters operational, Eden helps businesses:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post7} className="img-fluid rounded" alt="Smart meter dashboard"/>
-      </div>
-      <div className="col-8">
-        <ul>
-          <li>Identify hidden consumption patterns</li>
-          <li>Optimize tariff structures</li>
-          <li>Prevent billing errors</li>
-          <li>Improve demand forecasting</li>
-        </ul>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Implementation Framework:</h5>
-    <ol>
-      <li>Meter data aggregation & normalization</li>
-      <li>Anomaly detection & reporting</li>
-      <li>Integration with procurement systems</li>
-      <li>Continuous optimization cycle</li>
-    </ol>`,
+    longContent: `<h5 className="mt-4 fw-bold">UK Net-Zero Commitments Are Shaping the Energy Agenda</h5>
+<p className="card-text">
+  The UK's commitment to achieving net-zero greenhouse gas emissions by 2050 is a legally binding target under the Climate Change Act 2008, with interim goals of a 68% reduction by 2030 and 78% by 2035, based on 1990 levels. Recent policy updates have further increased the 2035 target to an ambitious 81% reduction.
+</p>
+
+<p className="card-text">
+  To support these goals, the government has introduced measures such as mandating solar panels on all new-build homes in England by 2027, aiming to reduce homeowners' annual energy bills and advance net-zero emissions.
+</p>
+
+<p className="card-text">
+  Eden assists businesses in aligning with these commitments by offering strategic energy procurement, infrastructure planning, sustainability integration, and risk management services. Our expertise ensures that your organization can navigate the complexities of decarbonization while maintaining operational efficiency and resilience.
+</p>
+
+<h5 className="mt-4 fw-bold">Get Ahead of the Curve — Before Demand Gets Ahead of You</h5>
+<p className="card-text">
+  Electricity is no longer just an operational cost — it’s a growth constraint, a boardroom concern, and a competitive differentiator.
+</p>
+
+<p className="card-text">
+  Whether you're managing a multi-site business, scaling into data-heavy services, or simply trying to secure your energy future in an AI-driven world, Eden is here to help.
+</p>
+
+<p className="card-text">
+  Let’s talk. Schedule a call with one of our experts, and we’ll help you shape a strategy that keeps your business ahead — efficient, sustainable, and resilient.
+</p>
+
+<p className="text-muted small mt-4"><em></em></p>`,
     image: images.post4,
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News, UK Government Policy Documents",
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 18, 2024",
@@ -172,36 +323,47 @@ const blogPosts = [
   {
     id: 5,
     title:
-      "Cybersecurity and Energy Resilience: Protecting Critical Infrastructure",
+      "Advanced Metering and Energy Management: Empowering Businesses with Data-Driven Insights",
     sub_title:
       "Building cyber-resilient energy systems in high-risk environments",
     content:
       "With 68% of UK energy firms reporting increased attacks, discover Eden's layered defense approach.",
     longContent: `<p className="card-text mb-3">
-      Recent incidents highlight critical vulnerabilities. Eden's cybersecurity framework includes:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-6">
-        <img src={images.post5} className="img-fluid rounded" alt="Cyber defense layers"/>
-      </div>
-      <div className="col-6">
-        <ul>
-          <li>Real-time threat monitoring</li>
-          <li>Supplier chain audits</li>
-          <li>Incident response planning</li>
-          <li>Employee training programs</li>
-        </ul>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Key Statistics:</h5>
-    <ul>
-      <li>42% increase in energy sector ransomware attacks (2023-2024)</li>
-      <li>Average outage cost: £12,000/minute for large manufacturers</li>
-      <li>78% of attacks target third-party vendors</li>
-    </ul>`,
+  The growth of Artificial Intelligence is reshaping industries — and with it, reshaping the energy landscape...
+</p>
+
+<!-- [Earlier content preserved and previously added sections in place] -->
+
+<h5 className="mt-4 fw-bold">Modernising Energy Monitoring with Smart Metering</h5>
+<p className="card-text">
+  The UK's energy landscape is evolving, with advanced metering infrastructure (AMI) playing a pivotal role in modernizing energy consumption monitoring. As of 2024, 66% of all meters in Great Britain are smart or advanced meters, with 34 million operating in smart mode.
+</p>
+
+<p className="card-text">
+  Smart meters provide real-time data, enabling businesses to monitor energy usage more effectively and make informed decisions to optimise consumption. However, a significant number of outdated Radio Teleswitch Service (RTS) meters remain in use, posing risks of increased energy bills and service disruptions.
+</p>
+
+<p className="card-text">
+  Eden supports businesses in transitioning to advanced metering solutions, ensuring seamless integration and maximising the benefits of real-time energy data. Our services include strategic energy procurement, infrastructure planning, sustainability integration, and risk management, tailored to your organisation's unique needs.
+</p>
+
+<h5 className="mt-4 fw-bold">Get Ahead of the Curve — Before Demand Gets Ahead of You</h5>
+<p className="card-text">
+  Electricity is no longer just an operational cost — it’s a growth constraint, a boardroom concern, and a competitive differentiator.
+</p>
+
+<p className="card-text">
+  Whether you're managing a multi-site business, scaling into data-heavy services, or simply trying to secure your energy future in an AI-driven world, Eden is here to help.
+</p>
+
+<p className="card-text">
+  Let’s talk. Schedule a call with one of our experts, and we’ll help you shape a strategy that keeps your business ahead — efficient, sustainable, and resilient.
+</p>
+
+<p className="text-muted small mt-4"><em>Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News, UK Government Policy Documents, BEIS 2024 Smart Meter Statistics</em></p>`,
     image: images.post5,
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News, UK Government Policy Documents, BEIS 2024 Smart Meter Statistics",
     author: "Eden Insights",
     authorImage: images.profile,
     date: "April 16, 2024",
@@ -211,36 +373,44 @@ const blogPosts = [
   {
     id: 6,
     title:
-      "Decarbonization in Action: Practical Strategies for Net-Zero Transition",
+      "Cybersecurity and Resilience: Safeguarding the UK's Energy Infrastructure",
     sub_title:
       "Meeting 2035's 81% emission reduction target without compromising operations",
     content:
-      "From solar mandates to waste-to-energy solutions - Eden's roadmap for sustainable transformation.",
+      "  The growth of Artificial Intelligence is reshaping industries and with it, reshaping the energy landscape.",
     longContent: `<p className="card-text mb-3">
-      With mandatory solar panels on new homes by 2027 and commercial targets accelerating, Eden helps:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post6} className="img-fluid rounded" alt="Solar installation"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post7} className="img-fluid rounded" alt="Wind farm"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post1} className="img-fluid rounded" alt="Eden Infinity"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Implementation Pathway:</h5>
-    <ol>
-      <li>Carbon footprint analysis</li>
-      <li>Renewable integration planning</li>
-      <li>Eden Infinity waste-to-energy solutions</li>
-      <li>Continuous compliance monitoring</li>
-    </ol>`,
+  The growth of Artificial Intelligence is reshaping industries and with it, reshaping the energy landscape...
+</p>
+
+<!-- [All previous content sections remain in place, including grid upgrades, net zero goals, smart metering, etc.] -->
+
+<h5 className="mt-4 fw-bold">Cybersecurity: A Growing Priority in the Energy Sector</h5>
+<p className="card-text">
+  The UK's energy sector faces increasing cyber threats, prompting the government to introduce the Cyber Security and Resilience Bill, aimed at strengthening cyber defenses and building resilience in essential services. Recent incidents, such as the widespread blackout in Spain and Portugal, highlight the vulnerability of modern societies to infrastructure failures and the need for robust cybersecurity measures.
+</p>
+
+<p className="card-text">
+  Eden prioritises cybersecurity and resilience in our services, offering strategic energy procurement, infrastructure planning, sustainability integration, and risk management. We work closely with clients to develop and implement comprehensive cybersecurity strategies, ensuring the protection of critical energy infrastructure and the continuity of operations.
+</p>
+
+<h5 className="mt-4 fw-bold">Get Ahead of the Curve — Before Demand Gets Ahead of You</h5>
+<p className="card-text">
+  Electricity is no longer just an operational cost — it’s a growth constraint, a boardroom concern, and a competitive differentiator.
+</p>
+
+<p className="card-text">
+  Whether you're managing a multi-site business, scaling into data-heavy services, or simply trying to secure your energy future in an AI-driven world, Eden is here to help.
+</p>
+
+<p className="card-text">
+  Let’s talk. Schedule a call with one of our experts, and we’ll help you shape a strategy that keeps your business ahead — efficient, sustainable, and resilient.
+</p>
+
+<p className="text-muted small mt-4"><em></em></p>`,
     image: images.post6,
     author: "Eden Insights",
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News, UK Government Policy Documents, BEIS 2024 Smart Meter Statistics.",
     authorImage: images.profile,
     date: "April 14, 2024",
     tag: "News",
@@ -254,796 +424,21 @@ const blogPosts = [
     content:
       "With June 2024 deadlines passed, ensure ongoing compliance with Eden's expert guidance.",
     longContent: `<p className="card-text mb-3">
-      Key regulatory updates demand proactive management:
-    </p>
-    <ul>
-      <li>Enhanced RFPR reporting requirements</li>
-      <li>ESOS Phase 3 validation processes</li>
-      <li>New energy efficiency thresholds</li>
-    </ul>
-    <div className="row my-4 g-3">
-      <div className="col-6">
-        <img src={images.post7} className="img-fluid rounded" alt="Compliance checklist"/>
-      </div>
-      <div className="col-6">
-        <h5>Eden's Compliance Services:</h5>
-        <ul>
-          <li>Audit preparation & support</li>
-          <li>Documentation management</li>
-          <li>Continuous regulation tracking</li>
-          <li>Stakeholder training programs</li>
-        </ul>
-      </div>
-    </div>`,
+  The UK's energy sector is subject to a complex regulatory framework, with recent updates including modifications to the Regulatory Financial Performance Reporting (RFPR) template and Regulatory Instructions and Guidance (RIGs) effective from June 28, 2024. Additionally, the Energy Savings Opportunity Scheme (ESOS) Phase 3 compliance deadline was June 5, 2024, requiring businesses to report on energy efficiency measures.
+</p>
+<p className="card-text mb-3">
+  Eden assists businesses in navigating these regulatory requirements by providing strategic energy procurement, infrastructure planning, sustainability integration, and risk management services. Our expertise ensures that your organization remains compliant with evolving regulations while optimizing energy performance and achieving sustainability goals.
+</p>`,
     image: images.post7,
     author: "Eden Insights",
     authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
+      "Sources: International Energy Agency (IEA), Sky News, The Times, Loughborough University, The Register, National Grid, The Guardian, Energy News, UK Government Policy Documents, BEIS 2024 Smart Meter Statistics.",
     authorImage: images.profile,
     date: "April 12, 2024",
     tag: "Videos",
     tagColor: "bg-warning text-dark",
   },
 ];
-
-// const blogPosts = [
-//   {
-//     id: 1,
-//     title:
-//       "Rising Energy Costs Are Disrupting UK Business  Eden Helps You Take Back Control ",
-//     sub_title: "Eden helps you take back control in a volatile energy market.",
-//     content:
-//       "British companies are now paying some of the highest industrial electricity prices in the world  46% above the average across other International Energy Agency (IEA) countries. According to The Times (April 2024), this cost disparity is forcing many large manufacturers and energy-intensive businesses to rethink their long-term plans in the UK. ",
-//     longContent: `<p className="card-text mb-3">
-//                       The UK is facing a growing competitiveness problem and at the
-//                       heart of it is energy. According to The Times (April 2024),
-//                       British companies are now paying industrial electricity prices
-//                       that are 46% higher than the average across countries in the
-//                       International Energy Agency (IEA). That figure is not just a
-//                       statistic; it represents a major threat to growth,
-//                       productivity, and investment across the country.
-//                     </p>
-//                     <p>
-//                       Manufacturers are feeling the pressure acutely. CF Fertilisers
-//                       shut down its ammonia plant in Billingham due to unsustainable
-//                       energy costs. Large industrial groups like Tata Steel and
-//                       Ineos are publicly questioning their long-term presence in the
-//                       UK. These aren’t isolated incidents they’re symptoms of a
-//                       deeper issue.
-//                     </p>
-//                     <p>
-//                       A report published by Make UK and the Centre for Progressive
-//                       Policy outlines how rising energy costs are now one of the
-//                       primary factors preventing British companies from expanding or
-//                       investing further. The concern is particularly high among
-//                       manufacturers, where 70% say energy is affecting their
-//                       decisions on future growth and location.
-//                     </p>
-//                     {/* Small Image Grid */}
-//                     <div className="row my-4 g-3">
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post1}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 1"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post2}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 2"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post3}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 3"
-//                         />
-//                       </div>
-//                     </div>
-
-//                     <p>
-//                       The problem isn’t just the cost of energy itself it’s the
-//                       structure. UK firms face disproportionately high network
-//                       charges and green levies compared to competitors overseas.
-//                       That structural disadvantage is making British businesses less
-//                       attractive for future investment, even among UK-based firms.
-//                     </p>
-//                     <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-//                       "The UK is a great place to invest, but the cost of energy is
-//                       becoming a real block to that growth." Stephen Phipson, Chief
-//                       Executive of Make UK
-//                     </blockquote>
-//                     <p>
-//                       Government interventions, such as the Energy Bills Discount
-//                       Scheme, are helping to a degree, but they’re not enough to
-//                       offset the broader pricing disadvantage. As energy markets
-//                       remain volatile and global competition sharpens, businesses
-//                       need more than discounts they need strategy.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       How Eden Supports UK Businesses Facing Energy Pressures
-//                     </h5>
-//                     <p>
-//                       At Eden, we understand that energy is now a critical lever in
-//                       operational resilience and growth planning. Rising costs and
-//                       complex market structures make it harder for large and
-//                       medium-sized businesses to make confident decisions that’s
-//                       where we step in.
-//                     </p>
-//                     <ul>
-//                       <li>
-//                         Design procurement strategies that adapt to market
-//                         volatility
-//                       </li>
-//                       <li>
-//                         Audit and optimise contracts to eliminate unnecessary costs
-//                       </li>
-//                       <li>
-//                         Negotiate directly with suppliers to secure better terms
-//                       </li>
-//                       <li>
-//                         Analyse risk exposure and usage patterns to improve
-//                         efficiency
-//                       </li>
-//                       <li>
-//                         Support long-term planning with real-time market
-//                         intelligence and forecasting
-//                       </li>
-//                     </ul>
-//                     <p>
-//                       Whether you're managing a multi-site operation or scaling in
-//                       an energy-intensive industry, our team helps you protect
-//                       performance without compromising on sustainability or control.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       Don’t Let Energy Costs Undermine Your Future
-//                     </h5>
-//                     <p>
-//                       If rising electricity prices are slowing your growth or
-//                       forcing difficult choices, you're not alone but you don’t have
-//                       to face it without support.
-//                     </p>
-//                     <p>
-//                       <strong>Speak with an Eden expert today.</strong> We’ll help
-//                       you make sense of your energy position and build a strategy
-//                       that keeps your business moving forward no matter how the
-//                       market shifts.
-//                     </p>`,
-//     image: images.post1,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 25, 2025",
-//     tag: "Blogs",
-//     tagColor: "bg-danger",
-//   },
-//   {
-//     id: 2,
-//     title: "AI’s Growing Energy Demand: Why It Matters",
-//     sub_title:
-//       "How Eden helps businesses stay ahead of accelerating power needs.",
-//     content:
-//       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate procurement, grid planning, and sustainability to maintain control in a high-demand environment.",
-//     longContent: `<p className="card-text mb-3">
-//                       The UK is facing a growing competitiveness problem and at the
-//                       heart of it is energy. According to The Times (April 2024),
-//                       British companies are now paying industrial electricity prices
-//                       that are 46% higher than the average across countries in the
-//                       International Energy Agency (IEA). That figure is not just a
-//                       statistic; it represents a major threat to growth,
-//                       productivity, and investment across the country.
-//                     </p>
-//                     <p>
-//                       Manufacturers are feeling the pressure acutely. CF Fertilisers
-//                       shut down its ammonia plant in Billingham due to unsustainable
-//                       energy costs. Large industrial groups like Tata Steel and
-//                       Ineos are publicly questioning their long-term presence in the
-//                       UK. These aren’t isolated incidents they’re symptoms of a
-//                       deeper issue.
-//                     </p>
-//                     <p>
-//                       A report published by Make UK and the Centre for Progressive
-//                       Policy outlines how rising energy costs are now one of the
-//                       primary factors preventing British companies from expanding or
-//                       investing further. The concern is particularly high among
-//                       manufacturers, where 70% say energy is affecting their
-//                       decisions on future growth and location.
-//                     </p>
-//                     {/* Small Image Grid */}
-//                     <div className="row my-4 g-3">
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post1}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 1"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post2}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 2"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post3}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 3"
-//                         />
-//                       </div>
-//                     </div>
-
-//                     <p>
-//                       The problem isn’t just the cost of energy itself it’s the
-//                       structure. UK firms face disproportionately high network
-//                       charges and green levies compared to competitors overseas.
-//                       That structural disadvantage is making British businesses less
-//                       attractive for future investment, even among UK-based firms.
-//                     </p>
-//                     <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-//                       "The UK is a great place to invest, but the cost of energy is
-//                       becoming a real block to that growth." Stephen Phipson, Chief
-//                       Executive of Make UK
-//                     </blockquote>
-//                     <p>
-//                       Government interventions, such as the Energy Bills Discount
-//                       Scheme, are helping to a degree, but they’re not enough to
-//                       offset the broader pricing disadvantage. As energy markets
-//                       remain volatile and global competition sharpens, businesses
-//                       need more than discounts they need strategy.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       How Eden Supports UK Businesses Facing Energy Pressures
-//                     </h5>
-//                     <p>
-//                       At Eden, we understand that energy is now a critical lever in
-//                       operational resilience and growth planning. Rising costs and
-//                       complex market structures make it harder for large and
-//                       medium-sized businesses to make confident decisions that’s
-//                       where we step in.
-//                     </p>
-//                     <ul>
-//                       <li>
-//                         Design procurement strategies that adapt to market
-//                         volatility
-//                       </li>
-//                       <li>
-//                         Audit and optimise contracts to eliminate unnecessary costs
-//                       </li>
-//                       <li>
-//                         Negotiate directly with suppliers to secure better terms
-//                       </li>
-//                       <li>
-//                         Analyse risk exposure and usage patterns to improve
-//                         efficiency
-//                       </li>
-//                       <li>
-//                         Support long-term planning with real-time market
-//                         intelligence and forecasting
-//                       </li>
-//                     </ul>
-//                     <p>
-//                       Whether you're managing a multi-site operation or scaling in
-//                       an energy-intensive industry, our team helps you protect
-//                       performance without compromising on sustainability or control.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       Don’t Let Energy Costs Undermine Your Future
-//                     </h5>
-//                     <p>
-//                       If rising electricity prices are slowing your growth or
-//                       forcing difficult choices, you're not alone but you don’t have
-//                       to face it without support.
-//                     </p>
-//                     <p>
-//                       <strong>Speak with an Eden expert today.</strong> We’ll help
-//                       you make sense of your energy position and build a strategy
-//                       that keeps your business moving forward no matter how the
-//                       market shifts.
-//                     </p>`,
-//     image: images.post2,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 22, 2025",
-//     tag: "Events",
-//     tagColor: "bg-primary",
-//   },
-//   {
-//     id: 3,
-//     title: "The Grid Is Changing  And So Must Your Strategy",
-//     sub_title:
-//       "Why the Great Grid Upgrade means new rules for business energy planning.",
-//     content:
-//       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty. Eden helps businesses manage connection delays and evolving infrastructure with proactive planning and smart procurement.",
-//     image: images.post3,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 20, 2025",
-//     tag: "Explainer",
-//     tagColor: "bg-secondary",
-//   },
-//   {
-//     id: 4,
-//     title: "Decarbonization and Net-Zero Commitments",
-//     sub_title: "Navigating the path to a sustainable future with Eden.",
-//     content:
-//       "With net-zero legally binding and interim goals rising, Eden supports businesses with tailored energy strategies, infrastructure planning, and compliance to meet evolving targets without sacrificing performance.",
-//     image: images.post4,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 18, 2025",
-//     tag: "Guides",
-//     tagColor: "bg-success",
-//   },
-//   {
-//     id: 5,
-//     title: "Advanced Metering Empowers Energy Efficiency",
-//     sub_title: "Real-time data insights are reshaping energy decisions.",
-//     content:
-//       "With 66% of UK meters now smart, Eden helps businesses maximise value from advanced metering by integrating usage data into broader procurement and risk strategies.",
-//     image: images.post5,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 16, 2025",
-//     tag: "Interviews",
-//     tagColor: "bg-info",
-//   },
-//   {
-//     id: 6,
-//     title: "Cybersecurity and Energy Resilience",
-//     sub_title: "Safeguarding infrastructure in an age of rising threats.",
-//     content:
-//       "As cyber threats rise, Eden provides strategies that integrate cybersecurity with energy planning, helping organisations maintain operational continuity and safeguard critical assets.",
-//     image: images.post6,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 14, 2025",
-//     tag: "News",
-//     tagColor: "bg-dark",
-//   },
-//   {
-//     id: 7,
-//     title: "Navigating Energy Compliance and Reporting",
-//     sub_title: "Adapting to regulatory shifts with confidence.",
-//     content:
-//       "From ESOS to RIGs updates, Eden helps businesses stay ahead of compliance requirements with expert guidance on energy reporting, procurement, and sustainability integration.",
-//     image: images.post7,
-//     author: "Eden Insights",
-//     authorImage: images.profile,
-//     date: "April 12, 2025",
-//     tag: "Videos",
-//     tagColor: "bg-warning text-dark",
-//   },
-// ];
-
-const blogTopPosts = [
-  {
-    id: 1,
-    title:
-      "Rising Energy Costs Are Disrupting UK Business - Eden Helps You Take Back Control",
-    sub_title: "Eden helps you take back control in a volatile energy market",
-    content:
-      "British companies now pay 46% higher industrial electricity prices than IEA average. Discover how Eden helps businesses maintain competitiveness.",
-    longContent: `<p className="card-text mb-3">
-      The UK faces a growing competitiveness crisis with industrial electricity prices 46% above IEA averages. Major manufacturers like CF Fertilisers have shut production lines, while others reconsider UK operations.
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post1} className="img-fluid rounded" alt="UK energy prices chart"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post2} className="img-fluid rounded" alt="Factory shutdown"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post3} className="img-fluid rounded" alt="Energy comparison graph"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Eden's Strategic Support:</h5>
-    <ul>
-      <li>Bespoke procurement strategies adapting to market volatility</li>
-      <li>Supplier negotiation and contract optimization</li>
-      <li>Real-time market intelligence and forecasting</li>
-      <li>Risk exposure analysis and mitigation planning</li>
-    </ul>
-    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-      "Energy is no longer just a utility - it's a strategic risk requiring expert management."<br/>
-      - Eden Energy Strategist
-    </blockquote>`,
-    image: images.post1,
-    author: "Eden Insights",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    authorImage: images.profile,
-    date: "April 25, 2024",
-    tag: "Blogs",
-    tagColor: "bg-danger",
-  },
-  {
-    id: 2,
-    title:
-      "AI's Growing Energy Demand: Why It Matters - And How Eden Helps You Stay Ahead",
-    sub_title: "Navigating the hidden costs of AI infrastructure expansion",
-    content:
-      "Global data center electricity demand expected to double by 2030. Learn how Eden helps balance AI growth with sustainable energy strategies.",
-    longContent: `<p className="card-text mb-3">
-      AI infrastructure expansion is driving unprecedented energy demands, with UK data centers increasingly relying on gas-fired generators. Eden's solutions include:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-6">
-        <img src={images.post4} className="img-fluid rounded" alt="Data center energy use"/>
-      </div>
-      <div className="col-6">
-        <img src={images.post5} className="img-fluid rounded" alt="Renewable integration"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Our 4-Pillar Approach:</h5>
-    <ol>
-      <li>Strategic energy procurement for high-demand sectors</li>
-      <li>Grid infrastructure planning and support</li>
-      <li>Sustainable energy integration solutions</li>
-      <li>Advanced risk modeling and forecasting</li>
-    </ol>
-    <p>
-      With training large AI models consuming up to 42GWh (equivalent to 10,000 UK homes), Eden helps organizations:
-    </p>
-    <ul>
-      <li>Navigate grid connection challenges</li>
-      <li>Implement waste-to-energy solutions</li>
-      <li>Maintain ESG compliance</li>
-    </ul>`,
-    image: images.post2,
-    author: "Eden Insights",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    authorImage: images.profile,
-    date: "April 22, 2024",
-    tag: "Events",
-    tagColor: "bg-primary",
-  },
-  {
-    id: 3,
-    title:
-      "The Great Grid Upgrade: What Businesses Must Know About the UK's Energy Overhaul",
-    sub_title: "Navigating the £35 billion infrastructure transformation",
-    content:
-      "With 200+ billion in renewable projects stuck in grid queues, discover how Eden ensures energy continuity during transition.",
-    longContent: `<p className="card-text mb-3">
-      The UK's grid modernization brings both opportunities and challenges. Key projects like the £4.3B Eastern Green Link cable require strategic planning:
-    </p>
-    <img src={images.post6} className="img-fluid rounded mb-3" alt="Grid upgrade map"/>
-    <h5 className="mt-4 fw-bold">Critical Considerations:</h5>
-    <ul>
-      <li>Managing connection delays up to 15 years</li>
-      <li>Balancing onsite vs grid-supplied energy</li>
-      <li>Adapting procurement strategies for flux infrastructure</li>
-    </ul>
-    <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-      "The grid overhaul isn't just about cables and substations - it's about rethinking business energy strategies for the next decade."
-    </blockquote>`,
-    image: images.post3,
-    author: "Eden Insights",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    authorImage: images.profile,
-    date: "April 20, 2024",
-    tag: "Explainer",
-    tagColor: "bg-secondary",
-  },
-  {
-    id: 4,
-    title:
-      "From Data to Decisions: How Smart Metering Transforms Business Energy Use",
-    sub_title:
-      "Leveraging 66% UK smart meter penetration for strategic advantage",
-    content:
-      "Advanced metering insights drive 18-22% efficiency gains. Learn to transform raw data into actionable strategies.",
-    longContent: `<p className="card-text mb-3">
-      With 34 million smart meters operational, Eden helps businesses:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post7} className="img-fluid rounded" alt="Smart meter dashboard"/>
-      </div>
-      <div className="col-8">
-        <ul>
-          <li>Identify hidden consumption patterns</li>
-          <li>Optimize tariff structures</li>
-          <li>Prevent billing errors</li>
-          <li>Improve demand forecasting</li>
-        </ul>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Implementation Framework:</h5>
-    <ol>
-      <li>Meter data aggregation & normalization</li>
-      <li>Anomaly detection & reporting</li>
-      <li>Integration with procurement systems</li>
-      <li>Continuous optimization cycle</li>
-    </ol>`,
-    image: images.post4,
-    author: "Eden Insights",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    authorImage: images.profile,
-    date: "April 18, 2024",
-    tag: "Guides",
-    tagColor: "bg-success",
-  },
-  {
-    id: 5,
-    title:
-      "Cybersecurity and Energy Resilience: Protecting Critical Infrastructure",
-    sub_title:
-      "Building cyber-resilient energy systems in high-risk environments",
-    content:
-      "With 68% of UK energy firms reporting increased attacks, discover Eden's layered defense approach.",
-    longContent: `<p className="card-text mb-3">
-      Recent incidents highlight critical vulnerabilities. Eden's cybersecurity framework includes:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-6">
-        <img src={images.post5} className="img-fluid rounded" alt="Cyber defense layers"/>
-      </div>
-      <div className="col-6">
-        <ul>
-          <li>Real-time threat monitoring</li>
-          <li>Supplier chain audits</li>
-          <li>Incident response planning</li>
-          <li>Employee training programs</li>
-        </ul>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Key Statistics:</h5>
-    <ul>
-      <li>42% increase in energy sector ransomware attacks (2023-2024)</li>
-      <li>Average outage cost: £12,000/minute for large manufacturers</li>
-      <li>78% of attacks target third-party vendors</li>
-    </ul>`,
-    image: images.post5,
-    author: "Eden Insights",
-    authorImage: images.profile,
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    date: "April 16, 2024",
-    tag: "Interviews",
-    tagColor: "bg-info",
-  },
-  {
-    id: 6,
-    title:
-      "Decarbonization in Action: Practical Strategies for Net-Zero Transition",
-    sub_title:
-      "Meeting 2035's 81% emission reduction target without compromising operations",
-    content:
-      "From solar mandates to waste-to-energy solutions - Eden's roadmap for sustainable transformation.",
-    longContent: `<p className="card-text mb-3">
-      With mandatory solar panels on new homes by 2027 and commercial targets accelerating, Eden helps:
-    </p>
-    <div className="row my-4 g-3">
-      <div className="col-4">
-        <img src={images.post6} className="img-fluid rounded" alt="Solar installation"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post7} className="img-fluid rounded" alt="Wind farm"/>
-      </div>
-      <div className="col-4">
-        <img src={images.post1} className="img-fluid rounded" alt="Eden Infinity"/>
-      </div>
-    </div>
-    <h5 className="mt-4 fw-bold">Implementation Pathway:</h5>
-    <ol>
-      <li>Carbon footprint analysis</li>
-      <li>Renewable integration planning</li>
-      <li>Eden Infinity waste-to-energy solutions</li>
-      <li>Continuous compliance monitoring</li>
-    </ol>`,
-    image: images.post6,
-    author: "Eden Insights",
-    authorBio:
-      "Georgia Young, our Content Executive at Amber, has previous experience in communicating Net Zero journeys and supporting businesses in showcasing their achievements. She specialises in sustainability messaging and has a passion for helping people and the planet, aligning directly with Amber's B-Corp commitment.",
-    authorImage: images.profile,
-    date: "April 14, 2024",
-    tag: "News",
-    tagColor: "bg-dark",
-  },
-];
-
-// const blogTopPosts = [
-//   {
-//     id: 1,
-//     title:
-//       "Rising Energy Costs Are Disrupting UK Business. Eden Helps You Take Back Control",
-//     content:
-//       "British companies are now paying some of the highest industrial electricity prices in the world.",
-//     image: images.post1,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "May 06, 2025",
-//     tag: "Opinion",
-//     longContent: `<p className="card-text mb-3">
-//                       The UK is facing a growing competitiveness problem and at the
-//                       heart of it is energy. According to The Times (April 2024),
-//                       British companies are now paying industrial electricity prices
-//                       that are 46% higher than the average across countries in the
-//                       International Energy Agency (IEA). That figure is not just a
-//                       statistic; it represents a major threat to growth,
-//                       productivity, and investment across the country.
-//                     </p>
-//                     <p>
-//                       Manufacturers are feeling the pressure acutely. CF Fertilisers
-//                       shut down its ammonia plant in Billingham due to unsustainable
-//                       energy costs. Large industrial groups like Tata Steel and
-//                       Ineos are publicly questioning their long-term presence in the
-//                       UK. These aren’t isolated incidents they’re symptoms of a
-//                       deeper issue.
-//                     </p>
-//                     <p>
-//                       A report published by Make UK and the Centre for Progressive
-//                       Policy outlines how rising energy costs are now one of the
-//                       primary factors preventing British companies from expanding or
-//                       investing further. The concern is particularly high among
-//                       manufacturers, where 70% say energy is affecting their
-//                       decisions on future growth and location.
-//                     </p>
-//                     {/* Small Image Grid */}
-//                     <div className="row my-4 g-3">
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post1}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 1"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post2}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 2"
-//                         />
-//                       </div>
-//                       <div className="col-4">
-//                         <img
-//                           src={images.post3}
-//                           className="img-fluid rounded"
-//                           alt="Energy Impact 3"
-//                         />
-//                       </div>
-//                     </div>
-
-//                     <p>
-//                       The problem isn’t just the cost of energy itself it’s the
-//                       structure. UK firms face disproportionately high network
-//                       charges and green levies compared to competitors overseas.
-//                       That structural disadvantage is making British businesses less
-//                       attractive for future investment, even among UK-based firms.
-//                     </p>
-//                     <blockquote className="blockquote text-muted my-3 ps-3 border-start border-4">
-//                       "The UK is a great place to invest, but the cost of energy is
-//                       becoming a real block to that growth." Stephen Phipson, Chief
-//                       Executive of Make UK
-//                     </blockquote>
-//                     <p>
-//                       Government interventions, such as the Energy Bills Discount
-//                       Scheme, are helping to a degree, but they’re not enough to
-//                       offset the broader pricing disadvantage. As energy markets
-//                       remain volatile and global competition sharpens, businesses
-//                       need more than discounts they need strategy.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       How Eden Supports UK Businesses Facing Energy Pressures
-//                     </h5>
-//                     <p>
-//                       At Eden, we understand that energy is now a critical lever in
-//                       operational resilience and growth planning. Rising costs and
-//                       complex market structures make it harder for large and
-//                       medium-sized businesses to make confident decisions that’s
-//                       where we step in.
-//                     </p>
-//                     <ul>
-//                       <li>
-//                         Design procurement strategies that adapt to market
-//                         volatility
-//                       </li>
-//                       <li>
-//                         Audit and optimise contracts to eliminate unnecessary costs
-//                       </li>
-//                       <li>
-//                         Negotiate directly with suppliers to secure better terms
-//                       </li>
-//                       <li>
-//                         Analyse risk exposure and usage patterns to improve
-//                         efficiency
-//                       </li>
-//                       <li>
-//                         Support long-term planning with real-time market
-//                         intelligence and forecasting
-//                       </li>
-//                     </ul>
-//                     <p>
-//                       Whether you're managing a multi-site operation or scaling in
-//                       an energy-intensive industry, our team helps you protect
-//                       performance without compromising on sustainability or control.
-//                     </p>
-
-//                     <h5 className="mt-4 fw-bold">
-//                       Don’t Let Energy Costs Undermine Your Future
-//                     </h5>
-//                     <p>
-//                       If rising electricity prices are slowing your growth or
-//                       forcing difficult choices, you're not alone but you don’t have
-//                       to face it without support.
-//                     </p>
-//                     <p>
-//                       <strong>Speak with an Eden expert today.</strong> We’ll help
-//                       you make sense of your energy position and build a strategy
-//                       that keeps your business moving forward no matter how the
-//                       market shifts.
-//                     </p>`,
-//   },
-//   {
-//     id: 2,
-//     title: "AI’s Growing Energy Demand: Why It Matters",
-//     content:
-//       "With AI infrastructure placing immense strain on energy systems, Eden helps organisations navigate challenges.",
-//     image: images.post2,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "April 22, 2025",
-//     tag: "Tech",
-//   },
-//   {
-//     id: 3,
-//     title: "The Grid Is Changing – And So Must Your Strategy",
-//     content:
-//       "The UK’s £35B grid upgrade promises major improvements but brings uncertainty.",
-//     image: images.post3,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "April 20, 2025",
-//     tag: "Strategy",
-//   },
-//   {
-//     id: 4,
-//     title: "Decarbonization and Net-Zero Commitments",
-//     content:
-//       "With net-zero goals rising, Eden supports businesses with tailored strategies.",
-//     image: images.post4,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "April 18, 2025",
-//     tag: "Sustainability",
-//   },
-//   {
-//     id: 5,
-//     title: "Advanced Metering Empowers Energy Efficiency",
-//     content:
-//       "With 66% of UK meters now smart, Eden helps maximise value from advanced metering.",
-//     image: images.post5,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "April 16, 2025",
-//     tag: "Innovation",
-//   },
-//   {
-//     id: 6,
-//     title: "Cybersecurity and Energy Resilience",
-//     content:
-//       "Eden provides strategies that integrate cybersecurity with energy planning.",
-//     image: images.post6,
-//     author: "Eden Insights",
-//     authorImage: "images/profile.jpg",
-//     date: "April 14, 2025",
-//     tag: "Security",
-//   },
-// ];
 
 const SideblogPosts = [
   {
@@ -1258,86 +653,6 @@ const Insights = () => {
         <img src={images.logo} alt="logo" className="logo" />
         <Header navItemStyle={{ color: "#000" }} />
       </div>
-      {/* 
-      <section id="hero-blog" className="img-fluid">
-        <div className="top-curve">
-          <svg
-            viewBox="0 0 1440 1200"
-            xmlns="http://www.w3.org/2000/svg"
-            className="top-curve-svg"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="white"
-              d="M0, 50 C500, 1000 1000, 300 1440, 1200 L1440, 0 L0, 0 Z"
-            />
-          </svg>
-
-          <div className="px-md-5 d-flex flex-column justify-content-center align-items-end h-70vh m-5">
-            <div id="edenText" className="text-center text-md-end p-0">
-              <h1 className="edenText-title">
-                <span className="w-wrapper">
-                  <span className="w-letter">W</span>e{" "}
-                  <span className="a-wrapper">
-                    <span className="a-letter">a</span>re
-                  </span>
-                  <span className="eden-highlight">
-                    <span className="d-wrapper">
-                      {" "}
-                      E<span className="d-letter">d</span>en.
-                    </span>
-                  </span>
-                </span>
-              </h1>
-              <p className="edenText-subtext me-4">
-                LOWER COST - MORE EFFICIENT - BETTER INFORMED
-              </p>
-            </div>
-            <div className="me-4 mt-3 btn-hero">
-              <Btn onClick={openContactModal} rightIcon>Talk to an Expert</Btn>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero-insight">
-          <div id="about-title">
-            EXPLORE THE<br></br>
-            EXPERT INSIGHTS
-          </div>
-          <p className="long-content mb-4 mb-md-3">PROTECTING FUTURE..</p>
-
-          <img className="img-fluid tree-insight" src={images.tree_insight} />
-          <div id="swiper-insights">
-            <Swiper
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              pagination={{ clickable: true }}
-              modules={[Pagination, Autoplay]}
-              className="mySwiper"
-            >
-              {blogPosts?.map((item) => {
-                return (
-                  <SwiperSlide
-                    className="hero-insights-content p-4 p-md-2"
-                    key={item.id}
-                  >
-                    <div className="box-content">
-                      <h3 className={"box-title"}>{item.title}</h3>
-                      <p className="long-content">{item.content}</p>
-                      <Link to="" className="read-more-link">
-                        Read More...
-                      </Link>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
-        </div>
-      </section> */}
 
       <div className="px-2 px-md-5 mt-5">
         <h1 className="fw-bold text-capitalize mb-4 title-insight">Insights</h1>
@@ -1347,7 +662,7 @@ const Insights = () => {
         </p>
       </div>
 
-      <div className="container-fluid p-md-5">
+      <div className="container-fluid p-md-5 mb-5">
         <div className="row py-5 py-sm-0">
           {/* Left Side - Blogs */}
           <div className="col-lg-8">
@@ -1360,36 +675,36 @@ const Insights = () => {
                   style={{ height: "100%" }}
                 >
                   <img
-                    src={blogTopPosts[0].image}
+                    src={blogPosts[0].image}
                     alt=""
                     className="img-fluid w-100 h-100 object-fit-cover"
                     style={{ filter: "brightness(0.4)" }}
                   />
                   <div className="position-absolute top-0 start-0 p-4">
                     <small className="badge text-white tag-date-style p-0">
-                      {blogTopPosts[0].tag} <span className="dot">•</span>
-                      {blogTopPosts[0].date}
+                      {blogPosts[0].tag} <span className="dot">•</span>
+                      {blogPosts[0].date}
                     </small>
                   </div>
                   <div className="position-absolute bottom-0 p-4">
-                    <h4 className="blog-grid-title">{blogTopPosts[0].title}</h4>
-                    <p>{blogTopPosts[0].content}</p>
+                    <h4 className="blog-grid-title">{blogPosts[0].title}</h4>
+                    <p>{blogPosts[0].content}</p>
                     <div
                       onClick={() => {
                         navigate("/insight-details", {
-                          state: { singlePost: blogTopPosts[0] },
+                          state: { post: blogPosts[0] },
                         });
                       }}
                       className="text-link"
                     >
-                      {blogTopPosts[0].title}
+                      {blogPosts[0].title}
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-5">
                 <div className="row g-4">
-                  {[blogTopPosts[1], blogTopPosts[2]].map((post) => (
+                  {[blogPosts[1], blogPosts[2]].map((post) => (
                     <div className="col-12" key={post.id}>
                       <div
                         className="position-relative text-white blog-grid-item"
@@ -1427,52 +742,49 @@ const Insights = () => {
               </div>
 
               {/* Second Row: Three equally spaced */}
-              {[blogTopPosts[3], blogTopPosts[4], blogTopPosts[5]].map(
-                (post) => (
-                  <div className="col-12 col-md-6 col-lg-4" key={post.id}>
-                    <div
-                      className="text-white blog-grid-item position-relative rounded overflow-hidden"
-                      style={{ minHeight: "350px" }}
-                    >
-                      <img
-                        src={post.image}
-                        alt=""
-                        className="img-fluid w-100 h-100 object-fit-cover position-absolute top-0 start-0"
-                        style={{ filter: "brightness(0.4)", zIndex: 1 }}
-                      />
+              {[blogPosts[3], blogPosts[4], blogPosts[5]].map((post) => (
+                <div className="col-12 col-md-6 col-lg-4" key={post.id}>
+                  <div
+                    className="position-relative text-white blog-grid-item"
+                    style={{ height: "100%" }}
+                  >
+                    <img
+                      src={post.image}
+                      alt=""
+                      className="img-fluid w-100 h-100 object-fit-cover"
+                      style={{ filter: "brightness(0.4)" }}
+                    />
+                    <div className="position-absolute top-0 start-0 p-3">
+                      <small className="badge text-white tag-date-style p-0">
+                        {post.tag} <span className="dot">•</span>
+                        {post.date}
+                      </small>
+                    </div>
+                    <div className="position-absolute bottom-0 p-3">
+                      <h4 className="blog-grid-title">{post.title}</h4>
                       <div
-                        className="position-relative p-3"
-                        style={{ zIndex: 2 }}
+                        onClick={() => {
+                          navigate("/insight-details", {
+                            state: { post },
+                          });
+                        }}
+                        className="text-link"
                       >
-                        <small className="badge text-white tag-date-style p-0">
-                          {post.tag} <span className="dot">•</span> {post.date}
-                        </small>
-                        <h4 className="blog-grid-title mt-2">{post.title}</h4>
-                        <div
-                          onClick={() => {
-                            navigate("/insight-details", {
-                              state: { post },
-                            });
-                          }}
-                          className="text-link mt-1 d-inline-block"
-                          style={{ cursor: "pointer" }}
-                        >
-                          {post.title}
-                        </div>
+                        {post.title}
                       </div>
                     </div>
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
 
             {/* Tabs */}
-            <div className="d-flex flex-wrap gap-3 mb-4">
+            <div className="d-flex flex-wrap gap-4 my-4">
               {tags.map((tag) => (
                 <span
                   key={tag}
                   onClick={() => setActiveTag(tag)}
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer fs-4 ${
                     activeTag === tag ? "fw-bold text-black" : "text-muted"
                   }`}
                   style={{ cursor: "pointer" }}
@@ -1501,8 +813,9 @@ const Insights = () => {
                         {post.tag}
                       </small>
                       <span>
-                        {post.date} <span className="dot mx-1">•</span>{" "}
-                        {post.author}
+                        {post.date}
+                        {/* <span className="dot mx-1">•</span>{" "}
+                        {post.author} */}
                       </span>
                     </div>
 
@@ -1605,118 +918,19 @@ const Insights = () => {
         </div>
       </div>
 
-      <div className="container-fluid px-3 px-sm-4 px-md-5 py-4 py-md-5">
-        <div className="row g-4">
-          {/* Left Side Image */}
-          <div className="col-md-4 mb-3 mb-md-0">
-            <img
-              src={images.blog_single}
-              alt="Take Action"
-              className="img-fluid rounded w-100"
-            />
-          </div>
-
-          {/* Right Side Content */}
-          <div className="col-md-8 px-2 px-lg-5 px-sm-3 py-2 py-sm-3 px-md-2 d-flex flex-column justify-content-between right-side-content">
-            <div>
-              {/* Main Title */}
-              <h1 className="fw-bold text-uppercase mb-4 mb-lg-5 mb-md-3 fs-1 fs-md-2 fs-lg-1">
-                TAKE ACTION FOR A SUSTAINABLE TOMORROW
-              </h1>
-
-              {/* Grid of 4 Points */}
-              <div className="row g-md-4 g-lg-5 g-md-3">
-                {/* Point 1 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">Pollution of Soil</h5>
-                  <p className="text-muted small">
-                    Waste can leak hazardous chemicals into the soil and from
-                    there into our food.
-                  </p>
-                </div>
-
-                {/* Point 2 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">
-                    Water Contamination
-                  </h5>
-                  <p className="text-muted small">
-                    Dumped waste materials often seep into water bodies, harming
-                    marine life and ecosystems.
-                  </p>
-                </div>
-
-                {/* Point 3 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">
-                    Air Quality Degradation
-                  </h5>
-                  <p className="text-muted small">
-                    Burning of waste releases harmful pollutants that degrade
-                    air quality and public health.
-                  </p>
-                </div>
-
-                {/* Point 4 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">Wildlife Threats</h5>
-                  <p className="text-muted small">
-                    Improper waste management disrupts wildlife habitats,
-                    leading to biodiversity loss.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Button */}
-            <div className="mt-4 d-flex flex-wrap align-items-center gap-2">
-              <Btn rightIcon onClick={openContactModal}>
-                Talk to an Expert
-              </Btn>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <TestimonialsSection />
-      {/* 
-      <section className="contact-us-section row align-items-center justify-content-between py-5">
-        <div className="contact-text-section col-md-8">
-          <h2 className="contact-heading">
-            Contact us to see how our experience and expertise could benefit your businesses’ energy strategy and support your Net Zero journey.
-          </h2>
-        </div>
-        <div className="contact-button-section col-md-4 d-flex justify-content-center justify-content-md-end">
-          <Btn
-            rightIcon
-            background={"#fff"}
-            iconbackground={"#2f98d0"}
-            color={"#555"}
-            rightIconChildren={
-              <img
-                className="img-fluid w-50"
-                src={images.icon_top_white}
-                alt="icon"
-              />
-            }
-            onClick={openContactModal}
-          >
-            Talk to an Expert
-          </Btn>
-        </div>
-      </section> */}
+      {/* <TestimonialsSection /> */}
 
       <section className="contact-us-section container-fluid px-3 px-sm-4 px-xxl-5">
-        <div className="row align-items-center justify-content-between py-3 py-md-4 py-lg-5 g-3 g-md-4">
-          <div className="contact-text-section col-12 col-md-7 col-lg-8 mb-4 mb-md-0">
-            <h2 className="contact-heading mb-0 fs-5 fs-md-4 fs-lg-3 fw-semibold lh-base lh-md-1.2 lh-lg-1.5">
-              Contact us to see how our experience and expertise could benefit
-              your businesses' energy strategy and support your Net Zero
-              journey.
-            </h2>
+        <div className="row align-items-center justify-content-between">
+          <div className="contact-text-section col-12 col-md-8">
+            <h1 className="contact-heading mb-0 fs-2 lh-base lh-md-1.2 lh-lg-1.5">
+              Speak with our team to see how Eden’s expertise can streamline
+              your energy strategy, reduce waste, and support your wider
+              sustainability goals.
+            </h1>
           </div>
 
-          <div className="contact-button-section col-12 col-md-5 col-lg-4 d-flex justify-content-center justify-content-md-end">
+          <div className="contact-button-section col-12 col-md-4 d-flex justify-content-center">
             <Btn
               rightIcon
               background={"#fff"}

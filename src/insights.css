@@ -109,13 +109,15 @@
   padding-right: 2.1875rem;
   letter-spacing: 2px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .contact-us-section {
   background-color: var(--primary);
   padding: 1rem 4rem;
-  margin-top: 15rem;
-  height: 45vh;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-heading {
@@ -883,4 +885,13 @@
   #circular #infinity-logo-transparent {
     display: none;
   }
+}
+
+.contact-button-section .webBtn {
+  height: 8vh;
+  padding: 0px 3vw;
+}
+.contact-button-section .webBtn:hover {
+  background-color: #fff !important;
+  box-shadow: none;
 }

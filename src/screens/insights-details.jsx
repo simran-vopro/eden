@@ -435,40 +435,40 @@ const InsightsDetails = () => {
               <div className="card-header bg-transparent border-0 p-0 mb-3">
                 <div className="flex items-center flex-wrap gap-2 text-sm text-gray-600 mb-2">
                   <span
-                    className={`badge ${post.tagColor} tag-date-style px-2 py-1`}
+                    className={`badge ${post?.tagColor} tag-date-style px-2 py-1`}
                   >
-                    {post.tag}
+                    {post?.tag}
                   </span>
                   <span
                     className="text-muted text-sm text-gray-600"
                     style={{ paddingLeft: 5 }}
                   >
                     Published{" "}
-                    {new Date(post.date).toLocaleDateString("en-US", {
+                    {new Date(post?.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     })}{" "}
-                    &nbsp;&bull;&nbsp; {post.author}
+                    &nbsp;&bull;&nbsp; {post?.author}
                   </span>
                 </div>
 
                 <h3 className="text-uppercase fw-bold text-black mb-1">
-                  {post.title}
+                  {post?.title}
                 </h3>
-                <p className="long-content text-dark fs-5">{post.content}</p>
+                <p className="long-content text-dark fs-5">{post?.content}</p>
               </div>
 
               {/* Optional Main Image */}
               <img
-                src={post.image}
+                src={post?.image}
                 className="img-fluid rounded mb-3"
-                alt={post.title}
+                alt={post?.title}
               />
 
               {/* Content */}
               <div className="card-body p-0">
-                <div dangerouslySetInnerHTML={{ __html: post.longContent }} />
+                <div dangerouslySetInnerHTML={{ __html: post?.longContent }} />
 
                 {/* Author and Share section */}
               </div>
@@ -604,8 +604,8 @@ const InsightsDetails = () => {
               <div className="d-flex flex-column flex-md-row align-items-start gap-4">
                 {/* Author Image */}
                 <img
-                  src={post.authorImage}
-                  alt={post.author}
+                  src={post?.authorImage}
+                  alt={post?.author}
                   style={{
                     width: "160px",
                     height: "160px",
@@ -617,9 +617,9 @@ const InsightsDetails = () => {
                 {/* Author Info */}
                 <div>
                   <p className="text-white mb-1">Meet the author</p>
-                  <h4 className="text-white fw-bold">{post.author}</h4>
+                  <h4 className="text-white fw-bold">{post?.author}</h4>
                   <p className="text-white" style={{ maxWidth: "600px" }}>
-                    {post.authorBio}
+                    {post?.authorBio}
                   </p>
                 </div>
               </div>
@@ -644,7 +644,7 @@ const InsightsDetails = () => {
 
                       <div className="d-flex justify-content-between align-items-center p-3 text-muted small">
                         <small
-                          className={`badge ${post.tagColor} tag-date-style p-1 me-2`}
+                          className={`badge ${post?.tagColor} tag-date-style p-1 me-2`}
                         >
                           {post.tag}
                         </small>
@@ -664,82 +664,47 @@ const InsightsDetails = () => {
         </div>
       </div>
 
-      <div className="container-fluid px-3 px-sm-4 px-md-5 py-4 py-md-5">
-        <div className="row g-4">
-          {/* Left Side Image */}
-          <div className="col-md-4 mb-3 mb-md-0">
-            <img
-              src={images.blog_single}
-              alt="Take Action"
-              className="img-fluid rounded w-100"
-            />
+      <section className="contact-us-section container-fluid px-3 px-sm-4 px-xxl-5">
+        <div className="row align-items-center justify-content-between">
+          <div className="contact-text-section col-12 col-md-8">
+            <h1 className="contact-heading mb-0 fs-2 lh-base lh-md-1.2 lh-lg-1.5">
+              Speak with our team to see how Eden’s expertise can streamline
+              your energy strategy, reduce waste, and support your wider
+              sustainability goals.
+            </h1>
           </div>
 
-          {/* Right Side Content */}
-          <div className="col-md-8 px-2 px-lg-5 px-sm-3 py-2 py-sm-3 px-md-2 d-flex flex-column justify-content-between right-side-content">
-            <div>
-              {/* Main Title */}
-              <h1 className="fw-bold text-uppercase mb-4 mb-lg-5 mb-md-3 fs-1 fs-md-2 fs-lg-1">
-                TAKE ACTION FOR A SUSTAINABLE TOMORROW
-              </h1>
-
-              {/* Grid of 4 Points */}
-              <div className="row g-md-4 g-lg-5 g-md-3">
-                {/* Point 1 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">Pollution of Soil</h5>
-                  <p className="text-muted small">
-                    Waste can leak hazardous chemicals into the soil and from
-                    there into our food.
-                  </p>
-                </div>
-
-                {/* Point 2 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">
-                    Water Contamination
-                  </h5>
-                  <p className="text-muted small">
-                    Dumped waste materials often seep into water bodies, harming
-                    marine life and ecosystems.
-                  </p>
-                </div>
-
-                {/* Point 3 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">
-                    Air Quality Degradation
-                  </h5>
-                  <p className="text-muted small">
-                    Burning of waste releases harmful pollutants that degrade
-                    air quality and public health.
-                  </p>
-                </div>
-
-                {/* Point 4 */}
-                <div className="col-sm-12 col-md-6">
-                  <h5 className="fw-bold text-secondary">Wildlife Threats</h5>
-                  <p className="text-muted small">
-                    Improper waste management disrupts wildlife habitats,
-                    leading to biodiversity loss.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Button */}
-            <div className="mt-4 d-flex flex-wrap align-items-center gap-2">
-              <Btn rightIcon onClick={openContactModal}>
-                Talk to an Expert
-              </Btn>
-            </div>
+          <div className="contact-button-section col-12 col-md-4 d-flex justify-content-center">
+            <Btn
+              rightIcon
+              background={"#fff"}
+              iconbackground={"#2f98d0"}
+              color={"#555"}
+              className="no-hover"
+              style={{
+                padding: "1rem 2rem",
+                borderRadius: "2rem",
+                fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+                minWidth: "12rem",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              }}
+              rightIconChildren={
+                <img
+                  className="img-fluid"
+                  style={{ width: "1.25rem", height: "1.25rem" }}
+                  src={images.icon_top_white}
+                  alt="contact icon"
+                />
+              }
+              onClick={openContactModal}
+            >
+              <span className="text-nowrap">Contact Us</span>
+            </Btn>
           </div>
         </div>
-      </div>
+      </section>
 
-      <TestimonialsSection />
-
-      <Brands style={{ padding: "15rem 0 0" }} />
+      {/* <Brands style={{ padding: "15rem 0 0" }} /> */}
       <Footer />
     </div>
   );
