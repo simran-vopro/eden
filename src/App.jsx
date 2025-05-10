@@ -157,12 +157,12 @@ const App = () => {
 
           <ScrollManager>
             <Routes>
-              <Route path="/" element={<LandingPage2 />} />
-              <Route path="/insights" element={<Insights />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/insights-new" element={<Insights />} />
               <Route path="/about" element={<About />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/insight-details" element={<InsightsDetails />} />
-              <Route path="/landing-2" element={<LandingPage />} />
+              <Route path="/landing-2" element={<LandingPage2 />} />
             </Routes>
           </ScrollManager>
         </Router>
